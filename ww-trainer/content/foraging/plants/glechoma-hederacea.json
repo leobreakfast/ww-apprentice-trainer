@@ -1,0 +1,300 @@
+{
+  "id": "glechoma_hederacea",
+  "common_name": "Ground Ivy",
+  "botanical_name": "Glechoma hederacea",
+  "images": [
+    "glechoma-hederacea_01.jpg"
+  ],
+  "narrative": "You notice a low creeping plant forming a dense carpet along the shaded woodland edge. You crush a leaf between your fingers...",
+  "interesting_fact": "Ground Ivy was the main flavouring in British ale before hops were introduced in the 16th century — its brewing name Alehoof comes from this use.",
+  "questions": [
+    {
+      "id": "q_01",
+      "type": "image_identification",
+      "question": "What plant is this?",
+      "options": [
+        "Ground Ivy",
+        "Wood Sorrel",
+        "Cleavers",
+        "Chickweed"
+      ],
+      "correct": "Ground Ivy",
+      "bonus": false
+    },
+    {
+      "id": "q_02",
+      "type": "multiple_choice",
+      "question": "What is the common name of this plant?",
+      "options": [
+        "Ground Ivy",
+        "Ground Elder",
+        "Ground Nut",
+        "Ground Moss"
+      ],
+      "correct": "Ground Ivy",
+      "bonus": false
+    },
+    {
+      "id": "q_03",
+      "type": "multiple_choice",
+      "question": "Does Ground Ivy have any other common names?",
+      "options": [
+        "Alehoof and Creeping Charlie",
+        "Sticky Willy and Goosegrass",
+        "Robin Hood and Maid Marian",
+        "It has no other common names"
+      ],
+      "correct": "Alehoof and Creeping Charlie",
+      "bonus": false
+    },
+    {
+      "id": "q_04",
+      "type": "multiple_choice",
+      "question": "What is the botanical name of Ground Ivy?",
+      "options": [
+        "Glechoma hederacea",
+        "Galium aparine",
+        "Stellaria media",
+        "Hedera helix"
+      ],
+      "correct": "Glechoma hederacea",
+      "bonus": false
+    },
+    {
+      "id": "q_05",
+      "type": "multiple_choice",
+      "question": "Where is Ground Ivy typically found?",
+      "options": [
+        "Woodland edges, hedgerows and shaded moist ground",
+        "Open hillsides and exposed moorland",
+        "Rocky coastal paths and cliff tops",
+        "Dry chalky grassland in full sun"
+      ],
+      "correct": "Woodland edges, hedgerows and shaded moist ground",
+      "bonus": false
+    },
+    {
+      "id": "q_06",
+      "type": "multiple_choice",
+      "question": "Name a key identifying feature of Ground Ivy",
+      "options": [
+        "Kidney shaped leaves with rounded toothed edges on square stems",
+        "Heart shaped leaves in groups of three",
+        "Narrow leaves in whorls of six to eight",
+        "Large oval leaves with serrated edges and stinging hairs"
+      ],
+      "correct": "Kidney shaped leaves with rounded toothed edges on square stems",
+      "bonus": false
+    },
+    {
+      "id": "q_07",
+      "type": "multiple_choice",
+      "question": "Name another key identifying feature of Ground Ivy",
+      "options": [
+        "Strong minty and aromatic smell when the leaves are crushed",
+        "Leaves fold down at night and in bright sunlight",
+        "Tiny hooked hairs that cling to clothing",
+        "Milky white sap when the stem is broken"
+      ],
+      "correct": "Strong minty and aromatic smell when the leaves are crushed",
+      "bonus": false
+    },
+    {
+      "id": "q_08",
+      "type": "multi_select",
+      "question": "What is Ground Ivy used for? Select all that apply",
+      "options": [
+        "Young leaves added to salads or soups",
+        "Made into a tea or infusion",
+        "Historically used to flavour beer before hops",
+        "Eaten raw in large quantities as a staple food",
+        "Used as a rope or cordage material"
+      ],
+      "correct": [
+        "Young leaves added to salads or soups",
+        "Made into a tea or infusion",
+        "Historically used to flavour beer before hops"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_09",
+      "type": "multiple_choice",
+      "question": "What does Ground Ivy taste like?",
+      "options": [
+        "Earthy and slightly bitter with minty undertones",
+        "Sharp and lemony",
+        "Sweet and mild like apple",
+        "Peppery and strong like rocket"
+      ],
+      "correct": "Earthy and slightly bitter with minty undertones",
+      "bonus": false
+    },
+    {
+      "id": "q_10",
+      "type": "multi_select",
+      "question": "What are the risks or cautions with Ground Ivy? Select all that apply",
+      "options": [
+        "Avoid during pregnancy — contains similar compounds to mint which can stimulate contractions",
+        "Avoid with kidney or liver problems",
+        "Best in spring — older leaves become tough and bitter",
+        "Toxic to horses and cattle in large quantities",
+        "Toxic to humans even in small amounts"
+      ],
+      "correct": [
+        "Avoid during pregnancy — contains similar compounds to mint which can stimulate contractions",
+        "Avoid with kidney or liver problems",
+        "Best in spring — older leaves become tough and bitter",
+        "Toxic to horses and cattle in large quantities"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_11",
+      "type": "multiple_choice",
+      "question": "Which species could Ground Ivy be confused with?",
+      "options": [
+        "Red Deadnettle (Lamium purpureum)",
+        "White Clover (Trifolium repens)",
+        "Wood Sorrel (Oxalis acetosella)",
+        "Cleavers (Galium aparine)"
+      ],
+      "correct": "Red Deadnettle (Lamium purpureum)",
+      "bonus": false
+    },
+    {
+      "id": "q_12",
+      "type": "multiple_choice",
+      "question": "When does Ground Ivy flower?",
+      "options": [
+        "Spring — blue-violet funnel shaped flowers",
+        "Midsummer — small white star shaped flowers",
+        "Autumn — yellow daisy like flowers",
+        "Winter — pale pink flowers"
+      ],
+      "correct": "Spring — blue-violet funnel shaped flowers",
+      "bonus": false
+    },
+    {
+      "id": "q_13",
+      "type": "multiple_choice",
+      "question": "What time of year is Ground Ivy most commonly found?",
+      "options": [
+        "Year round — it is evergreen",
+        "Spring and summer only",
+        "Autumn and winter only",
+        "Summer only"
+      ],
+      "correct": "Year round — it is evergreen",
+      "bonus": false
+    },
+    {
+      "id": "q_14",
+      "type": "multiple_choice",
+      "question": "Is Ground Ivy native to the UK?",
+      "options": [
+        "Yes",
+        "No",
+        "Only in Wales and Scotland",
+        "It was introduced by Roman settlers"
+      ],
+      "correct": "Yes",
+      "bonus": false
+    },
+    {
+      "id": "q_15",
+      "type": "multi_select",
+      "question": "What was Ground Ivy historically used to treat? Select all that apply",
+      "options": [
+        "Coughs and congestion",
+        "Colds and fevers",
+        "Broken bones",
+        "Eye inflammation"
+      ],
+      "correct": [
+        "Coughs and congestion",
+        "Colds and fevers",
+        "Eye inflammation"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_16",
+      "type": "multiple_choice",
+      "question": "How was Ground Ivy applied medicinally?",
+      "options": [
+        "As a tea or infusion",
+        "Burned and inhaled as smoke",
+        "Ground into a powder and swallowed dry",
+        "Applied as a compress soaked in cold water"
+      ],
+      "correct": "As a tea or infusion",
+      "bonus": false
+    },
+    {
+      "id": "q_17",
+      "type": "multiple_choice",
+      "question": "What is the life cycle of Ground Ivy?",
+      "options": [
+        "Perennial — returns every year",
+        "Annual — completes in one year",
+        "Biennial — takes two years to complete",
+        "Ephemeral — only lasts a few weeks"
+      ],
+      "correct": "Perennial — returns every year",
+      "bonus": false
+    },
+    {
+      "id": "q_18",
+      "type": "multiple_choice",
+      "question": "What soil or habitat conditions does Ground Ivy prefer?",
+      "options": [
+        "Moist, shaded ground — tolerates a range of soils",
+        "Dry sandy soil in full sun",
+        "Waterlogged acidic peat bogs",
+        "Rocky chalk downland"
+      ],
+      "correct": "Moist, shaded ground — tolerates a range of soils",
+      "bonus": false
+    },
+    {
+      "id": "q_19",
+      "type": "multiple_choice",
+      "question": "What plant family does Ground Ivy belong to?",
+      "options": [
+        "Lamiaceae — the mint family",
+        "Rosaceae — the rose family",
+        "Asteraceae — the daisy family",
+        "Rubiaceae — the bedstraw family"
+      ],
+      "correct": "Lamiaceae — the mint family",
+      "bonus": true
+    },
+    {
+      "id": "q_20",
+      "type": "multiple_choice",
+      "question": "What is the origin of the name Glechoma?",
+      "options": [
+        "From Greek meaning a type of mint",
+        "Named after the botanist Heinrich Glechom",
+        "From Latin meaning creeping plant",
+        "From Celtic meaning woodland carpet"
+      ],
+      "correct": "From Greek meaning a type of mint",
+      "bonus": true
+    },
+    {
+      "id": "q_21",
+      "type": "multiple_choice",
+      "question": "What does Hederacea mean in the botanical name?",
+      "options": [
+        "Ivy-like — referring to its creeping habit",
+        "Bitter tasting — referring to its flavour",
+        "Shade loving — referring to its habitat",
+        "Milk producing — referring to its sap"
+      ],
+      "correct": "Ivy-like — referring to its creeping habit",
+      "bonus": true
+    }
+  ]
+}

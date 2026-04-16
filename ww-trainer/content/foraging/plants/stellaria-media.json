@@ -1,0 +1,297 @@
+{
+  "id": "stellaria_media",
+  "common_name": "Chickweed",
+  "botanical_name": "Stellaria media",
+  "images": [
+    "stelaria-media_01.jpg"
+  ],
+  "narrative": "You notice a dense low growing mat of bright green leaves sprawling across the woodland floor...",
+  "interesting_fact": "Seeds were historically fed to caged birds — that is where the common name Chickweed comes from.",
+  "questions": [
+    {
+      "id": "q_01",
+      "type": "image_identification",
+      "question": "What plant is this?",
+      "options": [
+        "Chickweed",
+        "Ground Ivy",
+        "Wood Sorrel",
+        "Cleavers"
+      ],
+      "correct": "Chickweed",
+      "bonus": false
+    },
+    {
+      "id": "q_02",
+      "type": "multiple_choice",
+      "question": "What is the common name of this plant?",
+      "options": [
+        "Chickweed",
+        "Chickory",
+        "Chickgrass",
+        "Chickling"
+      ],
+      "correct": "Chickweed",
+      "bonus": false
+    },
+    {
+      "id": "q_03",
+      "type": "multiple_choice",
+      "question": "Does Chickweed have any other common names?",
+      "options": [
+        "Winterweed",
+        "Sticky Willy",
+        "Alehoof",
+        "Cuckoo's Meat"
+      ],
+      "correct": "Winterweed",
+      "bonus": false
+    },
+    {
+      "id": "q_04",
+      "type": "multiple_choice",
+      "question": "What is the botanical name of Chickweed?",
+      "options": [
+        "Stellaria media",
+        "Stellaria neglecta",
+        "Glechoma hederacea",
+        "Galium aparine"
+      ],
+      "correct": "Stellaria media",
+      "bonus": false
+    },
+    {
+      "id": "q_05",
+      "type": "multiple_choice",
+      "question": "Where is Chickweed typically found?",
+      "options": [
+        "Almost anywhere — gardens, woodland edges, disturbed ground and wasteland",
+        "Only in deep shaded woodland",
+        "Rocky coastal paths and cliff tops",
+        "Dry chalky grassland in full sun"
+      ],
+      "correct": "Almost anywhere — gardens, woodland edges, disturbed ground and wasteland",
+      "bonus": false
+    },
+    {
+      "id": "q_06",
+      "type": "multiple_choice",
+      "question": "Name a key identifying feature of Chickweed",
+      "options": [
+        "Small oval leaves growing in opposite pairs on slender stems",
+        "Heart shaped leaves in groups of three",
+        "Narrow leaves in whorls of six to eight",
+        "Kidney shaped leaves with toothed edges"
+      ],
+      "correct": "Small oval leaves growing in opposite pairs on slender stems",
+      "bonus": false
+    },
+    {
+      "id": "q_07",
+      "type": "multiple_choice",
+      "question": "Name another key identifying feature of Chickweed",
+      "options": [
+        "A single line of hairs running up one side of the stem, alternating sides at each node",
+        "Square stems covered in hooked hairs",
+        "Strong minty smell when crushed",
+        "Milky white sap when the stem is broken"
+      ],
+      "correct": "A single line of hairs running up one side of the stem, alternating sides at each node",
+      "bonus": false
+    },
+    {
+      "id": "q_08",
+      "type": "multi_select",
+      "question": "What is Chickweed used for? Select all that apply",
+      "options": [
+        "Eaten raw in salads",
+        "Cooked like spinach",
+        "Added to soups",
+        "Dried as a coffee substitute",
+        "Used as a rope material"
+      ],
+      "correct": [
+        "Eaten raw in salads",
+        "Cooked like spinach",
+        "Added to soups"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_09",
+      "type": "multiple_choice",
+      "question": "What does Chickweed taste like?",
+      "options": [
+        "Mild and slightly sweet",
+        "Sharp and lemony",
+        "Bitter and earthy",
+        "Peppery and strong"
+      ],
+      "correct": "Mild and slightly sweet",
+      "bonus": false
+    },
+    {
+      "id": "q_10",
+      "type": "multiple_choice",
+      "question": "What are the risks or cautions with Chickweed?",
+      "options": [
+        "Contains saponins — fine in normal quantities but excess can cause digestive upset",
+        "Toxic to humans even in small amounts",
+        "Can cause severe skin irritation on contact",
+        "No risks whatsoever — eat as much as you like"
+      ],
+      "correct": "Contains saponins — fine in normal quantities but excess can cause digestive upset",
+      "bonus": false
+    },
+    {
+      "id": "q_11",
+      "type": "multiple_choice",
+      "question": "Which species could Chickweed be confused with?",
+      "options": [
+        "Greater Chickweed (Stellaria neglecta)",
+        "Ground Ivy (Glechoma hederacea)",
+        "Wood Sorrel (Oxalis acetosella)",
+        "Cleavers (Galium aparine)"
+      ],
+      "correct": "Greater Chickweed (Stellaria neglecta)",
+      "bonus": false
+    },
+    {
+      "id": "q_12",
+      "type": "multiple_choice",
+      "question": "When does Chickweed flower?",
+      "options": [
+        "Year round in mild weather — tiny white star shaped flowers",
+        "Summer only — large white flowers",
+        "Spring only — blue violet flowers",
+        "Autumn only — yellow flowers"
+      ],
+      "correct": "Year round in mild weather — tiny white star shaped flowers",
+      "bonus": false
+    },
+    {
+      "id": "q_13",
+      "type": "multiple_choice",
+      "question": "What time of year is Chickweed most commonly found?",
+      "options": [
+        "Year round — best in spring when leaves are young and tender",
+        "Summer only",
+        "Autumn and winter only",
+        "Spring only"
+      ],
+      "correct": "Year round — best in spring when leaves are young and tender",
+      "bonus": false
+    },
+    {
+      "id": "q_14",
+      "type": "multiple_choice",
+      "question": "Is Chickweed native to the UK?",
+      "options": [
+        "Yes",
+        "No",
+        "Only in southern England",
+        "It was introduced by Roman settlers"
+      ],
+      "correct": "Yes",
+      "bonus": false
+    },
+    {
+      "id": "q_15",
+      "type": "multi_select",
+      "question": "What was Chickweed historically used to treat? Select all that apply",
+      "options": [
+        "Itchy skin conditions",
+        "Chest complaints",
+        "Broken bones",
+        "Scurvy"
+      ],
+      "correct": [
+        "Itchy skin conditions",
+        "Chest complaints",
+        "Scurvy"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_16",
+      "type": "multi_select",
+      "question": "How was Chickweed applied medicinally? Select all that apply",
+      "options": [
+        "As a poultice applied to itchy or inflamed skin",
+        "As a tea or infusion for chest complaints",
+        "Burned and inhaled as smoke",
+        "Ground into a powder and swallowed dry"
+      ],
+      "correct": [
+        "As a poultice applied to itchy or inflamed skin",
+        "As a tea or infusion for chest complaints"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_17",
+      "type": "multiple_choice",
+      "question": "What is the life cycle of Chickweed?",
+      "options": [
+        "Annual — completes in one year",
+        "Perennial — returns every year",
+        "Biennial — takes two years to complete",
+        "Ephemeral — only lasts a few weeks"
+      ],
+      "correct": "Annual — completes in one year",
+      "bonus": false
+    },
+    {
+      "id": "q_18",
+      "type": "multiple_choice",
+      "question": "What soil or habitat conditions does Chickweed prefer?",
+      "options": [
+        "Moist fertile soil — grows almost anywhere",
+        "Dry sandy soil in full sun",
+        "Waterlogged acidic peat bogs",
+        "Rocky chalk downland only"
+      ],
+      "correct": "Moist fertile soil — grows almost anywhere",
+      "bonus": false
+    },
+    {
+      "id": "q_19",
+      "type": "multiple_choice",
+      "question": "What plant family does Chickweed belong to?",
+      "options": [
+        "Caryophyllaceae — the pink or carnation family",
+        "Rosaceae — the rose family",
+        "Lamiaceae — the mint family",
+        "Asteraceae — the daisy family"
+      ],
+      "correct": "Caryophyllaceae — the pink or carnation family",
+      "bonus": true
+    },
+    {
+      "id": "q_20",
+      "type": "multiple_choice",
+      "question": "What is the origin of the name Stellaria?",
+      "options": [
+        "From Latin stella meaning star — referring to the star shaped flowers",
+        "Named after the botanist Heinrich Stellar",
+        "From Greek meaning small and creeping",
+        "From Celtic meaning winter plant"
+      ],
+      "correct": "From Latin stella meaning star — referring to the star shaped flowers",
+      "bonus": true
+    },
+    {
+      "id": "q_21",
+      "type": "multiple_choice",
+      "question": "What does Media mean in the botanical name Stellaria media?",
+      "options": [
+        "Middle or intermediate in Latin — referring to its medium size",
+        "Medicinal in Latin — referring to its herbal uses",
+        "Meadow in Latin — referring to its habitat",
+        "Small in Greek — referring to its tiny flowers"
+      ],
+      "correct": "Middle or intermediate in Latin — referring to its medium size",
+      "bonus": true
+    }
+  ]
+}

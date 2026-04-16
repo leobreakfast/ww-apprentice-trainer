@@ -1,0 +1,346 @@
+{
+  "id": "urtica_dioica",
+  "common_name": "Stinging Nettle",
+  "botanical_name": "Urtica dioica",
+  "images": [
+    "urtica-dioica_01.jpg"
+  ],
+  "narrative": "You push through the undergrowth and feel a sharp familiar sting on your wrist...",
+  "interesting_fact": "The sting injects histamine and other compounds including serotonin. Serotonin is often called the happy chemical but it is actually a stimulant — here it amplifies the histamine reaction. It breaks down before reaching the brain so it will not make you feel good, just stung.",
+  "questions": [
+    {
+      "id": "q_01",
+      "type": "image_identification",
+      "question": "What plant is this?",
+      "options": [
+        "Stinging Nettle",
+        "Dead Nettle",
+        "Ground Ivy",
+        "Cleavers"
+      ],
+      "correct": "Stinging Nettle",
+      "bonus": false
+    },
+    {
+      "id": "q_02",
+      "type": "multiple_choice",
+      "question": "What is the common name of this plant?",
+      "options": [
+        "Stinging Nettle",
+        "Stinging Ivy",
+        "Stinging Dock",
+        "Stinging Wort"
+      ],
+      "correct": "Stinging Nettle",
+      "bonus": false
+    },
+    {
+      "id": "q_03",
+      "type": "multiple_choice",
+      "question": "What is the botanical name of Stinging Nettle?",
+      "options": [
+        "Urtica dioica",
+        "Urtica urens",
+        "Lamium album",
+        "Rumex obtusifolius"
+      ],
+      "correct": "Urtica dioica",
+      "bonus": false
+    },
+    {
+      "id": "q_04",
+      "type": "multiple_choice",
+      "question": "Where is Stinging Nettle typically found?",
+      "options": [
+        "Almost anywhere — woodland edges, hedgerows and nitrogen rich disturbed ground",
+        "Only in deep shaded woodland",
+        "Rocky coastal paths and cliff tops",
+        "Dry chalky grassland in full sun"
+      ],
+      "correct": "Almost anywhere — woodland edges, hedgerows and nitrogen rich disturbed ground",
+      "bonus": false
+    },
+    {
+      "id": "q_05",
+      "type": "multiple_choice",
+      "question": "Name a key identifying feature of Stinging Nettle",
+      "options": [
+        "Dark green serrated leaves covered in hollow stinging hairs on square stems",
+        "Heart shaped leaves in groups of three",
+        "Kidney shaped leaves with rounded toothed edges",
+        "Narrow leaves in whorls of six to eight"
+      ],
+      "correct": "Dark green serrated leaves covered in hollow stinging hairs on square stems",
+      "bonus": false
+    },
+    {
+      "id": "q_06",
+      "type": "multiple_choice",
+      "question": "Name another key identifying feature of Stinging Nettle",
+      "options": [
+        "Leaves grow in opposite pairs and droop slightly at the tips",
+        "Leaves fold down at night and in bright sunlight",
+        "Single line of hairs running up one side of the stem",
+        "Strong minty smell when crushed"
+      ],
+      "correct": "Leaves grow in opposite pairs and droop slightly at the tips",
+      "bonus": false
+    },
+    {
+      "id": "q_07",
+      "type": "multi_select",
+      "question": "What is Stinging Nettle used for? Select all that apply",
+      "options": [
+        "Cooked like spinach or added to soups",
+        "Made into tea",
+        "Made into pesto or beer",
+        "Fibres used for cordage and textiles",
+        "Eaten raw as a salad leaf"
+      ],
+      "correct": [
+        "Cooked like spinach or added to soups",
+        "Made into tea",
+        "Made into pesto or beer",
+        "Fibres used for cordage and textiles"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_08",
+      "type": "multiple_choice",
+      "question": "What does Stinging Nettle taste like when cooked?",
+      "options": [
+        "Similar to spinach",
+        "Sharp and lemony",
+        "Bitter and earthy like coffee",
+        "Sweet and mild like peas"
+      ],
+      "correct": "Similar to spinach",
+      "bonus": false
+    },
+    {
+      "id": "q_09",
+      "type": "multi_select",
+      "question": "What are the risks or cautions with Stinging Nettle? Select all that apply",
+      "options": [
+        "Stings on contact — neutralised by cooking or thorough crushing",
+        "Do not eat older leaves after flowering — contain cystoliths which irritate the kidneys",
+        "Only harvest young spring growth",
+        "Avoid large quantities in early pregnancy",
+        "Toxic to humans even when cooked"
+      ],
+      "correct": [
+        "Stings on contact — neutralised by cooking or thorough crushing",
+        "Do not eat older leaves after flowering — contain cystoliths which irritate the kidneys",
+        "Only harvest young spring growth",
+        "Avoid large quantities in early pregnancy"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_10",
+      "type": "multiple_choice",
+      "question": "Which species could Stinging Nettle be confused with?",
+      "options": [
+        "Dead Nettle (Lamium album) — similar leaves but no sting and white flowers",
+        "Ground Ivy (Glechoma hederacea)",
+        "Cleavers (Galium aparine)",
+        "Chickweed (Stellaria media)"
+      ],
+      "correct": "Dead Nettle (Lamium album) — similar leaves but no sting and white flowers",
+      "bonus": false
+    },
+    {
+      "id": "q_11",
+      "type": "multiple_choice",
+      "question": "When does Stinging Nettle flower?",
+      "options": [
+        "May to September — small greenish brown flowers",
+        "March to April — white star shaped flowers",
+        "October to November — yellow flowers",
+        "December to February — pale pink flowers"
+      ],
+      "correct": "May to September — small greenish brown flowers",
+      "bonus": false
+    },
+    {
+      "id": "q_12",
+      "type": "multiple_choice",
+      "question": "What time of year is Stinging Nettle best harvested?",
+      "options": [
+        "March to May — young spring growth before flowering",
+        "Midsummer when fully grown",
+        "Autumn after it has gone to seed",
+        "Winter when other plants have died back"
+      ],
+      "correct": "March to May — young spring growth before flowering",
+      "bonus": false
+    },
+    {
+      "id": "q_13",
+      "type": "multiple_choice",
+      "question": "Is Stinging Nettle native to the UK?",
+      "options": [
+        "Yes",
+        "No",
+        "Only in England and Wales",
+        "It was introduced by Roman settlers"
+      ],
+      "correct": "Yes",
+      "bonus": false
+    },
+    {
+      "id": "q_14",
+      "type": "multi_select",
+      "question": "What was Stinging Nettle historically used to treat? Select all that apply",
+      "options": [
+        "Hay fever",
+        "Arthritis and rheumatism",
+        "Broken bones",
+        "Anaemia"
+      ],
+      "correct": [
+        "Hay fever",
+        "Arthritis and rheumatism",
+        "Anaemia"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_15",
+      "type": "multi_select",
+      "question": "How was Stinging Nettle applied medicinally? Select all that apply",
+      "options": [
+        "As a tea or infusion",
+        "Cooked and eaten as a nutritious food",
+        "Fresh leaves applied directly to arthritic joints",
+        "Burned and inhaled as smoke",
+        "Ground into a powder and swallowed dry"
+      ],
+      "correct": [
+        "As a tea or infusion",
+        "Cooked and eaten as a nutritious food",
+        "Fresh leaves applied directly to arthritic joints"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_16",
+      "type": "multiple_choice",
+      "question": "What does rubbing a dock leaf on a nettle sting actually do?",
+      "options": [
+        "There is no chemical evidence it works — it is likely distraction or placebo",
+        "The dock leaf releases an antihistamine that neutralises the sting",
+        "The coolness of the leaf draws out the histamine",
+        "The dock leaf juice breaks down the serotonin in the sting"
+      ],
+      "correct": "There is no chemical evidence it works — it is likely distraction or placebo",
+      "bonus": false
+    },
+    {
+      "id": "q_17",
+      "type": "multiple_choice",
+      "question": "What chemicals does the nettle sting inject?",
+      "options": [
+        "Histamine and other compounds including serotonin",
+        "Oxalic acid and tannins",
+        "Cyanide and alkaloids",
+        "Saponins and phenolic acids"
+      ],
+      "correct": "Histamine and other compounds including serotonin",
+      "bonus": false
+    },
+    {
+      "id": "q_18",
+      "type": "multiple_choice",
+      "question": "What is the life cycle of Stinging Nettle?",
+      "options": [
+        "Perennial — returns every year",
+        "Annual — completes in one year",
+        "Biennial — takes two years to complete",
+        "Ephemeral — only lasts a few weeks"
+      ],
+      "correct": "Perennial — returns every year",
+      "bonus": false
+    },
+    {
+      "id": "q_19",
+      "type": "multiple_choice",
+      "question": "What soil or habitat conditions does Stinging Nettle prefer?",
+      "options": [
+        "Nitrogen rich moist soil — its presence indicates fertile ground",
+        "Dry sandy soil in full sun",
+        "Waterlogged acidic peat bogs",
+        "Rocky chalk downland"
+      ],
+      "correct": "Nitrogen rich moist soil — its presence indicates fertile ground",
+      "bonus": false
+    },
+    {
+      "id": "q_20",
+      "type": "multiple_choice",
+      "question": "What plant family does Stinging Nettle belong to?",
+      "options": [
+        "Urticaceae — the nettle family",
+        "Lamiaceae — the mint family",
+        "Rosaceae — the rose family",
+        "Asteraceae — the daisy family"
+      ],
+      "correct": "Urticaceae — the nettle family",
+      "bonus": true
+    },
+    {
+      "id": "q_21",
+      "type": "multiple_choice",
+      "question": "What is the origin of the name Urtica?",
+      "options": [
+        "From Latin meaning to burn or to sting",
+        "Named after the Roman general Urticus",
+        "From Greek meaning two leaves",
+        "From Celtic meaning hedge plant"
+      ],
+      "correct": "From Latin meaning to burn or to sting",
+      "bonus": true
+    },
+    {
+      "id": "q_22",
+      "type": "multiple_choice",
+      "question": "What does Dioica mean in the botanical name?",
+      "options": [
+        "Two houses — male and female flowers grow on separate plants",
+        "Double sting — referring to the two types of hair",
+        "Two seasons — referring to spring and autumn growth",
+        "Double leaf — referring to the opposite leaf arrangement"
+      ],
+      "correct": "Two houses — male and female flowers grow on separate plants",
+      "bonus": true
+    },
+    {
+      "id": "q_23",
+      "type": "multiple_choice",
+      "question": "What did Roman soldiers reportedly do with Stinging Nettles in Britain?",
+      "options": [
+        "Flogged themselves with nettles to keep warm in the cold climate",
+        "Used the fibres to make their uniforms",
+        "Brewed nettle beer to drink on campaign",
+        "Fed nettles to their horses for energy"
+      ],
+      "correct": "Flogged themselves with nettles to keep warm in the cold climate",
+      "bonus": true
+    }
+    ,
+    {
+      "id": "q_24",
+      "type": "multiple_choice",
+      "question": "Some herbalists claim crushed nettle juice soothes a nettle sting. Why might this work?",
+      "options": [
+        "Crushing destroys the stinging hairs and releases juice containing anti-inflammatory compounds including quercetin",
+        "The juice contains antihistamine which directly neutralises the sting",
+        "The coldness of the juice draws out the histamine",
+        "There is no basis for this — it is purely placebo"
+      ],
+      "correct": "Crushing destroys the stinging hairs and releases juice containing anti-inflammatory compounds including quercetin",
+      "bonus": true
+    }
+  ]
+}

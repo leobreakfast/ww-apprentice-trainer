@@ -1,0 +1,310 @@
+{
+  "id": "galium_aparine",
+  "common_name": "Cleavers",
+  "botanical_name": "Galium aparine",
+  "images": [
+    "galium-aparine_01.jpg"
+  ],
+  "narrative": "You push through a hedgerow and notice something clinging to your sleeve...",
+  "interesting_fact": "Cleavers is said to be one of the inspirations for Velcro — the inventor George de Mestral studied how the hooked hairs clung to fabric and fur.",
+  "questions": [
+    {
+      "id": "q_01",
+      "type": "image_identification",
+      "question": "What plant is this?",
+      "options": [
+        "Cleavers",
+        "Ground Ivy",
+        "Chickweed",
+        "Wood Sorrel"
+      ],
+      "correct": "Cleavers",
+      "bonus": false
+    },
+    {
+      "id": "q_02",
+      "type": "multiple_choice",
+      "question": "What is the common name of this plant?",
+      "options": [
+        "Cleavers",
+        "Clovers",
+        "Creepers",
+        "Crawlers"
+      ],
+      "correct": "Cleavers",
+      "bonus": false
+    },
+    {
+      "id": "q_03",
+      "type": "multi_select",
+      "question": "Does Cleavers have any other common names? Select all that apply",
+      "options": [
+        "Goosegrass",
+        "Sticky Willy",
+        "Robin-run-the-hedge",
+        "Stinging Weed",
+        "Mudwort"
+      ],
+      "correct": [
+        "Goosegrass",
+        "Sticky Willy",
+        "Robin-run-the-hedge"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_04",
+      "type": "multiple_choice",
+      "question": "What is the botanical name of Cleavers?",
+      "options": [
+        "Galium aparine",
+        "Galium odoratum",
+        "Stellaria media",
+        "Urtica dioica"
+      ],
+      "correct": "Galium aparine",
+      "bonus": false
+    },
+    {
+      "id": "q_05",
+      "type": "multiple_choice",
+      "question": "Where is Cleavers typically found?",
+      "options": [
+        "Hedgerows, woodland edges and disturbed ground",
+        "Shaded woodland floors near tree roots",
+        "Open moorland and hillsides",
+        "Rocky coastal paths and cliffs"
+      ],
+      "correct": "Hedgerows, woodland edges and disturbed ground",
+      "bonus": false
+    },
+    {
+      "id": "q_06",
+      "type": "multiple_choice",
+      "question": "Name a key identifying feature of Cleavers",
+      "options": [
+        "Square stems covered in tiny hooked hairs that cling to clothing",
+        "Round hollow stems with a strong smell",
+        "Thick waxy leaves with purple undersides",
+        "Heart shaped leaves in groups of three"
+      ],
+      "correct": "Square stems covered in tiny hooked hairs that cling to clothing",
+      "bonus": false
+    },
+    {
+      "id": "q_07",
+      "type": "multiple_choice",
+      "question": "Name another key identifying feature of Cleavers",
+      "options": [
+        "Narrow leaves arranged in whorls of 6-8 around the stem",
+        "Broad oval leaves with serrated edges",
+        "Large palmate leaves with five lobes",
+        "Tiny round leaves growing in opposite pairs"
+      ],
+      "correct": "Narrow leaves arranged in whorls of 6-8 around the stem",
+      "bonus": false
+    },
+    {
+      "id": "q_08",
+      "type": "multi_select",
+      "question": "What is Cleavers used for? Select all that apply",
+      "options": [
+        "Young shoots added to soups and stews",
+        "Stir fried like tenderstem broccoli",
+        "Made into a tea or cold infusion",
+        "Seeds dried as a coffee substitute",
+        "Eaten raw in large quantities as a salad"
+      ],
+      "correct": [
+        "Young shoots added to soups and stews",
+        "Stir fried like tenderstem broccoli",
+        "Made into a tea or cold infusion",
+        "Seeds dried as a coffee substitute"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_09",
+      "type": "multiple_choice",
+      "question": "What does Cleavers taste like?",
+      "options": [
+        "Mild and slightly bitter",
+        "Sharp and lemony",
+        "Sweet and nutty",
+        "Strong and peppery"
+      ],
+      "correct": "Mild and slightly bitter",
+      "bonus": false
+    },
+    {
+      "id": "q_10",
+      "type": "multi_select",
+      "question": "What are the risks or cautions with Cleavers? Select all that apply",
+      "options": [
+        "Avoid if pregnant — can stimulate uterine contractions",
+        "Avoid if on blood thinning medication",
+        "Only eat young spring growth — older stems are tough and unpleasant",
+        "Avoid once gone to seed in late summer",
+        "Toxic to humans in any quantity"
+      ],
+      "correct": [
+        "Avoid if pregnant — can stimulate uterine contractions",
+        "Avoid if on blood thinning medication",
+        "Only eat young spring growth — older stems are tough and unpleasant",
+        "Avoid once gone to seed in late summer"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_11",
+      "type": "multiple_choice",
+      "question": "Which species could Cleavers be confused with?",
+      "options": [
+        "Sweet Woodruff (Galium odoratum)",
+        "Ground Ivy (Glechoma hederacea)",
+        "Wood Sorrel (Oxalis acetosella)",
+        "Chickweed (Stellaria media)"
+      ],
+      "correct": "Sweet Woodruff (Galium odoratum)",
+      "bonus": false
+    },
+    {
+      "id": "q_12",
+      "type": "multiple_choice",
+      "question": "When does Cleavers flower?",
+      "options": [
+        "June to August",
+        "March to May",
+        "September to October",
+        "November to January"
+      ],
+      "correct": "June to August",
+      "bonus": false
+    },
+    {
+      "id": "q_13",
+      "type": "multiple_choice",
+      "question": "What time of year is Cleavers best harvested?",
+      "options": [
+        "Early spring when shoots are young and tender",
+        "Midsummer when fully grown",
+        "Autumn after it has gone to seed",
+        "Winter when other plants have died back"
+      ],
+      "correct": "Early spring when shoots are young and tender",
+      "bonus": false
+    },
+    {
+      "id": "q_14",
+      "type": "multiple_choice",
+      "question": "Is Cleavers native to the UK?",
+      "options": [
+        "Yes",
+        "No",
+        "Only in southern England",
+        "It was introduced in the 18th century"
+      ],
+      "correct": "Yes",
+      "bonus": false
+    },
+    {
+      "id": "q_15",
+      "type": "multi_select",
+      "question": "What was Cleavers historically used to treat? Select all that apply",
+      "options": [
+        "Skin conditions such as eczema",
+        "Urinary tract infections",
+        "Broken bones",
+        "Fever"
+      ],
+      "correct": [
+        "Skin conditions such as eczema",
+        "Urinary tract infections"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_16",
+      "type": "multi_select",
+      "question": "How was Cleavers applied medicinally? Select all that apply",
+      "options": [
+        "As a tea or cold infusion",
+        "As a fresh juice",
+        "Applied as a poultice to wounds and skin",
+        "Burned and inhaled as smoke",
+        "Ground into a powder and swallowed dry"
+      ],
+      "correct": [
+        "As a tea or cold infusion",
+        "As a fresh juice",
+        "Applied as a poultice to wounds and skin"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_17",
+      "type": "multiple_choice",
+      "question": "What is the life cycle of Cleavers?",
+      "options": [
+        "Annual — completes in one year",
+        "Perennial — returns every year",
+        "Biennial — takes two years to complete",
+        "Ephemeral — only lasts a few weeks"
+      ],
+      "correct": "Annual — completes in one year",
+      "bonus": false
+    },
+    {
+      "id": "q_18",
+      "type": "multiple_choice",
+      "question": "What soil or habitat conditions does Cleavers prefer?",
+      "options": [
+        "Moist, fertile, nitrogen rich soil",
+        "Dry sandy soil in full sun",
+        "Waterlogged acidic peat",
+        "Rocky chalk downland"
+      ],
+      "correct": "Moist, fertile, nitrogen rich soil",
+      "bonus": false
+    },
+    {
+      "id": "q_19",
+      "type": "multiple_choice",
+      "question": "What plant family does Cleavers belong to?",
+      "options": [
+        "Rubiaceae",
+        "Rosaceae",
+        "Asteraceae",
+        "Lamiaceae"
+      ],
+      "correct": "Rubiaceae",
+      "bonus": true
+    },
+    {
+      "id": "q_20",
+      "type": "multiple_choice",
+      "question": "What is the origin of the name Galium?",
+      "options": [
+        "From the Greek for milk — a related plant was used to curdle milk in cheesemaking",
+        "Named after the Roman general Galius",
+        "From the Latin word for sticky",
+        "From the Celtic word for hedgerow"
+      ],
+      "correct": "From the Greek for milk — a related plant was used to curdle milk in cheesemaking",
+      "bonus": true
+    },
+    {
+      "id": "q_21",
+      "type": "multiple_choice",
+      "question": "What does Aparine mean in the botanical name?",
+      "options": [
+        "Clinging or seizing — from Greek",
+        "Little milk plant — from Latin",
+        "Goose food — from Old English",
+        "Hedge runner — from Celtic"
+      ],
+      "correct": "Clinging or seizing — from Greek",
+      "bonus": true
+    }
+  ]
+}
