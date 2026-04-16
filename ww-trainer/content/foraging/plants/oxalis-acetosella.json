@@ -23,6 +23,7 @@
     },
     {
       "id": "q_02",
+      "type": "multiple_choice",
       "question": "What is the common name of this plant?",
       "options": [
         "Wood Sorrel",
@@ -35,6 +36,7 @@
     },
     {
       "id": "q_03",
+      "type": "multiple_choice",
       "question": "Does Wood Sorrel have any other common names?",
       "options": [
         "Alleluia and Cuckoo's Meat",
@@ -47,6 +49,7 @@
     },
     {
       "id": "q_04",
+      "type": "multiple_choice",
       "question": "What is the botanical name of Wood Sorrel?",
       "options": [
         "Oxalis acetosella",
@@ -59,6 +62,7 @@
     },
     {
       "id": "q_05",
+      "type": "multiple_choice",
       "question": "Where is Wood Sorrel typically found?",
       "options": [
         "Shaded woodland floors near mossy banks and tree roots",
@@ -71,30 +75,38 @@
     },
     {
       "id": "q_06",
-      "question": "Name a key identifying feature of Wood Sorrel",
+      "type": "multi_select",
+      "question": "Select all key identifying features of Wood Sorrel",
       "options": [
-        "Heart shaped leaves in groups of three that fold down at night",
-        "Round leaves with a white stripe down the centre",
-        "Serrated oval leaves with a strong minty smell",
+        "Heart shaped leaves in groups of three",
+        "Leaves fold down at night or in bright sun",
+        "White flowers with lilac or pink veins",
+        "Strong minty smell when crushed",
         "Thick waxy leaves with purple undersides"
       ],
-      "correct": "Heart shaped leaves in groups of three that fold down at night",
+      "correct": [
+        "Heart shaped leaves in groups of three",
+        "Leaves fold down at night or in bright sun",
+        "White flowers with lilac or pink veins"
+      ],
       "bonus": false
     },
     {
       "id": "q_07",
+      "type": "multiple_choice",
       "question": "What is Wood Sorrel used for?",
       "options": [
         "Edible raw as a trail nibble, added to salads for a lemony flavour",
-        "Dried and used as a tea for headaches",
+        "Dried and used as a rope material",
         "Applied to skin to treat rashes",
-        "Used as a natural rope or cordage material"
+        "Used as a natural fire tinder"
       ],
       "correct": "Edible raw as a trail nibble, added to salads for a lemony flavour",
       "bonus": false
     },
     {
       "id": "q_08",
+      "type": "multiple_choice",
       "question": "What does Wood Sorrel taste like?",
       "options": [
         "Sharp and lemony due to oxalic acid",
@@ -107,6 +119,7 @@
     },
     {
       "id": "q_09",
+      "type": "multiple_choice",
       "question": "What potential risk does Wood Sorrel have?",
       "options": [
         "High in oxalic acid — not suitable in large quantities",
@@ -119,6 +132,7 @@
     },
     {
       "id": "q_10",
+      "type": "multiple_choice",
       "question": "Which species could Wood Sorrel be confused with?",
       "options": [
         "White Clover (Trifolium repens)",
@@ -131,6 +145,7 @@
     },
     {
       "id": "q_11",
+      "type": "multiple_choice",
       "question": "When does Wood Sorrel flower?",
       "options": [
         "April to June",
@@ -143,18 +158,7 @@
     },
     {
       "id": "q_12",
-      "question": "What colour are the flowers of Wood Sorrel?",
-      "options": [
-        "White with lilac or pink veins",
-        "Bright yellow",
-        "Deep purple",
-        "Pale blue"
-      ],
-      "correct": "White with lilac or pink veins",
-      "bonus": false
-    },
-    {
-      "id": "q_13",
+      "type": "multiple_choice",
       "question": "What time of year is Wood Sorrel most commonly found?",
       "options": [
         "March through to October",
@@ -166,7 +170,8 @@
       "bonus": false
     },
     {
-      "id": "q_14",
+      "id": "q_13",
+      "type": "multiple_choice",
       "question": "Is Wood Sorrel native to the UK?",
       "options": [
         "Yes",
@@ -178,7 +183,70 @@
       "bonus": false
     },
     {
+  "id": "q_14",
+  "type": "multi_select",
+  "question": "What was Wood Sorrel historically used to treat? Select all that apply",
+  "options": [
+    "Fever",
+    "Scurvy",
+    "Mouth ulcers",
+    "Skin rashes",
+    "Broken bones"
+  ],
+  "correct": [
+    "Fever",
+    "Scurvy",
+    "Mouth ulcers"
+  ],
+  "bonus": false
+},
+    {
       "id": "q_15",
+      "type": "multi_select",
+      "question": "How was Wood Sorrel applied medicinally? Select all that apply",
+      "options": [
+        "Infused in water or boiled in milk as a drink",
+        "Made into a syrup from the juice",
+        "Applied as a poultice soaked in juice",
+        "Burned and inhaled as smoke",
+        "Ground into a powder and swallowed dry"
+      ],
+      "correct": [
+        "Infused in water or boiled in milk as a drink",
+        "Made into a syrup from the juice",
+        "Applied as a poultice soaked in juice"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_16",
+      "type": "multiple_choice",
+      "question": "What is the life cycle of Wood Sorrel?",
+      "options": [
+        "Perennial — returns every year",
+        "Annual — completes in one year",
+        "Biennial — takes two years to complete",
+        "Ephemeral — only lasts a few weeks"
+      ],
+      "correct": "Perennial — returns every year",
+      "bonus": false
+    },
+    {
+      "id": "q_17",
+      "type": "multiple_choice",
+      "question": "What soil or habitat conditions does Wood Sorrel prefer?",
+      "options": [
+        "Moist, shaded, acidic soils under tree canopy",
+        "Dry chalky soils in open sunlight",
+        "Waterlogged clay soils near rivers",
+        "Sandy well drained soils on south facing slopes"
+      ],
+      "correct": "Moist, shaded, acidic soils under tree canopy",
+      "bonus": false
+    },
+    {
+      "id": "q_18",
+      "type": "multiple_choice",
       "question": "What plant family does Wood Sorrel belong to?",
       "options": [
         "Oxalidaceae",
@@ -190,7 +258,8 @@
       "bonus": true
     },
     {
-      "id": "q_16",
+      "id": "q_19",
+      "type": "multiple_choice",
       "question": "What is the origin of the name Oxalis?",
       "options": [
         "From the Greek word oxys meaning sour or sharp",
@@ -202,7 +271,8 @@
       "bonus": true
     },
     {
-      "id": "q_17",
+      "id": "q_20",
+      "type": "multiple_choice",
       "question": "What is the meaning of acetosella in the botanical name?",
       "options": [
         "Little vinegar plant in Latin",
@@ -211,30 +281,6 @@
         "Forest floor creeper in Latin"
       ],
       "correct": "Little vinegar plant in Latin",
-      "bonus": true
-    },
-    {
-      "id": "q_18",
-      "question": "What is the life cycle of Wood Sorrel?",
-      "options": [
-        "Perennial — returns every year",
-        "Annual — completes in one year",
-        "Biennial — takes two years to complete",
-        "Ephemeral — only lasts a few weeks"
-      ],
-      "correct": "Perennial — returns every year",
-      "bonus": true
-    },
-    {
-      "id": "q_19",
-      "question": "What soil or habitat conditions does Wood Sorrel prefer?",
-      "options": [
-        "Moist, shaded, acidic soils under tree canopy",
-        "Dry chalky soils in open sunlight",
-        "Waterlogged clay soils near rivers",
-        "Sandy well drained soils on south facing slopes"
-      ],
-      "correct": "Moist, shaded, acidic soils under tree canopy",
       "bonus": true
     }
   ]
