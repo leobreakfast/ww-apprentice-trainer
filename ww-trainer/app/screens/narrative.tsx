@@ -1,21 +1,21 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
 
-export default function HomeScreen() {
+export default function NarrativeScreen() {
   const router = useRouter();
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Woodland Ways</Text>
-      <Text style={styles.subtitle}>Instructor Trainer</Text>
+      <Text style={styles.scene}>🌿</Text>
+      <Text style={styles.narrative}>
+        Your customers are gathered and ready to head out. Before you go, 
+        you need to cover the basics of foraging law and safe practice.
+      </Text>
       <TouchableOpacity 
         style={styles.button}
-        onPress={() => {
-          console.log('button pressed');
-          router.push('/screens/modules');
-}}
+        onPress={() => router.push('/screens/question')}
       >
-        <Text style={styles.buttonText}>Start Training</Text>
+        <Text style={styles.buttonText}>Continue</Text>
       </TouchableOpacity>
     </View>
   );
@@ -25,29 +25,30 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1a1a0e',
+    padding: 32,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#c8a96e',
-    marginBottom: 8,
+  scene: {
+    fontSize: 64,
+    marginBottom: 32,
   },
-  subtitle: {
-    fontSize: 16,
-    color: '#8a9a6e',
-    marginBottom: 60,
+  narrative: {
+    fontSize: 18,
+    color: '#c8a96e',
+    textAlign: 'center',
+    lineHeight: 28,
+    marginBottom: 48,
   },
   button: {
     backgroundColor: '#4a7c59',
-    paddingVertical: 16,
+    paddingVertical: 14,
     paddingHorizontal: 48,
     borderRadius: 8,
   },
   buttonText: {
     color: '#ffffff',
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 'bold',
   },
 });

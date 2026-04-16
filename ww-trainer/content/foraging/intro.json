@@ -1,0 +1,23 @@
+{
+  "section": "intro",
+  "title": "Foraging Introduction",
+  "narrative": "Your customers are gathered and ready to head out. Before you go, you need to cover the basics of foraging law and safe practice.",
+  
+  
+  
+  "questions": [
+    {
+      "id": "intro_01",
+      "question": "All wild plants in the UK are protected under which act?",
+      "options": [
+        "The Wildlife and Countryside Act (1981)",
+        "The Environmental Protection Act (1990)",
+        "The Natural Environment Act (2021)",
+        "The Countryside and Rights of Way Act (2000)"
+      ],
+      "correct": "The Wildlife and Countryside Act (1981)",
+      "bonus": false,
+      "fact": "This act protects all wild plants from being uprooted without the landowner's permission."
+    }
+  ]
+}
