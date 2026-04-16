@@ -3,14 +3,24 @@ import { useRouter, useLocalSearchParams } from 'expo-router';
 
 export default function ResultsScreen() {
   const router = useRouter();
-  const { score, total } = useLocalSearchParams();
+  const { score, bonusScore, total, totalBonus } = useLocalSearchParams();
 
   return (
     <View style={styles.container}>
       <Text style={styles.emoji}>🌿</Text>
       <Text style={styles.title}>Session Complete</Text>
-      <Text style={styles.score}>{score} / {total}</Text>
-      <Text style={styles.subtitle}>Foraging — Spark — Introduction</Text>
+
+      <View style={styles.scoreBox}>
+        <Text style={styles.scoreLabel}>Main Score</Text>
+        <Text style={styles.score}>{score} / {total}</Text>
+      </View>
+
+      <View style={styles.bonusBox}>
+        <Text style={styles.bonusLabel}>Bonus Questions</Text>
+        <Text style={styles.bonusScore}>{bonusScore} / {totalBonus}</Text>
+      </View>
+
+      <Text style={styles.subtitle}>Foraging — Spark</Text>
 
       <TouchableOpacity 
         style={styles.button}
@@ -45,13 +55,47 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: 'bold',
     color: '#c8a96e',
+    marginBottom: 32,
+  },
+  scoreBox: {
+    backgroundColor: '#2a2a1a',
+    borderRadius: 12,
+    padding: 24,
+    alignItems: 'center',
+    width: '100%',
     marginBottom: 16,
+    borderLeftWidth: 4,
+    borderLeftColor: '#4a7c59',
+  },
+  scoreLabel: {
+    fontSize: 14,
+    color: '#8a9a6e',
+    marginBottom: 8,
   },
   score: {
-    fontSize: 64,
+    fontSize: 48,
     fontWeight: 'bold',
     color: '#ffffff',
+  },
+  bonusBox: {
+    backgroundColor: '#2a2a1a',
+    borderRadius: 12,
+    padding: 24,
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: 32,
+    borderLeftWidth: 4,
+    borderLeftColor: '#c8a96e',
+  },
+  bonusLabel: {
+    fontSize: 14,
+    color: '#8a9a6e',
     marginBottom: 8,
+  },
+  bonusScore: {
+    fontSize: 48,
+    fontWeight: 'bold',
+    color: '#c8a96e',
   },
   subtitle: {
     fontSize: 14,

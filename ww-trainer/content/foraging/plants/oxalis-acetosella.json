@@ -1,0 +1,241 @@
+{
+  "id": "oxalis_acetosella",
+  "common_name": "Wood Sorrel",
+  "botanical_name": "Oxalis acetosella",
+  "images": [
+    "oxalis-acetosella_01.jpg"
+  ],
+  "narrative": "You spot something low to the ground near the base of a mossy oak...",
+  "interesting_fact": "Wood Sorrel was historically known as Alleluia because it flowers around Easter.",
+  "questions": [
+    {
+      "id": "q_01",
+      "type": "image_identification",
+      "question": "What plant is this?",
+      "options": [
+        "Wood Sorrel",
+        "White Clover",
+        "Ground Ivy",
+        "Chickweed"
+      ],
+      "correct": "Wood Sorrel",
+      "bonus": false
+    },
+    {
+      "id": "q_02",
+      "question": "What is the common name of this plant?",
+      "options": [
+        "Wood Sorrel",
+        "Wood Sage",
+        "Wood Anemone",
+        "Wood Avens"
+      ],
+      "correct": "Wood Sorrel",
+      "bonus": false
+    },
+    {
+      "id": "q_03",
+      "question": "Does Wood Sorrel have any other common names?",
+      "options": [
+        "Alleluia and Cuckoo's Meat",
+        "Jack by the Hedge and Stinky Bob",
+        "Sticky Willy and Cleavers",
+        "It has no other common names"
+      ],
+      "correct": "Alleluia and Cuckoo's Meat",
+      "bonus": false
+    },
+    {
+      "id": "q_04",
+      "question": "What is the botanical name of Wood Sorrel?",
+      "options": [
+        "Oxalis acetosella",
+        "Stellaria media",
+        "Glechoma hederacea",
+        "Trifolium repens"
+      ],
+      "correct": "Oxalis acetosella",
+      "bonus": false
+    },
+    {
+      "id": "q_05",
+      "question": "Where is Wood Sorrel typically found?",
+      "options": [
+        "Shaded woodland floors near mossy banks and tree roots",
+        "Open meadows and grassland",
+        "Rocky coastal paths",
+        "Riverbanks and wetland margins"
+      ],
+      "correct": "Shaded woodland floors near mossy banks and tree roots",
+      "bonus": false
+    },
+    {
+      "id": "q_06",
+      "question": "Name a key identifying feature of Wood Sorrel",
+      "options": [
+        "Heart shaped leaves in groups of three that fold down at night",
+        "Round leaves with a white stripe down the centre",
+        "Serrated oval leaves with a strong minty smell",
+        "Thick waxy leaves with purple undersides"
+      ],
+      "correct": "Heart shaped leaves in groups of three that fold down at night",
+      "bonus": false
+    },
+    {
+      "id": "q_07",
+      "question": "What is Wood Sorrel used for?",
+      "options": [
+        "Edible raw as a trail nibble, added to salads for a lemony flavour",
+        "Dried and used as a tea for headaches",
+        "Applied to skin to treat rashes",
+        "Used as a natural rope or cordage material"
+      ],
+      "correct": "Edible raw as a trail nibble, added to salads for a lemony flavour",
+      "bonus": false
+    },
+    {
+      "id": "q_08",
+      "question": "What does Wood Sorrel taste like?",
+      "options": [
+        "Sharp and lemony due to oxalic acid",
+        "Bitter and earthy",
+        "Sweet and mild like apple",
+        "Peppery and strong"
+      ],
+      "correct": "Sharp and lemony due to oxalic acid",
+      "bonus": false
+    },
+    {
+      "id": "q_09",
+      "question": "What potential risk does Wood Sorrel have?",
+      "options": [
+        "High in oxalic acid — not suitable in large quantities",
+        "Can cause skin irritation on contact",
+        "Toxic to humans even in small amounts",
+        "No risks — completely safe in any quantity"
+      ],
+      "correct": "High in oxalic acid — not suitable in large quantities",
+      "bonus": false
+    },
+    {
+      "id": "q_10",
+      "question": "Which species could Wood Sorrel be confused with?",
+      "options": [
+        "White Clover (Trifolium repens)",
+        "Ground Ivy (Glechoma hederacea)",
+        "Chickweed (Stellaria media)",
+        "Nettles (Urtica dioica)"
+      ],
+      "correct": "White Clover (Trifolium repens)",
+      "bonus": false
+    },
+    {
+      "id": "q_11",
+      "question": "When does Wood Sorrel flower?",
+      "options": [
+        "April to June",
+        "July to September",
+        "February to March",
+        "October to November"
+      ],
+      "correct": "April to June",
+      "bonus": false
+    },
+    {
+      "id": "q_12",
+      "question": "What colour are the flowers of Wood Sorrel?",
+      "options": [
+        "White with lilac or pink veins",
+        "Bright yellow",
+        "Deep purple",
+        "Pale blue"
+      ],
+      "correct": "White with lilac or pink veins",
+      "bonus": false
+    },
+    {
+      "id": "q_13",
+      "question": "What time of year is Wood Sorrel most commonly found?",
+      "options": [
+        "March through to October",
+        "June through to August only",
+        "November through to February",
+        "Year round in all conditions"
+      ],
+      "correct": "March through to October",
+      "bonus": false
+    },
+    {
+      "id": "q_14",
+      "question": "Is Wood Sorrel native to the UK?",
+      "options": [
+        "Yes",
+        "No",
+        "Only in Scotland and Wales",
+        "It was introduced in the 19th century"
+      ],
+      "correct": "Yes",
+      "bonus": false
+    },
+    {
+      "id": "q_15",
+      "question": "What plant family does Wood Sorrel belong to?",
+      "options": [
+        "Oxalidaceae",
+        "Rosaceae",
+        "Asteraceae",
+        "Lamiaceae"
+      ],
+      "correct": "Oxalidaceae",
+      "bonus": true
+    },
+    {
+      "id": "q_16",
+      "question": "What is the origin of the name Oxalis?",
+      "options": [
+        "From the Greek word oxys meaning sour or sharp",
+        "Named after the botanist Johann Oxal",
+        "From the Latin word for forest floor",
+        "From the Celtic word for three leaves"
+      ],
+      "correct": "From the Greek word oxys meaning sour or sharp",
+      "bonus": true
+    },
+    {
+      "id": "q_17",
+      "question": "What is the meaning of acetosella in the botanical name?",
+      "options": [
+        "Little vinegar plant in Latin",
+        "Small woodland herb in Greek",
+        "Sour leaved plant in Celtic",
+        "Forest floor creeper in Latin"
+      ],
+      "correct": "Little vinegar plant in Latin",
+      "bonus": true
+    },
+    {
+      "id": "q_18",
+      "question": "What is the life cycle of Wood Sorrel?",
+      "options": [
+        "Perennial — returns every year",
+        "Annual — completes in one year",
+        "Biennial — takes two years to complete",
+        "Ephemeral — only lasts a few weeks"
+      ],
+      "correct": "Perennial — returns every year",
+      "bonus": true
+    },
+    {
+      "id": "q_19",
+      "question": "What soil or habitat conditions does Wood Sorrel prefer?",
+      "options": [
+        "Moist, shaded, acidic soils under tree canopy",
+        "Dry chalky soils in open sunlight",
+        "Waterlogged clay soils near rivers",
+        "Sandy well drained soils on south facing slopes"
+      ],
+      "correct": "Moist, shaded, acidic soils under tree canopy",
+      "bonus": true
+    }
+  ]
+}
