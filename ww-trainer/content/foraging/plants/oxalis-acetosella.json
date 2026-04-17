@@ -21,19 +21,7 @@
       "correct": "Wood Sorrel",
       "bonus": false
     },
-    {
-      "id": "q_02",
-      "type": "multiple_choice",
-      "question": "What is the common name of this plant?",
-      "options": [
-        "Wood Sorrel",
-        "Wood Sage",
-        "Wood Anemone",
-        "Wood Avens"
-      ],
-      "correct": "Wood Sorrel",
-      "bonus": false
-    },
+    
     {
       "id": "q_03",
       "type": "multiple_choice",

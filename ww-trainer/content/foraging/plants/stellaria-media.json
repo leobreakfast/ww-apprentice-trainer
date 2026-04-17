@@ -21,19 +21,7 @@
       "correct": "Chickweed",
       "bonus": false
     },
-    {
-      "id": "q_02",
-      "type": "multiple_choice",
-      "question": "What is the common name of this plant?",
-      "options": [
-        "Chickweed",
-        "Chickory",
-        "Chickgrass",
-        "Chickling"
-      ],
-      "correct": "Chickweed",
-      "bonus": false
-    },
+ 
     {
       "id": "q_03",
       "type": "multiple_choice",

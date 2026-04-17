@@ -1,72 +1,102 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-export interface ModuleProgress {
-  spark: {
-    completed: boolean;
-    completionCount: number;
-    lastScore: number;
-    lastBonusScore: number;
-    lastPlayed: string | null;
-  };
-  ember: {
-    completed: boolean;
-    completionCount: number;
-    lastScore: number;
-    lastBonusScore: number;
-    lastPlayed: string | null;
-  };
-  flame: {
-    completed: boolean;
-    completionCount: number;
-    lastScore: number;
-    lastBonusScore: number;
-    lastPlayed: string | null;
-  };
+export interface PlantProgress {
+  perfectCompletions: number;
+  currentStreak: number;
 }
 
-const DEFAULT_LEVEL = {
-  completed: false,
-  completionCount: 0,
-  lastScore: 0,
-  lastBonusScore: 0,
-  lastPlayed: null,
+export interface ModuleProgress {
+  plants: { [plantId: string]: PlantProgress };
+  forage: PlantProgress;
+  sparkUnlocked: boolean;
+  emberUnlocked: boolean;
+  flameUnlocked: boolean;
+  fullForageCompleted: boolean;
+}
+
+const DEFAULT_PLANT: PlantProgress = {
+  perfectCompletions: 0,
+  currentStreak: 0,
 };
 
 const DEFAULT_PROGRESS: ModuleProgress = {
-  spark: { ...DEFAULT_LEVEL },
-  ember: { ...DEFAULT_LEVEL },
-  flame: { ...DEFAULT_LEVEL },
+  plants: {},
+  forage: { perfectCompletions: 0, currentStreak: 0 },
+  sparkUnlocked: true,
+  emberUnlocked: false,
+  flameUnlocked: false,
+  fullForageCompleted: false,
 };
 
 export async function getModuleProgress(moduleId: string): Promise<ModuleProgress> {
   try {
     const data = await AsyncStorage.getItem(`progress_${moduleId}`);
-    return data ? JSON.parse(data) : DEFAULT_PROGRESS;
+    if (!data) return { ...DEFAULT_PROGRESS, plants: {} };
+    const parsed = JSON.parse(data);
+    return {
+      ...DEFAULT_PROGRESS,
+      ...parsed,
+      plants: parsed.plants || {},
+    };
   } catch {
+    return { ...DEFAULT_PROGRESS, plants: {} };
+  }
+}
+
+export async function savePlantResult(
+  moduleId: string,
+  plantId: string,
+  perfect: boolean
+): Promise<ModuleProgress> {
+  try {
+    const progress = await getModuleProgress(moduleId);
+    const plant = progress.plants[plantId] || { ...DEFAULT_PLANT };
+
+    if (perfect) {
+      plant.perfectCompletions += 1;
+      plant.currentStreak += 1;
+    } else {
+      plant.currentStreak = 0;
+    }
+
+    progress.plants[plantId] = plant;
+
+    // check if ember should unlock
+    // all plants must have 2+ perfect completions
+    const allPlantIds = ['oxalis_acetosella', 'galium_aparine', 'glechoma_hederacea', 'stellaria_media', 'urtica_dioica'];
+    const allPerfect = allPlantIds.every(id =>
+      (progress.plants[id]?.perfectCompletions ?? 0) >= 2
+    );
+
+    if (allPerfect || progress.fullForageCompleted) {
+      progress.emberUnlocked = true;
+    }
+
+    await AsyncStorage.setItem(`progress_${moduleId}`, JSON.stringify(progress));
+    return progress;
+  } catch (error) {
+    console.error('Error saving plant result:', error);
     return DEFAULT_PROGRESS;
   }
 }
 
-export async function saveModuleProgress(
+export async function saveFullForageResult(
   moduleId: string,
-  level: 'spark' | 'ember' | 'flame',
-  score: number,
-  bonusScore: number,
-  total: number
+  perfect: boolean
 ): Promise<void> {
   try {
     const progress = await getModuleProgress(moduleId);
-    const passed = score === total;
-    progress[level] = {
-      completed: passed || progress[level].completed,
-      completionCount: passed ? progress[level].completionCount + 1 : progress[level].completionCount,
-      lastScore: score,
-      lastBonusScore: bonusScore,
-      lastPlayed: new Date().toISOString(),
-    };
+    if (perfect) {
+      progress.forage.perfectCompletions += 1;
+      progress.forage.currentStreak += 1;
+      progress.fullForageCompleted = true;
+      progress.emberUnlocked = true;
+    } else {
+      progress.forage.currentStreak = 0;
+    }
     await AsyncStorage.setItem(`progress_${moduleId}`, JSON.stringify(progress));
   } catch (error) {
-    console.error('Error saving progress:', error);
+    console.error('Error saving forage result:', error);
   }
 }
 

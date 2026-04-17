@@ -21,19 +21,7 @@
       "correct": "Ground Ivy",
       "bonus": false
     },
-    {
-      "id": "q_02",
-      "type": "multiple_choice",
-      "question": "What is the common name of this plant?",
-      "options": [
-        "Ground Ivy",
-        "Ground Elder",
-        "Ground Nut",
-        "Ground Moss"
-      ],
-      "correct": "Ground Ivy",
-      "bonus": false
-    },
+    
     {
       "id": "q_03",
       "type": "multiple_choice",

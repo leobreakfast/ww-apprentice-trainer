@@ -12,8 +12,8 @@ export default function ModulesScreen() {
         style={styles.module}
         onPress={() => router.push('/screens/foraging')}
       >
-        <Text style={styles.moduleName}>Foraging</Text>
-        <Text style={styles.moduleStatus}>⚡ Not yet started</Text>
+        <Text style={styles.moduleName}>Foraging 🌿</Text>
+
       </TouchableOpacity>
 
       <TouchableOpacity style={[styles.module, styles.locked]}>

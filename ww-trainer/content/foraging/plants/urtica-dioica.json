@@ -21,19 +21,7 @@
       "correct": "Stinging Nettle",
       "bonus": false
     },
-    {
-      "id": "q_02",
-      "type": "multiple_choice",
-      "question": "What is the common name of this plant?",
-      "options": [
-        "Stinging Nettle",
-        "Stinging Ivy",
-        "Stinging Dock",
-        "Stinging Wort"
-      ],
-      "correct": "Stinging Nettle",
-      "bonus": false
-    },
+   
     {
       "id": "q_03",
       "type": "multiple_choice",

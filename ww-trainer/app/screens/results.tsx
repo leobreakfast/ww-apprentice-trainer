@@ -1,34 +1,24 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
-import { useEffect } from 'react';
-import { saveModuleProgress } from '../../utils/progress';
 
 export default function ResultsScreen() {
   const router = useRouter();
-  const { score, bonusScore, total, totalBonus } = useLocalSearchParams();
+  const { score, bonusScore, total, totalBonus, mode, plantId } = useLocalSearchParams();
 
   const scoreNum = Number(score);
   const totalNum = Number(total);
   const passed = scoreNum === totalNum;
-
-  useEffect(() => {
-    saveModuleProgress(
-      'foraging',
-      'spark',
-      scoreNum,
-      Number(bonusScore),
-      totalNum
-    );
-  }, []);
+  const isPlantMode = mode === 'plant';
 
   return (
     <View style={styles.container}>
       <Text style={styles.emoji}>{passed ? '🔥' : '🌱'}</Text>
-      <Text style={styles.title}>{passed ? 'Excellent!' : 'Keep Practising'}</Text>
+      <Text style={styles.title}>{passed ? 'Perfect!' : 'Keep Practising'}</Text>
 
       <View style={styles.scoreBox}>
-        <Text style={styles.scoreLabel}>Main Score</Text>
+        <Text style={styles.scoreLabel}>Score</Text>
         <Text style={styles.score}>{score} / {total}</Text>
+        {passed && <Text style={styles.passText}>100% ✓</Text>}
       </View>
 
       <View style={styles.bonusBox}>
@@ -36,25 +26,30 @@ export default function ResultsScreen() {
         <Text style={styles.bonusScore}>{bonusScore} / {totalBonus}</Text>
       </View>
 
-      <Text style={styles.subtitle}>Foraging — Spark</Text>
-
-      {passed && (
-        <Text style={styles.passText}>✓ Spark level complete!</Text>
-      )}
+      <Text style={styles.subtitle}>
+        {isPlantMode ? 'Plant Practice' : 'Full Customer Forage'} — Spark
+      </Text>
 
       <TouchableOpacity
         style={styles.button}
         onPress={() => router.push('/screens/foraging')}
       >
-        <Text style={styles.buttonText}>Try Again</Text>
+        <Text style={styles.buttonText}>
+          {isPlantMode ? 'Back to Plants' : 'Back to Foraging'}
+        </Text>
       </TouchableOpacity>
 
-      <TouchableOpacity
-        style={styles.buttonSecondary}
-        onPress={() => router.push('/screens/modules')}
-      >
-        <Text style={styles.buttonSecondaryText}>Back to Modules</Text>
-      </TouchableOpacity>
+      {isPlantMode && (
+        <TouchableOpacity
+          style={styles.buttonSecondary}
+          onPress={() => router.push({
+            pathname: '/screens/question',
+            params: { mode: 'plant', plantId }
+          })}
+        >
+          <Text style={styles.buttonSecondaryText}>Try Again</Text>
+        </TouchableOpacity>
+      )}
     </View>
   );
 }
@@ -97,6 +92,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#ffffff',
   },
+  passText: {
+    fontSize: 16,
+    color: '#4a7c59',
+    marginTop: 8,
+    fontWeight: 'bold',
+  },
   bonusBox: {
     backgroundColor: '#2a2a1a',
     borderRadius: 12,
@@ -120,13 +121,7 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 14,
     color: '#8a9a6e',
-    marginBottom: 8,
-  },
-  passText: {
-    fontSize: 16,
-    color: '#4a7c59',
     marginBottom: 32,
-    fontWeight: 'bold',
   },
   button: {
     backgroundColor: '#4a7c59',

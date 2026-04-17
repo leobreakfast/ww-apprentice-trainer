@@ -69,3 +69,24 @@ Where it's typically found, what it grows near
 - Section on "questions to ask yourself about any plant"
 - Possibly after the law intro section
 - Meta-skill — building automatic mental checklist
+
+## Plant List — To Add
+
+### Plants
+- Stellaria media (Chickweed) ✓
+- Oxalis acetosella (Wood Sorrel) ✓
+- Galium aparine (Cleavers) ✓
+- Glechoma hederacea (Ground Ivy) ✓
+- Urtica dioica (Stinging Nettle) ✓
+- Plantago major (Broadleaf Plantain)
+- Rumex acetosa (Common Sorrel)
+
+- ...
+
+### Trees
+- Quercus robur (English Oak)
+- Quercus patrea (Sesile Oak)
+- Betula pendula (Silver Birch)
+- Fagus sylvatica (Beech)
+- Sambucus nigra (Elder)
+- ...

@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
-import { useRouter, useLocalSearchParams } from 'expo-router';
-import { useState, useMemo } from 'react';
-import { saveSessionProgress, clearSessionProgress } from '../../utils/progress';
+import { BackHandler } from 'react-native';
+import { useRouter, useLocalSearchParams, useFocusEffect } from 'expo-router';
+import { useState, useMemo, useCallback } from 'react';
+import { saveSessionProgress, clearSessionProgress, savePlantResult, saveFullForageResult } from '../../utils/progress';
 import plantImages from '../../content/plantImages';
 import introData from '../../content/foraging/intro.json';
 import oxalisData from '../../content/foraging/plants/oxalis-acetosella.json';
@@ -9,6 +10,7 @@ import galiumData from '../../content/foraging/plants/galium-aparine.json';
 import glechomaData from '../../content/foraging/plants/glechoma-hederacea.json';
 import stellariaData from '../../content/foraging/plants/stellaria-media.json';
 import urticaData from '../../content/foraging/plants/urtica-dioica.json';
+
 
 function shuffleArray(array: string[]) {
   return [...array].sort(() => Math.random() - 0.5);
@@ -42,30 +44,47 @@ function buildPlantQuestions(plant: any) {
 export default function QuestionScreen() {
   const router = useRouter();
 
-  const params = useLocalSearchParams();
-  const continueSession = params.continueSession === 'true';
-  const savedCompletedIds: string[] = continueSession
-    ? JSON.parse(params.completedPlantIds as string)
-    : [];
-  const savedScore = continueSession ? Number(params.savedScore) : 0;
-  const savedBonusScore = continueSession ? Number(params.savedBonusScore) : 0;
+const params = useLocalSearchParams();
+const continueSession = params.continueSession === 'true';
+const mode = (params.mode as string) || 'forage';
+const plantId = (params.plantId as string) || '';
+const savedCompletedIds: string[] = continueSession
+  ? JSON.parse(params.completedPlantIds as string)
+  : [];
+const savedScore = continueSession ? Number(params.savedScore) : 0;
+const savedBonusScore = continueSession ? Number(params.savedBonusScore) : 0;
 
-  const ALL_QUESTIONS = useMemo(() => {
-    const remaining = continueSession
-      ? shufflePlants(PLANTS.filter((p: any) => !savedCompletedIds.includes(p.id)))
-      : shufflePlants(PLANTS);
+const ALL_QUESTIONS = useMemo(() => {
+  if (mode === 'intro') {
+    return introData.questions.map((q: any) => ({
+      ...q,
+      options: shuffleArray(q.options),
+      section: 'intro'
+    }));
+  }
 
-    return continueSession
-      ? remaining.flatMap((plant: any) => buildPlantQuestions(plant))
-      : [
-          ...introData.questions.map((q: any) => ({
-            ...q,
-            options: shuffleArray(q.options),
-            section: 'intro'
-          })),
-          ...remaining.flatMap((plant: any) => buildPlantQuestions(plant)),
-        ];
-  }, []);
+  if (mode === 'plant') {
+    const plant = PLANTS.find((p: any) => p.id === plantId);
+    if (!plant) return [];
+    return buildPlantQuestions(plant);
+  }
+  // ... rest stays the same
+
+  const remaining = continueSession
+    ? shufflePlants(PLANTS.filter((p: any) => !savedCompletedIds.includes(p.id)))
+    : shufflePlants(PLANTS);
+
+  return continueSession
+    ? remaining.flatMap((plant: any) => buildPlantQuestions(plant))
+    : [
+        ...introData.questions.map((q: any) => ({
+          ...q,
+          options: shuffleArray(q.options),
+          section: 'intro'
+        })),
+        ...remaining.flatMap((plant: any) => buildPlantQuestions(plant)),
+      ];
+}, []);
 
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
@@ -74,6 +93,13 @@ export default function QuestionScreen() {
   const [score, setScore] = useState(savedScore);
   const [bonusScore, setBonusScore] = useState(savedBonusScore);
   const [completedPlants, setCompletedPlants] = useState<string[]>(savedCompletedIds);
+
+useFocusEffect(
+  useCallback(() => {
+    const subscription = BackHandler.addEventListener('hardwareBackPress', () => true);
+    return () => subscription.remove();
+  }, [])
+);
 
   const item = ALL_QUESTIONS[current];
 
@@ -110,18 +136,28 @@ export default function QuestionScreen() {
   function handleNext() {
     const nextIndex = current + 1;
 
-    if (nextIndex >= ALL_QUESTIONS.length) {
-      clearSessionProgress('foraging');
-      const totalQuestions = ALL_QUESTIONS.filter(q =>
-        q.type !== 'plant_narrative' && q.type !== 'bonus_narrative' && !q.bonus
-      ).length;
-      const totalBonus = ALL_QUESTIONS.filter(q => q.bonus).length;
-      router.push({
-        pathname: '/screens/results',
-        params: { score, bonusScore, total: totalQuestions, totalBonus }
-      });
-      return;
-    }
+if (nextIndex >= ALL_QUESTIONS.length) {
+  const totalQuestions = ALL_QUESTIONS.filter(q =>
+    q.type !== 'plant_narrative' && q.type !== 'bonus_narrative' && !q.bonus
+  ).length;
+  const totalBonus = ALL_QUESTIONS.filter(q => q.bonus).length;
+  const perfect = score === totalQuestions;
+
+if (mode === 'plant') {
+  savePlantResult('foraging', plantId, perfect);
+} else if (mode === 'intro') {
+  savePlantResult('foraging', 'foraging_intro', perfect);
+} else {
+  clearSessionProgress('foraging');
+  saveFullForageResult('foraging', perfect);
+}
+
+  router.push({
+    pathname: '/screens/results',
+    params: { score, bonusScore, total: totalQuestions, totalBonus, mode, plantId }
+  });
+  return;
+}
 
     const nextItem = ALL_QUESTIONS[nextIndex];
 
