@@ -74,31 +74,22 @@
       "bonus": false
     },
     {
-      "id": "q_06",
-      "type": "multiple_choice",
-      "question": "Name a key identifying feature of Chickweed",
-      "options": [
-        "Small oval leaves growing in opposite pairs on slender stems",
-        "Heart shaped leaves in groups of three",
-        "Narrow leaves in whorls of six to eight",
-        "Kidney shaped leaves with toothed edges"
-      ],
-      "correct": "Small oval leaves growing in opposite pairs on slender stems",
-      "bonus": false
-    },
-    {
-      "id": "q_07",
-      "type": "multiple_choice",
-      "question": "Name another key identifying feature of Chickweed",
-      "options": [
-        "A single line of hairs running up one side of the stem, alternating sides at each node",
-        "Square stems covered in hooked hairs",
-        "Strong minty smell when crushed",
-        "Milky white sap when the stem is broken"
-      ],
-      "correct": "A single line of hairs running up one side of the stem, alternating sides at each node",
-      "bonus": false
-    },
+  "id": "q_06",
+  "type": "multi_select",
+  "question": "Select all key identifying features of Chickweed",
+  "options": [
+    "Small oval leaves growing in opposite pairs on slender stems",
+    "A single line of hairs running up one side of the stem alternating sides at each node",
+    "Strong minty smell when crushed",
+    "Tiny hooked hairs that cling to clothing",
+    "Kidney shaped leaves with rounded toothed edges"
+  ],
+  "correct": [
+    "Small oval leaves growing in opposite pairs on slender stems",
+    "A single line of hairs running up one side of the stem alternating sides at each node"
+  ],
+  "bonus": false
+},
     {
       "id": "q_08",
       "type": "multi_select",

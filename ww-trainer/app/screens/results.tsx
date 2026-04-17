@@ -1,14 +1,30 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
+import { useEffect } from 'react';
+import { saveModuleProgress } from '../../utils/progress';
 
 export default function ResultsScreen() {
   const router = useRouter();
   const { score, bonusScore, total, totalBonus } = useLocalSearchParams();
 
+  const scoreNum = Number(score);
+  const totalNum = Number(total);
+  const passed = scoreNum === totalNum;
+
+  useEffect(() => {
+    saveModuleProgress(
+      'foraging',
+      'spark',
+      scoreNum,
+      Number(bonusScore),
+      totalNum
+    );
+  }, []);
+
   return (
     <View style={styles.container}>
-      <Text style={styles.emoji}>🌿</Text>
-      <Text style={styles.title}>Session Complete</Text>
+      <Text style={styles.emoji}>{passed ? '🔥' : '🌱'}</Text>
+      <Text style={styles.title}>{passed ? 'Excellent!' : 'Keep Practising'}</Text>
 
       <View style={styles.scoreBox}>
         <Text style={styles.scoreLabel}>Main Score</Text>
@@ -22,14 +38,18 @@ export default function ResultsScreen() {
 
       <Text style={styles.subtitle}>Foraging — Spark</Text>
 
-      <TouchableOpacity 
+      {passed && (
+        <Text style={styles.passText}>✓ Spark level complete!</Text>
+      )}
+
+      <TouchableOpacity
         style={styles.button}
         onPress={() => router.push('/screens/foraging')}
       >
         <Text style={styles.buttonText}>Try Again</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity 
+      <TouchableOpacity
         style={styles.buttonSecondary}
         onPress={() => router.push('/screens/modules')}
       >
@@ -83,7 +103,7 @@ const styles = StyleSheet.create({
     padding: 24,
     alignItems: 'center',
     width: '100%',
-    marginBottom: 32,
+    marginBottom: 16,
     borderLeftWidth: 4,
     borderLeftColor: '#c8a96e',
   },
@@ -100,7 +120,13 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 14,
     color: '#8a9a6e',
-    marginBottom: 48,
+    marginBottom: 8,
+  },
+  passText: {
+    fontSize: 16,
+    color: '#4a7c59',
+    marginBottom: 32,
+    fontWeight: 'bold',
   },
   button: {
     backgroundColor: '#4a7c59',

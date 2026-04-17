@@ -65,12 +65,12 @@
       "type": "multiple_choice",
       "question": "Where is Wood Sorrel typically found?",
       "options": [
-        "Shaded woodland floors near mossy banks and tree roots",
+        "Shaded woodland",
         "Open meadows and grassland",
         "Rocky coastal paths",
         "Riverbanks and wetland margins"
       ],
-      "correct": "Shaded woodland floors near mossy banks and tree roots",
+      "correct": "Shaded woodland",
       "bonus": false
     },
     {
@@ -111,7 +111,7 @@
       "options": [
         "Sharp and lemony due to oxalic acid",
         "Bitter and earthy",
-        "Sweet and mild like apple",
+        "Fresh and grassy",
         "Peppery and strong"
       ],
       "correct": "Sharp and lemony due to oxalic acid",

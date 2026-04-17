@@ -61,31 +61,22 @@
       "bonus": false
     },
     {
-      "id": "q_05",
-      "type": "multiple_choice",
-      "question": "Name a key identifying feature of Stinging Nettle",
-      "options": [
-        "Dark green serrated leaves covered in hollow stinging hairs on square stems",
-        "Heart shaped leaves in groups of three",
-        "Kidney shaped leaves with rounded toothed edges",
-        "Narrow leaves in whorls of six to eight"
-      ],
-      "correct": "Dark green serrated leaves covered in hollow stinging hairs on square stems",
-      "bonus": false
-    },
-    {
-      "id": "q_06",
-      "type": "multiple_choice",
-      "question": "Name another key identifying feature of Stinging Nettle",
-      "options": [
-        "Leaves grow in opposite pairs and droop slightly at the tips",
-        "Leaves fold down at night and in bright sunlight",
-        "Single line of hairs running up one side of the stem",
-        "Strong minty smell when crushed"
-      ],
-      "correct": "Leaves grow in opposite pairs and droop slightly at the tips",
-      "bonus": false
-    },
+  "id": "q_05",
+  "type": "multi_select",
+  "question": "Select all key identifying features of Stinging Nettle",
+  "options": [
+    "Dark green serrated leaves covered in hollow stinging hairs on square stems",
+    "Leaves grow in opposite pairs and droop slightly at the tips",
+    "Strong minty smell when crushed",
+    "Tiny hooked hairs that cling to clothing",
+    "Heart shaped leaves in groups of three"
+  ],
+  "correct": [
+    "Dark green serrated leaves covered in hollow stinging hairs on square stems",
+    "Leaves grow in opposite pairs and droop slightly at the tips"
+  ],
+  "bonus": false
+},
     {
       "id": "q_07",
       "type": "multi_select",

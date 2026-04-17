@@ -1,22 +1,39 @@
 import { StyleSheet, Text, View, TouchableOpacity, Modal } from 'react-native';
 import { useRouter } from 'expo-router';
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import { getSessionProgress, SessionProgress, clearSessionProgress } from '../../utils/progress';
+import { useFocusEffect } from 'expo-router';
+
 
 export default function ForagingScreen() {
   const router = useRouter();
   const [modalVisible, setModalVisible] = useState(false);
+  const [savedSession, setSavedSession] = useState<SessionProgress | null>(null);
+
+useFocusEffect(
+  useCallback(() => {
+    getSessionProgress('foraging').then(session => {
+      setSavedSession(session);
+    });
+  }, [])
+);
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Foraging</Text>
       <Text style={styles.subtitle}>Choose your level</Text>
 
-      <TouchableOpacity 
+      <TouchableOpacity
         style={styles.level}
         onPress={() => setModalVisible(true)}
       >
         <Text style={styles.levelName}>⚡ Spark</Text>
         <Text style={styles.levelDesc}>Multiple choice — Recognition</Text>
+        {savedSession && (
+          <Text style={styles.savedText}>
+            ● {savedSession.completedPlantIds.length} of 5 plants saved
+          </Text>
+        )}
       </TouchableOpacity>
 
       <TouchableOpacity style={[styles.level, styles.locked]}>
@@ -36,18 +53,57 @@ export default function ForagingScreen() {
       >
         <View style={styles.modalOverlay}>
           <View style={styles.modalBox}>
-            <Text style={styles.modalTitle}>Ready to begin?</Text>
-            <Text style={styles.modalText}>Spark level — Foraging</Text>
-            <TouchableOpacity 
-              style={styles.modalButton}
-              onPress={() => {
-                setModalVisible(false);
-                router.push('/screens/narrative');
-              }}
-            >
-              <Text style={styles.modalButtonText}>Yes, let's go</Text>
-            </TouchableOpacity>
-            <TouchableOpacity 
+            {savedSession && savedSession.completedPlantIds.length > 0 ? (
+              <>
+                <Text style={styles.modalTitle}>Continue session?</Text>
+                <Text style={styles.modalText}>
+                  {savedSession.completedPlantIds.length} of 5 plants completed
+                </Text>
+                <TouchableOpacity
+                  style={styles.modalButton}
+                  onPress={() => {
+                    setModalVisible(false);
+                    router.push({
+                      pathname: '/screens/question',
+                      params: {
+                        continueSession: 'true',
+                        completedPlantIds: JSON.stringify(savedSession.completedPlantIds),
+                        savedScore: savedSession.currentScore,
+                        savedBonusScore: savedSession.currentBonusScore,
+                      }
+                    });
+                  }}
+                >
+                  <Text style={styles.modalButtonText}>Continue</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.modalButtonSecondary}
+                  onPress={() => {
+                    setModalVisible(false);
+                    router.push('/screens/narrative');
+                  }}
+                >
+                  <Text style={styles.modalButtonSecondaryText}>Start Fresh</Text>
+                </TouchableOpacity>
+              </>
+            ) : (
+              <>
+                <Text style={styles.modalTitle}>Ready to begin?</Text>
+                <Text style={styles.modalText}>Spark level — Foraging</Text>
+                <TouchableOpacity
+                  style={styles.modalButton}
+                  onPress={async () => {
+  setModalVisible(false);
+  await clearSessionProgress('foraging');
+  setSavedSession(null);
+  router.push('/screens/narrative');
+}}
+                >
+                  <Text style={styles.modalButtonText}>Yes, let's go</Text>
+                </TouchableOpacity>
+              </>
+            )}
+            <TouchableOpacity
               style={styles.modalCancel}
               onPress={() => setModalVisible(false)}
             >
@@ -99,6 +155,11 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#8a9a6e',
   },
+  savedText: {
+    fontSize: 12,
+    color: '#4a7c59',
+    marginTop: 6,
+  },
   modalOverlay: {
     flex: 1,
     backgroundColor: 'rgba(0,0,0,0.7)',
@@ -136,6 +197,21 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  modalButtonSecondary: {
+    backgroundColor: '#2a3a2a',
+    paddingVertical: 14,
+    paddingHorizontal: 40,
+    borderRadius: 8,
+    marginBottom: 12,
+    width: '100%',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#4a7c59',
+  },
+  modalButtonSecondaryText: {
+    color: '#8a9a6e',
+    fontSize: 16,
   },
   modalCancel: {
     paddingVertical: 10,

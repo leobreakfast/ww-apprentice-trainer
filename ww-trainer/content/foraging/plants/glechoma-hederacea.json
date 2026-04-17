@@ -73,32 +73,23 @@
       "correct": "Woodland edges, hedgerows and shaded moist ground",
       "bonus": false
     },
-    {
-      "id": "q_06",
-      "type": "multiple_choice",
-      "question": "Name a key identifying feature of Ground Ivy",
-      "options": [
-        "Kidney shaped leaves with rounded toothed edges on square stems",
-        "Heart shaped leaves in groups of three",
-        "Narrow leaves in whorls of six to eight",
-        "Large oval leaves with serrated edges and stinging hairs"
-      ],
-      "correct": "Kidney shaped leaves with rounded toothed edges on square stems",
-      "bonus": false
-    },
-    {
-      "id": "q_07",
-      "type": "multiple_choice",
-      "question": "Name another key identifying feature of Ground Ivy",
-      "options": [
-        "Strong minty and aromatic smell when the leaves are crushed",
-        "Leaves fold down at night and in bright sunlight",
-        "Tiny hooked hairs that cling to clothing",
-        "Milky white sap when the stem is broken"
-      ],
-      "correct": "Strong minty and aromatic smell when the leaves are crushed",
-      "bonus": false
-    },
+{
+  "id": "q_06",
+  "type": "multi_select",
+  "question": "Select all key identifying features of Ground Ivy",
+  "options": [
+    "Kidney shaped leaves with rounded toothed edges on square stems",
+    "Strong minty and aromatic smell when the leaves are crushed",
+    "Tiny hooked hairs that cling to clothing",
+    "Heart shaped leaves in groups of three",
+    "Milky white sap when the stem is broken"
+  ],
+  "correct": [
+    "Kidney shaped leaves with rounded toothed edges on square stems",
+    "Strong minty and aromatic smell when the leaves are crushed"
+  ],
+  "bonus": false
+},
     {
       "id": "q_08",
       "type": "multi_select",
@@ -209,12 +200,12 @@
         "Coughs and congestion",
         "Colds and fevers",
         "Broken bones",
-        "Eye inflammation"
+        "Athlete's foot"
       ],
       "correct": [
         "Coughs and congestion",
-        "Colds and fevers",
-        "Eye inflammation"
+        "Colds and fevers"
+        
       ],
       "bonus": false
     },

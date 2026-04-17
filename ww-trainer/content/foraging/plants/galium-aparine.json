@@ -41,7 +41,6 @@
       "options": [
         "Goosegrass",
         "Sticky Willy",
-        "Robin-run-the-hedge",
         "Stinging Weed",
         "Mudwort"
       ],
@@ -78,32 +77,24 @@
       "correct": "Hedgerows, woodland edges and disturbed ground",
       "bonus": false
     },
-    {
-      "id": "q_06",
-      "type": "multiple_choice",
-      "question": "Name a key identifying feature of Cleavers",
-      "options": [
-        "Square stems covered in tiny hooked hairs that cling to clothing",
-        "Round hollow stems with a strong smell",
-        "Thick waxy leaves with purple undersides",
-        "Heart shaped leaves in groups of three"
-      ],
-      "correct": "Square stems covered in tiny hooked hairs that cling to clothing",
-      "bonus": false
-    },
-    {
-      "id": "q_07",
-      "type": "multiple_choice",
-      "question": "Name another key identifying feature of Cleavers",
-      "options": [
-        "Narrow leaves arranged in whorls of 6-8 around the stem",
-        "Broad oval leaves with serrated edges",
-        "Large palmate leaves with five lobes",
-        "Tiny round leaves growing in opposite pairs"
-      ],
-      "correct": "Narrow leaves arranged in whorls of 6-8 around the stem",
-      "bonus": false
-    },
+{
+  "id": "q_06",
+  "type": "multi_select",
+  "question": "Select all key identifying features of Cleavers",
+  "options": [
+    "Square stems covered in tiny hooked hairs that cling to clothing",
+    "Narrow leaves arranged in whorls of 6-8 around the stem",
+    "Heart shaped leaves in groups of three",
+    "Strong minty smell when crushed",
+    "Milky white sap when the stem is broken"
+  ],
+  "correct": [
+    "Square stems covered in tiny hooked hairs that cling to clothing",
+    "Narrow leaves arranged in whorls of 6-8 around the stem"
+  ],
+  "bonus": false
+},
+    
     {
       "id": "q_08",
       "type": "multi_select",
