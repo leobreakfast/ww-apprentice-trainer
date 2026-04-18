@@ -32,7 +32,10 @@ export default function ResultsScreen() {
 
       <TouchableOpacity
         style={styles.button}
-        onPress={() => router.push('/screens/foraging')}
+        onPress={() => router.push({
+  pathname: '/screens/foraging',
+  params: { view: 'spark' }
+})}
       >
         <Text style={styles.buttonText}>
           {isPlantMode ? 'Back to Plants' : 'Back to Foraging'}

@@ -21,19 +21,7 @@
       "correct": "Cleavers",
       "bonus": false
     },
-    {
-      "id": "q_02",
-      "type": "multiple_choice",
-      "question": "What is the common name of this plant?",
-      "options": [
-        "Cleavers",
-        "Clovers",
-        "Creepers",
-        "Crawlers"
-      ],
-      "correct": "Cleavers",
-      "bonus": false
-    },
+  
     {
       "id": "q_03",
       "type": "multi_select",
@@ -46,8 +34,8 @@
       ],
       "correct": [
         "Goosegrass",
-        "Sticky Willy",
-        "Robin-run-the-hedge"
+        "Sticky Willy"
+        
       ],
       "bonus": false
     },

@@ -72,21 +72,51 @@ Where it's typically found, what it grows near
 
 ## Plant List — To Add
 
+## Plant & Tree List — To Add
+
 ### Plants
 - Stellaria media (Chickweed) ✓
 - Oxalis acetosella (Wood Sorrel) ✓
-- Galium aparine (Cleavers) ✓
+- Galium aparine (Cleavers / Goosegrass) ✓
 - Glechoma hederacea (Ground Ivy) ✓
 - Urtica dioica (Stinging Nettle) ✓
-- Plantago major (Broadleaf Plantain)
-- Rumex acetosa (Common Sorrel)
+- Plantago major (Broadleaf Plantain) -
+- Matricaria discoidea (Pineapple Weed) -
+- Carex pendula (Pendulous Sedge) -
+- Rumex obtusifolius (Broad-leaved Dock) -
+- Arctium lappa (Greater Burdock) - 
+- Arctium minus (Lesser Burdock) -
+- Impatiens glandulifera (Himalayan Balsam) - 
+- Chenopodium album (Fat Hen) - 
+- Rubus fruticosus (Bramble / Blackberry) - 
+- Allium ursinum (Wild Garlic / Ramsons) - 
+- Anemone nemorosa (Wood Anemone) - 
+- Geranium robertianum (Herb Robert) - 
+- Artemisia vulgaris (Mugwort) - 
+- Arum Maculatum (Lords and Ladies) - 
+- Nasturtium officinale (Watercress) 
 
-- ...
-
-### Trees
-- Quercus robur (English Oak)
-- Quercus patrea (Sesile Oak)
+### Trees and Shrubs
+- Quercus robur (English / Pedunculate Oak)
+- Quercus petraea (Sessile Oak)
 - Betula pendula (Silver Birch)
 - Fagus sylvatica (Beech)
 - Sambucus nigra (Elder)
-- ...
+- Alnus glutinosa (Alder)
+- Tilia cordata (Small-leaved Lime)
+- Tilia platyphyllos (Large-leaved Lime)
+- Pinus sylvestris (Scots Pine)
+- Picea abies (Norway Spruce)
+- Picea sitchensis (Sitka Spruce)
+- Thuja plicata (Western Red Cedar)
+- Taxus baccata (Yew)
+- Ilex aquifolium (Holly)
+- Populus nigra (Black Poplar)
+- Populus tremula (Aspen)
+- Corylus avellana (Hazel)
+- Crataegus monogyna (Hawthorn)
+- Prunus spinosa (Blackthorn)
+- Prunus avium (Wild Cherry)
+- Sorbus aucuparia (Rowan)
+- Fraxinus excelsior (Ash)
+- Acer campestre (Field Maple)

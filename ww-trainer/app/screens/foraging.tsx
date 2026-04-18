@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Modal } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useRouter, useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useState, useCallback } from 'react';
-import { useFocusEffect } from 'expo-router';
 import { getModuleProgress, ModuleProgress, clearSessionProgress, getSessionProgress, SessionProgress } from '../../utils/progress';
 
 const INTRO = { id: 'foraging_intro', name: 'Foraging Law & Intro', botanical: '' };
@@ -19,7 +18,11 @@ export default function ForagingScreen() {
   const [progress, setProgress] = useState<ModuleProgress | null>(null);
   const [savedSession, setSavedSession] = useState<SessionProgress | null>(null);
   const [forageModal, setForageModal] = useState(false);
-  const [view, setView] = useState<'levels' | 'spark'>('levels');
+  const params = useLocalSearchParams();
+  const [view, setView] = useState<'levels' | 'spark'>(
+    params.view === 'spark' ? 'spark' : 'levels'
+);
+  
 
   useFocusEffect(
     useCallback(() => {
@@ -33,45 +36,45 @@ export default function ForagingScreen() {
     return progress.plants[plantId] || { perfectCompletions: 0, currentStreak: 0 };
   }
 
-  if (view === 'levels') {
-    return (
-      <View style={styles.container}>
-        <ScrollView contentContainerStyle={styles.content}>
-          <Text style={styles.title}>Foraging</Text>
-          <Text style={styles.subtitle}>Choose your level</Text>
-
-          <TouchableOpacity
-            style={styles.card}
-            onPress={() => setView('spark')}
-          >
-            <Text style={styles.cardTitle}>💫 Spark</Text>
-            <Text style={styles.cardDesc}>Multiple choice — Recognition</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={[styles.card, styles.locked]}>
-            <Text style={styles.cardTitle}>💥 Ember</Text>
-            <Text style={styles.cardDesc}>
-              {progress?.emberUnlocked
-                ? 'Unlocked — coming soon'
-                : '🔒 Complete Spark to unlock'}
-            </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={[styles.card, styles.locked]}>
-            <Text style={styles.cardTitle}>🔥 Flame</Text>
-            <Text style={styles.cardDesc}>🔒 Complete Ember to unlock</Text>
-          </TouchableOpacity>
-        </ScrollView>
-      </View>
-    );
-  }
+if (view === 'levels') {
+  return (
+    <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.content}>
+        <TouchableOpacity onPress={() => router.push('/screens/modules')}>
+          <Text style={styles.backText}>← Back</Text>
+        </TouchableOpacity>
+        <Text style={styles.title}>Foraging</Text>
+        <Text style={styles.subtitle}>Choose your level</Text>
+        <TouchableOpacity
+          style={styles.card}
+          onPress={() => setView('spark')}
+        >
+          <Text style={styles.cardTitle}>💫 Spark</Text>
+          <Text style={styles.cardDesc}>Multiple choice — Recognition</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.card, styles.locked]}>
+          <Text style={styles.cardTitle}>💥 Ember</Text>
+          <Text style={styles.cardDesc}>
+            {progress?.emberUnlocked
+              ? 'Unlocked — coming soon'
+              : '🔒 Complete Spark to unlock'}
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.card, styles.locked]}>
+          <Text style={styles.cardTitle}>🔥 Flame</Text>
+          <Text style={styles.cardDesc}>🔒 Complete Ember to unlock</Text>
+        </TouchableOpacity>
+      </ScrollView>
+    </View>
+  );
+}
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <TouchableOpacity onPress={() => setView('levels')}>
         <Text style={styles.backText}>← Back</Text>
       </TouchableOpacity>
-      <Text style={styles.title}>Spark</Text>
+      <Text style={styles.title}>Foraging - Spark</Text>
       <Text style={styles.subtitle}>Score 100% on each lesson twice, or the full forage once, to unlock Ember.
                                 
 
@@ -380,9 +383,10 @@ const styles = StyleSheet.create({
     color: '#8a9a6e',
     fontSize: 14,
   },
-  backText: {
+  
+backText: {
   color: '#8a9a6e',
   fontSize: 16,
-  marginBottom: 24,
 },
+  
 });

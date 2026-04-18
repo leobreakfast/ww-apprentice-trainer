@@ -283,7 +283,10 @@ if (mode === 'plant') {
 
       <TouchableOpacity
         style={styles.exitButton}
-        onPress={() => router.push('/screens/foraging')}
+        onPress={() => router.push({
+          pathname: '/screens/foraging',
+          params: { view: 'spark' }
+})}
       >
         <Text style={styles.exitText}>← Exit</Text>
       </TouchableOpacity>
@@ -392,6 +395,7 @@ const styles = StyleSheet.create({
   },
   exitButton: {
     paddingVertical: 14,
+    paddingBottom: 32,
     width: '100%',
     alignItems: 'center',
     marginTop: 'auto',
