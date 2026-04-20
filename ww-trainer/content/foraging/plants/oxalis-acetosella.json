@@ -8,19 +8,19 @@
   "narrative": "You spot something low to the ground near the base of a mossy oak...",
   "interesting_fact": "Wood Sorrel was historically known as Alleluia because it flowers around Easter.",
   "questions": [
-    {
-      "id": "q_01",
-      "type": "image_identification",
-      "question": "What plant is this?",
-      "options": [
-        "Wood Sorrel",
-        "White Clover",
-        "Ground Ivy",
-        "Chickweed"
-      ],
-      "correct": "Wood Sorrel",
-      "bonus": false
-    },
+{
+  "id": "q_01",
+  "type": "image_carousel",
+  "question": "Which of these plants is Wood Sorrel?",
+  "options": [
+    { "label": "Wood Sorrel", "image": "oxalis-acetosella_01.jpg" },
+    { "label": "White Clover", "image": "trifolium-repens_01.jpg" },
+    { "label": "Ground Ivy", "image": "glechoma-hederacea_01.jpg" },
+    { "label": "Chickweed", "image": "stelaria-media_01.jpg" }
+  ],
+  "correct": "Wood Sorrel",
+  "bonus": false
+},
     
     {
       "id": "q_03",

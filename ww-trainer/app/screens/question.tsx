@@ -10,6 +10,7 @@ import galiumData from '../../content/foraging/plants/galium-aparine.json';
 import glechomaData from '../../content/foraging/plants/glechoma-hederacea.json';
 import stellariaData from '../../content/foraging/plants/stellaria-media.json';
 import urticaData from '../../content/foraging/plants/urtica-dioica.json';
+import ImageCarousel from '../../components/ImageCarousel';
 
 
 function shuffleArray(array: string[]) {
@@ -200,6 +201,7 @@ if (mode === 'plant') {
   }
 
   const isImageQuestion = item.type === 'image_identification';
+  const isCarouselQuestion = item.type === 'image_carousel';
 
   return (
     <View style={styles.container}>
@@ -212,26 +214,41 @@ if (mode === 'plant') {
       </Text>
 
       {isImageQuestion && (
-        <Image
-          source={plantImages[item.plant?.images[0]]}
-          style={styles.plantImage}
-          resizeMode="cover"
-        />
-      )}
+  <Image
+    source={plantImages[item.plant?.images[0]]}
+    style={styles.plantImage}
+    resizeMode="cover"
+  />
+)}
 
-      <Text style={styles.question}>{item.question}</Text>
+{isCarouselQuestion && (
+  <ImageCarousel
+    question={item.question}
+    options={item.options}
+    correct={item.correct}
+    onAnswer={(label, correct) => {
+      if (selected) return;
+      setSelected(label);
+      if (correct) setScore(s => s + 1);
+    }}
+  />
+)}
 
-      {item.type === 'multi_select' && (
-        <Text style={styles.questionType}>Select all that apply</Text>
-      )}
-      {item.type !== 'multi_select' &&
+      {!isCarouselQuestion && (
+  <Text style={styles.question}>{item.question}</Text>
+)}
+
+      {!isCarouselQuestion && item.type === 'multi_select' && (
+  <Text style={styles.questionType}>Select all that apply</Text>
+)}
+{!isCarouselQuestion && item.type !== 'multi_select' &&
         item.type !== 'image_identification' &&
         item.type !== 'plant_narrative' &&
         item.type !== 'bonus_narrative' && (
           <Text style={styles.questionType}>Select one answer</Text>
         )}
 
-      {item.options.map((option: string) => {
+      {!isCarouselQuestion && item.options.map((option: string) => {
         let style = styles.option;
         if (item.type === 'multi_select') {
           if (submitted) {
@@ -259,13 +276,13 @@ if (mode === 'plant') {
         );
       })}
 
-      {item.type === 'multi_select' && !submitted && multiSelected.length > 0 && (
+     {!isCarouselQuestion && item.type === 'multi_select' && !submitted && multiSelected.length > 0 && (
         <TouchableOpacity style={styles.next} onPress={handleSubmitMulti}>
           <Text style={styles.nextText}>Submit</Text>
         </TouchableOpacity>
       )}
 
-      {item.type === 'multi_select' && submitted && (
+      {!isCarouselQuestion && item.type === 'multi_select' && submitted && (
         <TouchableOpacity style={styles.next} onPress={handleNext}>
           <Text style={styles.nextText}>
             {current + 1 < ALL_QUESTIONS.length ? 'Next' : 'See Results'}
@@ -273,7 +290,15 @@ if (mode === 'plant') {
         </TouchableOpacity>
       )}
 
-      {item.type !== 'multi_select' && selected && (
+      {!isCarouselQuestion && item.type !== 'multi_select' && selected && (
+        <TouchableOpacity style={styles.next} onPress={handleNext}>
+          <Text style={styles.nextText}>
+            {current + 1 < ALL_QUESTIONS.length ? 'Next' : 'See Results'}
+          </Text>
+        </TouchableOpacity>
+      )}
+
+      {isCarouselQuestion && selected && (
         <TouchableOpacity style={styles.next} onPress={handleNext}>
           <Text style={styles.nextText}>
             {current + 1 < ALL_QUESTIONS.length ? 'Next' : 'See Results'}
