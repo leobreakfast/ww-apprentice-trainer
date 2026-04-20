@@ -6,11 +6,12 @@ import { getModuleProgress, ModuleProgress, clearSessionProgress, getSessionProg
 const INTRO = { id: 'foraging_intro', name: 'Foraging Law & Intro', botanical: '' };
 
 const PLANTS = [
-  { id: 'oxalis_acetosella', name: 'Wood Sorrel', botanical: 'Oxalis acetosella' },
+  { id: 'plantago_major', name: 'Broadleaf Plantain', botanical: 'Plantago major' },
+  { id: 'stellaria_media', name: 'Chickweed', botanical: 'Stellaria media' },
   { id: 'galium_aparine', name: 'Cleavers', botanical: 'Galium aparine' },
   { id: 'glechoma_hederacea', name: 'Ground Ivy', botanical: 'Glechoma hederacea' },
-  { id: 'stellaria_media', name: 'Chickweed', botanical: 'Stellaria media' },
   { id: 'urtica_dioica', name: 'Stinging Nettle', botanical: 'Urtica dioica' },
+  { id: 'oxalis_acetosella', name: 'Wood Sorrel', botanical: 'Oxalis acetosella' },
 ];
 
 export default function ForagingScreen() {
