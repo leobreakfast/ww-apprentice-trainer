@@ -1,0 +1,19 @@
+{
+  "modules": [
+    {
+      "id": "foraging",
+      "title": "Foraging",
+      "description": "Plant identification, edibility, and safe foraging practice",
+      "intro": "content/foraging/intro.json",
+      "plants": [
+        "content/foraging/plants/oxalis-acetosella.json",
+        "content/foraging/plants/galium-aparine.json",
+        "content/foraging/plants/glechoma-hederacea.json",
+        "content/foraging/plants/stellaria-media.json",
+        "content/foraging/plants/urtica-dioica.json",
+        "content/foraging/plants/plantago-major.json"
+      ],
+      "trees": []
+    }
+  ]
+}

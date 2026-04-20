@@ -10,18 +10,29 @@
   "questions": [
     {
       "id": "q_01",
-      "type": "image_identification",
-      "question": "What plant is this?",
+      "type": "image_carousel",
+      "question": "Which of these plants is Ground Ivy?",
       "options": [
-        "Ground Ivy",
-        "Wood Sorrel",
-        "Cleavers",
-        "Chickweed"
+        {
+          "label": "Ground Ivy",
+          "image": "glechoma-hederacea_01.jpg"
+        },
+        {
+          "label": "Cleavers",
+          "image": "galium-aparine_01.jpg"
+        },
+        {
+          "label": "Wood Sorrel",
+          "image": "oxalis-acetosella_01.jpg"
+        },
+        {
+          "label": "Stinging Nettle",
+          "image": "urtica-dioica_01.jpg"
+        }
       ],
       "correct": "Ground Ivy",
       "bonus": false
     },
-    
     {
       "id": "q_03",
       "type": "multiple_choice",
@@ -61,23 +72,23 @@
       "correct": "Woodland edges, hedgerows and shaded moist ground",
       "bonus": false
     },
-{
-  "id": "q_06",
-  "type": "multi_select",
-  "question": "Select all key identifying features of Ground Ivy",
-  "options": [
-    "Kidney shaped leaves with rounded toothed edges on square stems",
-    "Strong minty and aromatic smell when the leaves are crushed",
-    "Tiny hooked hairs that cling to clothing",
-    "Heart shaped leaves in groups of three",
-    "Milky white sap when the stem is broken"
-  ],
-  "correct": [
-    "Kidney shaped leaves with rounded toothed edges on square stems",
-    "Strong minty and aromatic smell when the leaves are crushed"
-  ],
-  "bonus": false
-},
+    {
+      "id": "q_06",
+      "type": "multi_select",
+      "question": "Select all key identifying features of Ground Ivy",
+      "options": [
+        "Kidney shaped leaves with rounded toothed edges on square stems",
+        "Strong minty and aromatic smell when the leaves are crushed",
+        "Tiny hooked hairs that cling to clothing",
+        "Heart shaped leaves in groups of three",
+        "Milky white sap when the stem is broken"
+      ],
+      "correct": [
+        "Kidney shaped leaves with rounded toothed edges on square stems",
+        "Strong minty and aromatic smell when the leaves are crushed"
+      ],
+      "bonus": false
+    },
     {
       "id": "q_08",
       "type": "multi_select",
@@ -193,7 +204,6 @@
       "correct": [
         "Coughs and congestion",
         "Colds and fevers"
-        
       ],
       "bonus": false
     },
@@ -274,6 +284,20 @@
       ],
       "correct": "Ivy-like — referring to its creeping habit",
       "bonus": true
+    }
+  ],
+  "carousel_distractors": [
+    {
+      "label": "Cleavers",
+      "image": "galium-aparine_01.jpg"
+    },
+    {
+      "label": "Wood Sorrel",
+      "image": "oxalis-acetosella_01.jpg"
+    },
+    {
+      "label": "Stinging Nettle",
+      "image": "urtica-dioica_01.jpg"
     }
   ]
 }

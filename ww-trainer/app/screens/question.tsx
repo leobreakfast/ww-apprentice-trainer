@@ -5,11 +5,7 @@ import { useState, useMemo, useCallback } from 'react';
 import { saveSessionProgress, clearSessionProgress, savePlantResult, saveFullForageResult } from '../../utils/progress';
 import plantImages from '../../content/plantImages';
 import introData from '../../content/foraging/intro.json';
-import oxalisData from '../../content/foraging/plants/oxalis-acetosella.json';
-import galiumData from '../../content/foraging/plants/galium-aparine.json';
-import glechomaData from '../../content/foraging/plants/glechoma-hederacea.json';
-import stellariaData from '../../content/foraging/plants/stellaria-media.json';
-import urticaData from '../../content/foraging/plants/urtica-dioica.json';
+import * as PlantFiles from '../../content/foraging/plants/index';
 import ImageCarousel from '../../components/ImageCarousel';
 
 
@@ -21,7 +17,7 @@ function shufflePlants(plants: any[]) {
   return [...plants].sort(() => Math.random() - 0.5);
 }
 
-const PLANTS = [oxalisData, galiumData, glechomaData, stellariaData, urticaData];
+const PLANTS = Object.values(PlantFiles);
 
 function buildPlantQuestions(plant: any) {
   return [

@@ -93,7 +93,8 @@ export default function ImageCarousel({ question, options, correct, onAnswer }: 
           />
         ))}
       </View>
-      {!selected && <Text style={styles.swipeHint}>← swipe to browse →</Text>}
+
+      
 
       {!selected && (
         <TouchableOpacity style={styles.selectButton} onPress={handleSelect}>
@@ -116,7 +117,7 @@ export default function ImageCarousel({ question, options, correct, onAnswer }: 
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 0,
   },
   question: {
     fontSize: 20,

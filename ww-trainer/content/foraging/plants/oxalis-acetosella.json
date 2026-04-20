@@ -8,20 +8,31 @@
   "narrative": "You spot something low to the ground near the base of a mossy oak...",
   "interesting_fact": "Wood Sorrel was historically known as Alleluia because it flowers around Easter.",
   "questions": [
-{
-  "id": "q_01",
-  "type": "image_carousel",
-  "question": "Which of these plants is Wood Sorrel?",
-  "options": [
-    { "label": "Wood Sorrel", "image": "oxalis-acetosella_01.jpg" },
-    { "label": "White Clover", "image": "trifolium-repens_01.jpg" },
-    { "label": "Ground Ivy", "image": "glechoma-hederacea_01.jpg" },
-    { "label": "Chickweed", "image": "stelaria-media_01.jpg" }
-  ],
-  "correct": "Wood Sorrel",
-  "bonus": false
-},
-    
+    {
+      "id": "q_01",
+      "type": "image_carousel",
+      "question": "Which of these plants is Wood Sorrel?",
+      "options": [
+        {
+          "label": "Wood Sorrel",
+          "image": "oxalis-acetosella_01.jpg"
+        },
+        {
+          "label": "White Clover",
+          "image": "trifolium-repens_01.jpg"
+        },
+        {
+          "label": "Ground Ivy",
+          "image": "glechoma-hederacea_01.jpg"
+        },
+        {
+          "label": "Chickweed",
+          "image": "stellaria-media_01.jpg"
+        }
+      ],
+      "correct": "Wood Sorrel",
+      "bonus": false
+    },
     {
       "id": "q_03",
       "type": "multiple_choice",
@@ -171,23 +182,23 @@
       "bonus": false
     },
     {
-  "id": "q_14",
-  "type": "multi_select",
-  "question": "What was Wood Sorrel historically used to treat? Select all that apply",
-  "options": [
-    "Fever",
-    "Scurvy",
-    "Mouth ulcers",
-    "Skin rashes",
-    "Broken bones"
-  ],
-  "correct": [
-    "Fever",
-    "Scurvy",
-    "Mouth ulcers"
-  ],
-  "bonus": false
-},
+      "id": "q_14",
+      "type": "multi_select",
+      "question": "What was Wood Sorrel historically used to treat? Select all that apply",
+      "options": [
+        "Fever",
+        "Scurvy",
+        "Mouth ulcers",
+        "Skin rashes",
+        "Broken bones"
+      ],
+      "correct": [
+        "Fever",
+        "Scurvy",
+        "Mouth ulcers"
+      ],
+      "bonus": false
+    },
     {
       "id": "q_15",
       "type": "multi_select",
@@ -270,6 +281,20 @@
       ],
       "correct": "Little vinegar plant in Latin",
       "bonus": true
+    }
+  ],
+  "carousel_distractors": [
+    {
+      "label": "White Clover",
+      "image": "trifolium-repens_01.jpg"
+    },
+    {
+      "label": "Ground Ivy",
+      "image": "glechoma-hederacea_01.jpg"
+    },
+    {
+      "label": "Chickweed",
+      "image": "stellaria-media_01.jpg"
     }
   ]
 }

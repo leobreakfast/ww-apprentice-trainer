@@ -3,25 +3,36 @@
   "common_name": "Chickweed",
   "botanical_name": "Stellaria media",
   "images": [
-    "stelaria-media_01.jpg"
+    "stellaria-media_01.jpg"
   ],
   "narrative": "You notice a dense low growing mat of bright green leaves sprawling across the woodland floor...",
   "interesting_fact": "Seeds were historically fed to caged birds — that is where the common name Chickweed comes from.",
   "questions": [
     {
       "id": "q_01",
-      "type": "image_identification",
-      "question": "What plant is this?",
+      "type": "image_carousel",
+      "question": "Which of these plants is Chickweed?",
       "options": [
-        "Chickweed",
-        "Ground Ivy",
-        "Wood Sorrel",
-        "Cleavers"
+        {
+          "label": "Chickweed",
+          "image": "stellaria-media_01.jpg"
+        },
+        {
+          "label": "Wood Sorrel",
+          "image": "oxalis-acetosella_01.jpg"
+        },
+        {
+          "label": "Ground Ivy",
+          "image": "glechoma-hederacea_01.jpg"
+        },
+        {
+          "label": "Cleavers",
+          "image": "galium-aparine_01.jpg"
+        }
       ],
       "correct": "Chickweed",
       "bonus": false
     },
- 
     {
       "id": "q_03",
       "type": "multiple_choice",
@@ -62,22 +73,22 @@
       "bonus": false
     },
     {
-  "id": "q_06",
-  "type": "multi_select",
-  "question": "Select all key identifying features of Chickweed",
-  "options": [
-    "Small oval leaves growing in opposite pairs on slender stems",
-    "A single line of hairs running up one side of the stem alternating sides at each node",
-    "Strong minty smell when crushed",
-    "Tiny hooked hairs that cling to clothing",
-    "Kidney shaped leaves with rounded toothed edges"
-  ],
-  "correct": [
-    "Small oval leaves growing in opposite pairs on slender stems",
-    "A single line of hairs running up one side of the stem alternating sides at each node"
-  ],
-  "bonus": false
-},
+      "id": "q_06",
+      "type": "multi_select",
+      "question": "Select all key identifying features of Chickweed",
+      "options": [
+        "Small oval leaves growing in opposite pairs on slender stems",
+        "A single line of hairs running up one side of the stem alternating sides at each node",
+        "Strong minty smell when crushed",
+        "Tiny hooked hairs that cling to clothing",
+        "Kidney shaped leaves with rounded toothed edges"
+      ],
+      "correct": [
+        "Small oval leaves growing in opposite pairs on slender stems",
+        "A single line of hairs running up one side of the stem alternating sides at each node"
+      ],
+      "bonus": false
+    },
     {
       "id": "q_08",
       "type": "multi_select",
@@ -271,6 +282,20 @@
       ],
       "correct": "Middle or intermediate in Latin — referring to its medium size",
       "bonus": true
+    }
+  ],
+  "carousel_distractors": [
+    {
+      "label": "Wood Sorrel",
+      "image": "oxalis-acetosella_01.jpg"
+    },
+    {
+      "label": "Ground Ivy",
+      "image": "glechoma-hederacea_01.jpg"
+    },
+    {
+      "label": "Cleavers",
+      "image": "galium-aparine_01.jpg"
     }
   ]
 }

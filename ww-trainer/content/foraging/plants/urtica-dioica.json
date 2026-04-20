@@ -10,18 +10,29 @@
   "questions": [
     {
       "id": "q_01",
-      "type": "image_identification",
-      "question": "What plant is this?",
+      "type": "image_carousel",
+      "question": "Which of these plants is Stinging Nettle?",
       "options": [
-        "Stinging Nettle",
-        "Dead Nettle",
-        "Ground Ivy",
-        "Cleavers"
+        {
+          "label": "Stinging Nettle",
+          "image": "urtica-dioica_01.jpg"
+        },
+        {
+          "label": "Cleavers",
+          "image": "galium-aparine_01.jpg"
+        },
+        {
+          "label": "Chickweed",
+          "image": "stellaria-media_01.jpg"
+        },
+        {
+          "label": "Ground Ivy",
+          "image": "glechoma-hederacea_01.jpg"
+        }
       ],
       "correct": "Stinging Nettle",
       "bonus": false
     },
-   
     {
       "id": "q_03",
       "type": "multiple_choice",
@@ -49,22 +60,22 @@
       "bonus": false
     },
     {
-  "id": "q_05",
-  "type": "multi_select",
-  "question": "Select all key identifying features of Stinging Nettle",
-  "options": [
-    "Dark green serrated leaves covered in hollow stinging hairs on square stems",
-    "Leaves grow in opposite pairs and droop slightly at the tips",
-    "Strong minty smell when crushed",
-    "Tiny hooked hairs that cling to clothing",
-    "Heart shaped leaves in groups of three"
-  ],
-  "correct": [
-    "Dark green serrated leaves covered in hollow stinging hairs on square stems",
-    "Leaves grow in opposite pairs and droop slightly at the tips"
-  ],
-  "bonus": false
-},
+      "id": "q_05",
+      "type": "multi_select",
+      "question": "Select all key identifying features of Stinging Nettle",
+      "options": [
+        "Dark green serrated leaves covered in hollow stinging hairs on square stems",
+        "Leaves grow in opposite pairs and droop slightly at the tips",
+        "Strong minty smell when crushed",
+        "Tiny hooked hairs that cling to clothing",
+        "Heart shaped leaves in groups of three"
+      ],
+      "correct": [
+        "Dark green serrated leaves covered in hollow stinging hairs on square stems",
+        "Leaves grow in opposite pairs and droop slightly at the tips"
+      ],
+      "bonus": false
+    },
     {
       "id": "q_07",
       "type": "multi_select",
@@ -306,8 +317,7 @@
       ],
       "correct": "Flogged themselves with nettles to keep warm in the cold climate",
       "bonus": true
-    }
-    ,
+    },
     {
       "id": "q_24",
       "type": "multiple_choice",
@@ -320,6 +330,20 @@
       ],
       "correct": "Crushing destroys the stinging hairs and releases juice containing anti-inflammatory compounds including quercetin",
       "bonus": true
+    }
+  ],
+  "carousel_distractors": [
+    {
+      "label": "Cleavers",
+      "image": "galium-aparine_01.jpg"
+    },
+    {
+      "label": "Chickweed",
+      "image": "stellaria-media_01.jpg"
+    },
+    {
+      "label": "Ground Ivy",
+      "image": "glechoma-hederacea_01.jpg"
     }
   ]
 }

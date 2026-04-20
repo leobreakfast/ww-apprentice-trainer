@@ -10,18 +10,29 @@
   "questions": [
     {
       "id": "q_01",
-      "type": "image_identification",
-      "question": "What plant is this?",
+      "type": "image_carousel",
+      "question": "Which of these plants is Cleavers?",
       "options": [
-        "Cleavers",
-        "Ground Ivy",
-        "Chickweed",
-        "Wood Sorrel"
+        {
+          "label": "Cleavers",
+          "image": "galium-aparine_01.jpg"
+        },
+        {
+          "label": "Ground Ivy",
+          "image": "glechoma-hederacea_01.jpg"
+        },
+        {
+          "label": "Chickweed",
+          "image": "stellaria-media_01.jpg"
+        },
+        {
+          "label": "Wood Sorrel",
+          "image": "oxalis-acetosella_01.jpg"
+        }
       ],
       "correct": "Cleavers",
       "bonus": false
     },
-  
     {
       "id": "q_03",
       "type": "multi_select",
@@ -35,7 +46,6 @@
       "correct": [
         "Goosegrass",
         "Sticky Willy"
-        
       ],
       "bonus": false
     },
@@ -65,24 +75,23 @@
       "correct": "Hedgerows, woodland edges and disturbed ground",
       "bonus": false
     },
-{
-  "id": "q_06",
-  "type": "multi_select",
-  "question": "Select all key identifying features of Cleavers",
-  "options": [
-    "Square stems covered in tiny hooked hairs that cling to clothing",
-    "Narrow leaves arranged in whorls of 6-8 around the stem",
-    "Heart shaped leaves in groups of three",
-    "Strong minty smell when crushed",
-    "Milky white sap when the stem is broken"
-  ],
-  "correct": [
-    "Square stems covered in tiny hooked hairs that cling to clothing",
-    "Narrow leaves arranged in whorls of 6-8 around the stem"
-  ],
-  "bonus": false
-},
-    
+    {
+      "id": "q_06",
+      "type": "multi_select",
+      "question": "Select all key identifying features of Cleavers",
+      "options": [
+        "Square stems covered in tiny hooked hairs that cling to clothing",
+        "Narrow leaves arranged in whorls of 6-8 around the stem",
+        "Heart shaped leaves in groups of three",
+        "Strong minty smell when crushed",
+        "Milky white sap when the stem is broken"
+      ],
+      "correct": [
+        "Square stems covered in tiny hooked hairs that cling to clothing",
+        "Narrow leaves arranged in whorls of 6-8 around the stem"
+      ],
+      "bonus": false
+    },
     {
       "id": "q_08",
       "type": "multi_select",
@@ -284,6 +293,20 @@
       ],
       "correct": "Clinging or seizing — from Greek",
       "bonus": true
+    }
+  ],
+  "carousel_distractors": [
+    {
+      "label": "Ground Ivy",
+      "image": "glechoma-hederacea_01.jpg"
+    },
+    {
+      "label": "Chickweed",
+      "image": "stellaria-media_01.jpg"
+    },
+    {
+      "label": "Wood Sorrel",
+      "image": "oxalis-acetosella_01.jpg"
     }
   ]
 }
