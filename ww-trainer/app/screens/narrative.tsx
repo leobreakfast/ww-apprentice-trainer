@@ -6,16 +6,35 @@ export default function NarrativeScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.scene}>🌿</Text>
-      <Text style={styles.narrative}>
-        Your customers are gathered and ready to head out. Before you go, 
-        you need to cover the basics of foraging law and safe practice.
-      </Text>
-      <TouchableOpacity 
-        style={styles.button}
-        onPress={() => router.push('/screens/question')}
+      <View style={styles.content}>
+        <Text style={styles.scene}>🌿</Text>
+        <Text style={styles.narrative}>
+          Your customers are gathered and ready to head out. Before you go,
+          you need to cover the basics of foraging law and safe practice.
+        </Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => router.push('/screens/question')}
+        >
+          <Text style={styles.buttonText}>Continue</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.backButton}
+          onPress={() => router.back()}
+        >
+          <Text style={styles.backText}>← Back</Text>
+        </TouchableOpacity>
+      </View>
+
+      <TouchableOpacity
+        style={styles.exitButton}
+        onPress={() => router.push({
+          pathname: '/screens/foraging',
+          params: { view: 'spark' }
+        })}
       >
-        <Text style={styles.buttonText}>Continue</Text>
+        <Text style={styles.exitText}>← Exit</Text>
       </TouchableOpacity>
     </View>
   );
@@ -25,9 +44,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1a1a0e',
-    padding: 32,
+  },
+  content: {
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 32,
   },
   scene: {
     fontSize: 64,
@@ -51,4 +73,25 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
+  backButton: {
+    marginTop: 24,
+    paddingVertical: 10,
+  },
+  backText: {
+    color: '#8a9a6e',
+    fontSize: 16,
+  },
+  exitButton: {
+    paddingVertical: 14,
+    paddingBottom: 32,
+    width: '100%',
+    alignItems: 'center',
+    borderTopWidth: 1,
+    borderTopColor: '#2a2a1a',
+  },
+  exitText: {
+    color: '#8a9a6e',
+    fontSize: 16,
+  },
+  
 });

@@ -1,0 +1,331 @@
+{
+  "id": "arctium_lappa_minus",
+  "common_name": "Burdock — Greater / Lesser",
+  "botanical_name": "Arctium lappa / Arctium minus",
+  "carousel_correct_label": "Greater Burdock",
+  "images": [
+    "arctium-lappa_01.jpg"
+  ],
+  "narrative": "You spot a large flat rosette of enormous heart-shaped leaves at the edge of the path. The underside of the leaves is covered in a soft white wool...",
+  "interesting_fact": "The hooked burrs of Burdock directly inspired Swiss engineer George de Mestral to invent Velcro in the 1940s after finding them stuck to his dog's fur.",
+  "carousel_distractors": [
+    {
+      "label": "Foxglove",
+      "image": "digitalis-purpurea_01.jpg"
+    },
+    {
+      "label": "Dock",
+      "image": "rumex-obtusifolius_01.jpg"
+    },
+    {
+      "label": "Broadleaf Plantain",
+      "image": "plantago-major_01.jpg"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_01",
+      "type": "image_carousel",
+      "question": "Which of these plants is Greater Burdock?",
+      "options": [
+        {
+          "label": "Greater Burdock",
+          "image": "arctium-lappa_01.jpg"
+        },
+        {
+          "label": "Foxglove",
+          "image": "digitalis-purpurea_01.jpg"
+        },
+        {
+          "label": "Dock",
+          "image": "rumex-obtusifolius_01.jpg"
+        },
+        {
+          "label": "Broadleaf Plantain",
+          "image": "plantago-major_01.jpg"
+        }
+      ],
+      "correct": "Greater Burdock",
+      "bonus": false
+    },
+    {
+      "id": "q_02",
+      "type": "multiple_choice",
+      "question": "Does Burdock have any other common names?",
+      "options": [
+        "Beggar's Buttons and Gobo",
+        "Goosegrass and Sticky Willy",
+        "Alehoof and Creeping Charlie",
+        "Winterweed and Starwort"
+      ],
+      "correct": "Beggar's Buttons and Gobo",
+      "remember": "Gobo is the Japanese name — burdock root is a prized vegetable in Japanese cuisine and widely cultivated there. Beggar's Buttons refers to the burrs that cling to clothing like buttons",
+      "bonus": false
+    },
+    {
+      "id": "q_03",
+      "type": "multiple_choice",
+      "question": "Where is Burdock typically found?",
+      "options": [
+        "Roadsides, pathways, field edges and wasteland on nutrient-rich disturbed soil",
+        "Damp woodland edges and hedgerows on heavy clay soil",
+        "Meadows and grassland on well-drained chalky soils",
+        "Field margins and arable land on fertile loamy soil"
+      ],
+      "correct": "Roadsides, pathways, field edges and wasteland on nutrient-rich disturbed soil",
+      "bonus": false
+    },
+    {
+      "id": "q_04",
+      "type": "multiple_choice",
+      "question": "What are the botanical names for Greater and Lesser Burdock?",
+      "options": [
+        "Arctium lappa / Arctium minus",
+        "Arctium tomentosum / Arctium nanum",
+        "Arctium vulgare / Arctium sylvestre",
+        "Arctium pubens / Arctium campestre"
+      ],
+      "correct": "Arctium lappa / Arctium minus",
+      "remember": "Both species are edible and interchangeable — Greater Burdock has solid leaf stalks, Lesser Burdock has hollow ones",
+      "bonus": false
+    },
+    {
+      "id": "q_05",
+      "type": "multi_select",
+      "question": "Select all key identifying features of Burdock",
+      "options": [
+        "Very large heart-shaped leaves with a woolly white underside",
+        "Round burrs with hooked spines that cling to clothing and fur",
+        "Purple thistle-like flowers in summer",
+        "Finely toothed leaf edges with a strong bitter smell when crushed",
+        "Hollow ridged stems with a distinctly waxy green surface"
+      ],
+      "correct": [
+        "Very large heart-shaped leaves with a woolly white underside",
+        "Round burrs with hooked spines that cling to clothing and fur",
+        "Purple thistle-like flowers in summer"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_06",
+      "type": "multiple_choice",
+      "question": "What is the life cycle of Burdock?",
+      "options": [
+        "Biennial — rosette of leaves in year one, flowers and dies in year two",
+        "Perennial — returns every year from the same rootstock",
+        "Annual — completes its full life cycle within a single growing season",
+        "Ephemeral — appears briefly in spring then dies back completely within weeks"
+      ],
+      "correct": "Biennial — rosette of leaves in year one, flowers and dies in year two",
+      "remember": "In year one the plant is a low flat rosette with no flowering stem — in year two it shoots up to 2m tall with branching stems and burrs. Harvest the root in year one autumn before the plant bolts",
+      "bonus": false
+    },
+    {
+      "id": "q_07",
+      "type": "multi_select",
+      "question": "What is Burdock used for? Select all that apply",
+      "options": [
+        "Root eaten raw when young or cooked in stir fries and soups",
+        "Peeled stems blanched and eaten as a vegetable",
+        "Large leaves used to wrap food parcels for cooking over a fire",
+        "Seeds dried and ground into a spice for seasoning meat"
+      ],
+      "correct": [
+        "Root eaten raw when young or cooked in stir fries and soups",
+        "Peeled stems blanched and eaten as a vegetable",
+        "Large leaves used to wrap food parcels for cooking over a fire"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_08",
+      "type": "multiple_choice",
+      "question": "Is there anything to be aware of legally when foraging Burdock root?",
+      "options": [
+        "Yes — foraging roots requires the landowner's permission as it counts as uprooting a plant",
+        "No — all parts of Burdock can be freely foraged anywhere in the UK",
+        "Only in designated nature reserves — it is freely available elsewhere",
+        "Yes — it is listed under the Weeds Act 1959 and cannot be removed without a licence"
+      ],
+      "correct": "Yes — foraging roots requires the landowner's permission as it counts as uprooting a plant",
+      "bonus": false
+    },
+    {
+      "id": "q_09",
+      "type": "multiple_choice",
+      "question": "When is the best time to harvest Burdock root?",
+      "options": [
+        "Autumn of the first year — before it becomes woody and the plant puts energy into flowering",
+        "Spring of the second year — after winter frosts have softened the root and improved the flavour",
+        "Midsummer of the first year — when the root is at its longest and most nutritious",
+        "Autumn of the second year — after the plant has finished flowering and set seed"
+      ],
+      "correct": "Autumn of the first year — before it becomes woody and the plant puts energy into flowering",
+      "bonus": false
+    },
+    {
+      "id": "q_10",
+      "type": "multiple_choice",
+      "question": "What does Burdock root taste like?",
+      "options": [
+        "Sweet and mildly earthy — similar to parsnip crossed with artichoke",
+        "Bitter and strongly astringent",
+        "Sharp and lemony",
+        "Mild and starchy like potato"
+      ],
+      "correct": "Sweet and mildly earthy — similar to parsnip crossed with artichoke",
+      "bonus": false
+    },
+    {
+      "id": "q_11",
+      "type": "multiple_choice",
+      "question": "What are the cautions with Burdock?",
+      "options": [
+        "May cause contact dermatitis in sensitive individuals — avoid during pregnancy due to oestrogenic effects. Contains inulin which can cause wind",
+        "Contains oxalic acid — avoid in large quantities especially if prone to kidney stones",
+        "Safe with no known cautions — can be eaten freely in any quantity",
+        "Avoid entirely as the root contains compounds that can cause liver damage in large quantities"
+      ],
+      "correct": "May cause contact dermatitis in sensitive individuals — avoid during pregnancy due to oestrogenic effects. Contains inulin which can cause wind",
+      "bonus": false
+    },
+    {
+      "id": "q_12",
+      "type": "multiple_choice",
+      "question": "Why should you avoid foraging Burdock root from roadsides or industrial areas?",
+      "options": [
+        "The roots can absorb heavy metals and toxins from the soil",
+        "The roots become bitter and unpalatable when grown in compacted urban soil",
+        "The burrs from urban plants contain higher levels of irritating compounds",
+        "Roadside plants are legally protected and cannot be foraged"
+      ],
+      "correct": "The roots can absorb heavy metals and toxins from the soil",
+      "bonus": false
+    },
+    {
+      "id": "q_13",
+      "type": "multiple_choice",
+      "question": "Which toxic plant could Burdock be confused with?",
+      "options": [
+        "Foxglove (Digitalis purpurea) — similar large leaves but more pointed with no woolly underside",
+        "Hemlock (Conium maculatum) — similar tall stems in disturbed habitats",
+        "Lords and Ladies (Arum maculatum) — similar large leaves in shaded habitats",
+        "Ragwort (Senecio jacobaea) — similar height and disturbed ground preference"
+      ],
+      "correct": "Foxglove (Digitalis purpurea) — similar large leaves but more pointed with no woolly underside",
+      "bonus": false
+    },
+    {
+      "id": "q_14",
+      "type": "multiple_choice",
+      "question": "When does Burdock flower?",
+      "options": [
+        "July to September",
+        "March to May",
+        "October to December",
+        "April to June"
+      ],
+      "correct": "July to September",
+      "bonus": false
+    },
+    {
+      "id": "q_15",
+      "type": "multiple_choice",
+      "question": "Is Burdock native to the UK?",
+      "options": [
+        "Yes — native to Europe and widely naturalised across Britain and Ireland",
+        "No — introduced from Japan where it is cultivated as a vegetable crop",
+        "No — introduced from North America in the 18th century as a medicinal herb",
+        "Yes — but only in southern England, rare north of the Midlands"
+      ],
+      "correct": "Yes — native to Europe and widely naturalised across Britain and Ireland",
+      "bonus": false
+    },
+    {
+      "id": "q_16",
+      "type": "multi_select",
+      "question": "What was Burdock historically used to treat? Select all that apply",
+      "options": [
+        "Skin conditions such as eczema, psoriasis and boils",
+        "Liver complaints and as a blood purifier",
+        "Urinary tract infections",
+        "Broken bones and fractures"
+      ],
+      "correct": [
+        "Skin conditions such as eczema, psoriasis and boils",
+        "Liver complaints and as a blood purifier",
+        "Urinary tract infections"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_17",
+      "type": "multi_select",
+      "question": "How was Burdock applied medicinally? Select all that apply",
+      "options": [
+        "Root eaten or made into a tea or decoction",
+        "Leaves applied as a poultice to skin conditions",
+        "Burned and inhaled as smoke",
+        "Seeds ground into a powder and swallowed dry"
+      ],
+      "correct": [
+        "Root eaten or made into a tea or decoction",
+        "Leaves applied as a poultice to skin conditions"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_18",
+      "type": "multiple_choice",
+      "question": "What plant family does Burdock belong to?",
+      "options": [
+        "Asteraceae — the daisy family",
+        "Lamiaceae — the mint family",
+        "Rosaceae — the rose family",
+        "Polygonaceae — the dock and sorrel family"
+      ],
+      "correct": "Asteraceae — the daisy family",
+      "bonus": true
+    },
+    {
+      "id": "q_19",
+      "type": "multiple_choice",
+      "question": "What is the possible origin of the name Arctium?",
+      "options": [
+        "Possibly from Greek arktos meaning bear — possibly referring to the rough shaggy appearance of the burrs",
+        "Possibly from Greek arktikos meaning northern — possibly referring to its preference for cool climates",
+        "Possibly from Latin arcus meaning curved — possibly referring to the hooked spines on the burrs",
+        "Possibly from Greek arche meaning ancient — possibly referring to its long history of medicinal use"
+      ],
+      "correct": "Possibly from Greek arktos meaning bear — possibly referring to the rough shaggy appearance of the burrs",
+      "bonus": true
+    },
+    {
+      "id": "q_20",
+      "type": "multiple_choice",
+      "question": "What does Lappa mean in the botanical name?",
+      "options": [
+        "From Latin lappare meaning to seize — referring to the clinging ability of the burrs",
+        "From Greek lapas meaning flat — referring to the broad shape of the leaves",
+        "From Latin lapsus meaning fallen — referring to how the burrs fall and disperse seeds",
+        "From Celtic lapp meaning large — referring to the impressive size of the plant"
+      ],
+      "correct": "From Latin lappare meaning to seize — referring to the clinging ability of the burrs",
+      "bonus": true
+    },
+    {
+      "id": "q_21",
+      "type": "multiple_choice",
+      "question": "What everyday invention was directly inspired by Burdock?",
+      "options": [
+        "Velcro — Swiss engineer George de Mestral invented it in the 1940s after finding burrs stuck to his dog's fur",
+        "The safety pin — inspired by the hooked spines locking together on the burrs",
+        "Zip fasteners — inspired by the interlocking hooks on the dried seed heads",
+        "Sticky tape — inspired by the adhesive surface of the burr when pressed flat"
+      ],
+      "correct": "Velcro — Swiss engineer George de Mestral invented it in the 1940s after finding burrs stuck to his dog's fur",
+      "bonus": true
+    }
+  ]
+}

@@ -7,9 +7,14 @@ const INTRO = { id: 'foraging_intro', name: 'Foraging Law & Intro', botanical: '
 
 const PLANTS = [
   { id: 'plantago_major', name: 'Broadleaf Plantain', botanical: 'Plantago major' },
+  { id: 'arctium_lappa_minus', name: 'Burdock — Greater / Lesser', botanical: 'Arctium lappa / Arctium minus' },
   { id: 'stellaria_media', name: 'Chickweed', botanical: 'Stellaria media' },
   { id: 'galium_aparine', name: 'Cleavers', botanical: 'Galium aparine' },
+  { id: 'rumex_obtusifolius_crispus', name: 'Dock — Broad-leaved / Curled', botanical: 'Rumex obtusifolius / Rumex crispus' },
   { id: 'glechoma_hederacea', name: 'Ground Ivy', botanical: 'Glechoma hederacea' },
+  { id: 'arum_maculatum', name: 'Lords and Ladies', botanical: 'Arum maculatum' },
+  { id: 'carex_pendula', name: 'Pendulous Sedge', botanical: 'Carex pendula' },
+  { id: 'matricaria_discoidea', name: 'Pineapple Weed', botanical: 'Matricaria discoidea' },
   { id: 'urtica_dioica', name: 'Stinging Nettle', botanical: 'Urtica dioica' },
   { id: 'oxalis_acetosella', name: 'Wood Sorrel', botanical: 'Oxalis acetosella' },
 ];
@@ -109,29 +114,28 @@ if (view === 'levels') {
         const completed = status.perfectCompletions >= 2;
         return (
           <TouchableOpacity
-            key={plant.id}
-            style={[styles.card, completed && styles.cardCompleted]}
-            onPress={() => router.push({
-              pathname: '/screens/question',
-              params: { mode: 'plant', plantId: plant.id }
-            })}
-          >
-            <View style={styles.cardRow}>
-              <View>
-                <Text style={styles.cardTitle}>{plant.name}</Text>
-                <Text style={styles.cardBotanical}>{plant.botanical}</Text>
-              </View>
-              <View style={styles.cardStats}>
-                <Text style={styles.statText}>✓ {status.perfectCompletions}</Text>
-                {status.currentStreak > 0 && (
-                  <Text style={styles.streakText}>🔥 {status.currentStreak}</Text>
-                )}
-              </View>
-            </View>
-            {completed && (
-              <Text style={styles.completedText}>Ready for Ember ✓</Text>
-            )}
-          </TouchableOpacity>
+  key={plant.id}
+  style={[styles.card, completed && styles.cardCompleted]}
+  onPress={() => router.push({
+    pathname: '/screens/question',
+    params: { mode: 'plant', plantId: plant.id }
+  })}
+>
+  <View style={styles.cardRow}>
+    <View style={{ flex: 1 }}>
+      <Text style={styles.cardTitle}>{plant.name}</Text>
+      <Text style={styles.cardBotanical}>
+        {plant.botanical}{completed ? '  · Ready for Ember ✓' : ''}
+      </Text>
+    </View>
+    <View style={styles.cardStats}>
+      {status.currentStreak > 0 && (
+        <Text style={styles.streakText}>🔥 {status.currentStreak}</Text>
+      )}
+      <Text style={styles.statText}>✓ {status.perfectCompletions}</Text>
+    </View>
+  </View>
+</TouchableOpacity>
         );
       })}
 

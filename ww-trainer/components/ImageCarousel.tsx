@@ -24,7 +24,7 @@ export default function ImageCarousel({ question, options, correct, onAnswer }: 
   const current = options[currentIndex];
 
   function handleScroll(e: NativeSyntheticEvent<NativeScrollEvent>) {
-    const index = Math.round(e.nativeEvent.contentOffset.x / (width - 48));
+    const index = Math.round(e.nativeEvent.contentOffset.x / width);
     setCurrentIndex(index);
   }
 
@@ -46,21 +46,22 @@ export default function ImageCarousel({ question, options, correct, onAnswer }: 
         pagingEnabled
         showsHorizontalScrollIndicator={false}
         onMomentumScrollEnd={handleScroll}
-        scrollEnabled={!selected}
+        scrollEnabled={true}
         style={styles.scrollView}
         contentContainerStyle={styles.scrollContent}
       >
         {options.map((option, index) => {
           const imageSource = plantImages[option.image];
-          const isThis = selected === option.label;
           const isCorrectOption = option.label === correct;
+          const isWrongPick = selected === option.label && !isCorrectOption;
+          const isDimmed = selected && !isCorrectOption && selected !== option.label;
 
           return (
             <View key={index} style={styles.slide}>
               {imageSource ? (
                 <Image
                   source={imageSource}
-                  style={styles.image}
+                  style={[styles.image, isDimmed && styles.imageDimmed]}
                   resizeMode="cover"
                 />
               ) : (
@@ -70,14 +71,17 @@ export default function ImageCarousel({ question, options, correct, onAnswer }: 
                 </View>
               )}
 
-              {selected && isCorrectOption && (
-                <View style={styles.overlayCorrect}>
-                  <Text style={styles.overlayText}>✓ {option.label}</Text>
-                </View>
-              )}
-              {selected && isThis && !isCorrectOption && (
-                <View style={styles.overlayWrong}>
-                  <Text style={styles.overlayText}>✗ {option.label}</Text>
+              {selected && (
+                <View style={[
+                  styles.resultLabel,
+                  isCorrectOption ? styles.resultLabelCorrect : styles.resultLabelWrong
+                ]}>
+                  <Text style={styles.resultLabelText}>
+                    {isCorrectOption ? '✓ ' : '✗ '}{option.label}
+                  </Text>
+                  {isWrongPick && (
+                    <Text style={styles.yourPickText}>← your answer</Text>
+                  )}
                 </View>
               )}
             </View>
@@ -94,7 +98,7 @@ export default function ImageCarousel({ question, options, correct, onAnswer }: 
         ))}
       </View>
 
-      
+      <Text style={styles.swipeHint}>← swipe to browse →</Text>
 
       {!selected && (
         <TouchableOpacity style={styles.selectButton} onPress={handleSelect}>
@@ -107,7 +111,7 @@ export default function ImageCarousel({ question, options, correct, onAnswer }: 
           <Text style={styles.resultText}>
             {selected === correct
               ? `✓ Correct — that is ${correct}`
-              : `✗ That was ${selected} — swipe to find the correct answer: ${correct}`}
+              : `✗ Wrong — swipe to see all results`}
           </Text>
         </View>
       )}
@@ -140,13 +144,16 @@ const styles = StyleSheet.create({
   },
   slide: {
     width: width,
-    height: 280,
+    height: width,
     paddingHorizontal: 24,
     position: 'relative',
   },
   image: {
     width: '100%',
     height: '100%',
+  },
+  imageDimmed: {
+    opacity: 0.35,
   },
   placeholder: {
     width: '100%',
@@ -167,41 +174,35 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#8a9a6e',
   },
-  overlayCorrect: {
+  resultLabel: {
     position: 'absolute',
     bottom: 0,
-    left: 0,
-    right: 0,
+    left: 24,
+    right: 24,
     padding: 12,
     alignItems: 'center',
-    backgroundColor: 'rgba(74, 124, 89, 0.9)',
   },
-  overlayWrong: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    padding: 12,
-    alignItems: 'center',
-    backgroundColor: 'rgba(124, 74, 74, 0.9)',
+  resultLabelCorrect: {
+    backgroundColor: 'rgba(74, 124, 89, 0.92)',
   },
-  overlayText: {
+  resultLabelWrong: {
+    backgroundColor: 'rgba(124, 74, 74, 0.92)',
+  },
+  resultLabelText: {
     color: '#ffffff',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  yourPickText: {
+    color: '#ffcccc',
+    fontSize: 12,
+    marginTop: 2,
   },
   dots: {
     flexDirection: 'row',
     justifyContent: 'center',
     marginTop: 12,
     marginBottom: 4,
-  },
-  swipeHint: {
-    fontSize: 12,
-    color: '#8a9a6e',
-    textAlign: 'center',
-    marginBottom: 12,
-    fontStyle: 'italic',
   },
   dot: {
     width: 8,
@@ -210,9 +211,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#3a3a2a',
     marginHorizontal: 4,
   },
-  
   dotActive: {
     backgroundColor: '#c8a96e',
+  },
+  swipeHint: {
+    fontSize: 12,
+    color: '#8a9a6e',
+    textAlign: 'center',
+    marginBottom: 12,
+    fontStyle: 'italic',
   },
   selectButton: {
     backgroundColor: '#4a7c59',

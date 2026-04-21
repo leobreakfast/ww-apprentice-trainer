@@ -24,7 +24,7 @@ const plantImages: { [key: string]: any } = {
   'prunus-avium-leaves_01.jpg': require('../assets/images/plants/prunus-avium-leaves_01.jpg'),
   'prunus-spinosa-leaves_01.jpg': require('../assets/images/plants/prunus-spinosa-leaves_01.jpg'),
   'rubus-fruticosus_01.jpg': require('../assets/images/plants/rubus-fruticosus_01.jpg'),
-  'rumex-obtusifolius_01.jpeg': require('../assets/images/plants/rumex-obtusifolius_01.jpeg'),
+  'rumex-obtusifolius_01.jpg': require('../assets/images/plants/rumex-obtusifolius_01.jpg'),
   'stellaria-media_01.jpg': require('../assets/images/plants/stellaria-media_01.jpg'),
   'urtica-dioica_01.jpg': require('../assets/images/plants/urtica-dioica_01.jpg'),
 };

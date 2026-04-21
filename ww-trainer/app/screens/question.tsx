@@ -1,8 +1,8 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import { BackHandler } from 'react-native';
 import { useRouter, useLocalSearchParams, useFocusEffect } from 'expo-router';
-import { useState, useMemo, useCallback } from 'react';
-import { saveSessionProgress, clearSessionProgress, savePlantResult, saveFullForageResult } from '../../utils/progress';
+import { useState, useMemo, useCallback, useEffect } from 'react';
+import { saveSessionProgress, clearSessionProgress, savePlantResult, saveFullForageResult, saveMissedQuestions, getModuleProgress } from '../../utils/progress';
 import plantImages from '../../content/plantImages';
 import introData from '../../content/foraging/intro.json';
 import * as PlantFiles from '../../content/foraging/plants/index';
@@ -41,47 +41,46 @@ function buildPlantQuestions(plant: any) {
 export default function QuestionScreen() {
   const router = useRouter();
 
-const params = useLocalSearchParams();
-const continueSession = params.continueSession === 'true';
-const mode = (params.mode as string) || 'forage';
-const plantId = (params.plantId as string) || '';
-const savedCompletedIds: string[] = continueSession
-  ? JSON.parse(params.completedPlantIds as string)
-  : [];
-const savedScore = continueSession ? Number(params.savedScore) : 0;
-const savedBonusScore = continueSession ? Number(params.savedBonusScore) : 0;
+  const params = useLocalSearchParams();
+  const continueSession = params.continueSession === 'true';
+  const mode = (params.mode as string) || 'forage';
+  const plantId = (params.plantId as string) || '';
+  const savedCompletedIds: string[] = continueSession
+    ? JSON.parse(params.completedPlantIds as string)
+    : [];
+  const savedScore = continueSession ? Number(params.savedScore) : 0;
+  const savedBonusScore = continueSession ? Number(params.savedBonusScore) : 0;
 
-const ALL_QUESTIONS = useMemo(() => {
-  if (mode === 'intro') {
-    return introData.questions.map((q: any) => ({
-      ...q,
-      options: shuffleArray(q.options),
-      section: 'intro'
-    }));
-  }
+  const ALL_QUESTIONS = useMemo(() => {
+    if (mode === 'intro') {
+      return introData.questions.map((q: any) => ({
+        ...q,
+        options: shuffleArray(q.options),
+        section: 'intro'
+      }));
+    }
 
-  if (mode === 'plant') {
-    const plant = PLANTS.find((p: any) => p.id === plantId);
-    if (!plant) return [];
-    return buildPlantQuestions(plant);
-  }
-  // ... rest stays the same
+    if (mode === 'plant') {
+      const plant = PLANTS.find((p: any) => p.id === plantId);
+      if (!plant) return [];
+      return buildPlantQuestions(plant);
+    }
 
-  const remaining = continueSession
-    ? shufflePlants(PLANTS.filter((p: any) => !savedCompletedIds.includes(p.id)))
-    : shufflePlants(PLANTS);
+    const remaining = continueSession
+      ? shufflePlants(PLANTS.filter((p: any) => !savedCompletedIds.includes(p.id)))
+      : shufflePlants(PLANTS);
 
-  return continueSession
-    ? remaining.flatMap((plant: any) => buildPlantQuestions(plant))
-    : [
-        ...introData.questions.map((q: any) => ({
-          ...q,
-          options: shuffleArray(q.options),
-          section: 'intro'
-        })),
-        ...remaining.flatMap((plant: any) => buildPlantQuestions(plant)),
-      ];
-}, []);
+    return continueSession
+      ? remaining.flatMap((plant: any) => buildPlantQuestions(plant))
+      : [
+          ...introData.questions.map((q: any) => ({
+            ...q,
+            options: shuffleArray(q.options),
+            section: 'intro'
+          })),
+          ...remaining.flatMap((plant: any) => buildPlantQuestions(plant)),
+        ];
+  }, []);
 
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
@@ -90,13 +89,31 @@ const ALL_QUESTIONS = useMemo(() => {
   const [score, setScore] = useState(savedScore);
   const [bonusScore, setBonusScore] = useState(savedBonusScore);
   const [completedPlants, setCompletedPlants] = useState<string[]>(savedCompletedIds);
+  const [missedQuestions, setMissedQuestions] = useState<{ id: string; question: string }[]>([]);
+  const [lastMissed, setLastMissed] = useState<string[]>([]);
 
-useFocusEffect(
-  useCallback(() => {
-    const subscription = BackHandler.addEventListener('hardwareBackPress', () => true);
-    return () => subscription.remove();
-  }, [])
-);
+  useFocusEffect(
+    useCallback(() => {
+      const subscription = BackHandler.addEventListener('hardwareBackPress', () => true);
+      return () => subscription.remove();
+    }, [])
+  );
+
+  useEffect(() => {
+    if (item?.type === 'plant_narrative') {
+      getModuleProgress('foraging').then(progress => {
+        const plant = progress.plants[item.plant.id];
+        if (plant?.missedQuestions) {
+          const lm = plant.missedQuestions
+            .filter((q: any) => q.lastMissed)
+            .map((q: any) => q.question);
+          setLastMissed(lm);
+        } else {
+          setLastMissed([]);
+        }
+      });
+    }
+  }, [current]);
 
   const item = ALL_QUESTIONS[current];
 
@@ -114,6 +131,13 @@ useFocusEffect(
       if (option === item.correct) {
         if (item.bonus) setBonusScore(b => b + 1);
         else setScore(s => s + 1);
+      } else {
+        if (item.id && item.question) {
+          setMissedQuestions(prev => {
+            if (prev.find(q => q.id === item.id)) return prev;
+            return [...prev, { id: item.id, question: item.question }];
+          });
+        }
       }
     }
   }
@@ -127,34 +151,52 @@ useFocusEffect(
     if (allCorrectSelected && noWrongSelected) {
       if (item.bonus) setBonusScore(b => b + 1);
       else setScore(s => s + 1);
+    } else {
+      if (item.id && item.question) {
+        setMissedQuestions(prev => {
+          if (prev.find(q => q.id === item.id)) return prev;
+          return [...prev, { id: item.id, question: item.question }];
+        });
+      }
     }
   }
 
   function handleNext() {
     const nextIndex = current + 1;
 
-if (nextIndex >= ALL_QUESTIONS.length) {
-  const totalQuestions = ALL_QUESTIONS.filter(q =>
-    q.type !== 'plant_narrative' && q.type !== 'bonus_narrative' && !q.bonus
-  ).length;
-  const totalBonus = ALL_QUESTIONS.filter(q => q.bonus).length;
-  const perfect = score === totalQuestions;
+    if (nextIndex >= ALL_QUESTIONS.length) {
+      const totalQuestions = ALL_QUESTIONS.filter(q =>
+        q.type !== 'plant_narrative' && q.type !== 'bonus_narrative' && !q.bonus
+      ).length;
+      const totalBonus = ALL_QUESTIONS.filter(q => q.bonus).length;
+      const perfect = score === totalQuestions;
 
-if (mode === 'plant') {
-  savePlantResult('foraging', plantId, perfect);
-} else if (mode === 'intro') {
-  savePlantResult('foraging', 'foraging_intro', perfect);
-} else {
-  clearSessionProgress('foraging');
-  saveFullForageResult('foraging', perfect);
-}
+      if (mode === 'plant') {
+        savePlantResult('foraging', plantId, perfect);
+        if (missedQuestions.length > 0) {
+          saveMissedQuestions('foraging', plantId, missedQuestions);
+        }
+      } else if (mode === 'intro') {
+        savePlantResult('foraging', 'foraging_intro', perfect);
+      } else {
+        clearSessionProgress('foraging');
+        saveFullForageResult('foraging', perfect);
+      }
 
-  router.push({
-    pathname: '/screens/results',
-    params: { score, bonusScore, total: totalQuestions, totalBonus, mode, plantId }
-  });
-  return;
-}
+      router.push({
+        pathname: '/screens/results',
+        params: {
+          score,
+          bonusScore,
+          total: totalQuestions,
+          totalBonus,
+          mode,
+          plantId,
+          missedQuestions: JSON.stringify(missedQuestions)
+        }
+      });
+      return;
+    }
 
     const nextItem = ALL_QUESTIONS[nextIndex];
 
@@ -173,10 +215,31 @@ if (mode === 'plant') {
   if (item.type === 'plant_narrative') {
     return (
       <View style={styles.container}>
-        <Text style={styles.scene}>🌿</Text>
-        <Text style={styles.narrative}>{item.plant.narrative}</Text>
-        <TouchableOpacity style={styles.next} onPress={handleNext}>
-          <Text style={styles.nextText}>Continue</Text>
+        <View style={styles.narrativeContent}>
+          <Text style={styles.scene}>🌿</Text>
+          <Text style={styles.narrative}>{item.plant.narrative}</Text>
+
+          {lastMissed.length > 0 && (
+            <View style={styles.lastMissedBox}>
+              <Text style={styles.lastMissedTitle}>Last time you struggled with:</Text>
+              {lastMissed.map((q, i) => (
+                <Text key={i} style={styles.lastMissedItem}>· {q}</Text>
+              ))}
+            </View>
+          )}
+
+          <TouchableOpacity style={styles.next} onPress={handleNext}>
+            <Text style={styles.nextText}>Continue</Text>
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity
+          style={styles.exitButton}
+          onPress={() => router.push({
+            pathname: '/screens/foraging',
+            params: { view: 'spark' }
+          })}
+        >
+          <Text style={styles.exitText}>← Exit</Text>
         </TouchableOpacity>
       </View>
     );
@@ -185,12 +248,23 @@ if (mode === 'plant') {
   if (item.type === 'bonus_narrative') {
     return (
       <View style={styles.container}>
-        <Text style={styles.scene}>⭐</Text>
-        <Text style={styles.narrative}>
-          The customers are full of questions today. One of them turns to you and asks something unexpected...
-        </Text>
-        <TouchableOpacity style={styles.next} onPress={handleNext}>
-          <Text style={styles.nextText}>Bonus Round</Text>
+        <View style={styles.narrativeContent}>
+          <Text style={styles.scene}>⭐</Text>
+          <Text style={styles.narrative}>
+            The customers are full of questions today. One of them turns to you and asks something unexpected...
+          </Text>
+          <TouchableOpacity style={styles.next} onPress={handleNext}>
+            <Text style={styles.nextText}>Bonus Round</Text>
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity
+          style={styles.exitButton}
+          onPress={() => router.push({
+            pathname: '/screens/foraging',
+            params: { view: 'spark' }
+          })}
+        >
+          <Text style={styles.exitText}>← Exit</Text>
         </TouchableOpacity>
       </View>
     );
@@ -210,34 +284,43 @@ if (mode === 'plant') {
       </Text>
 
       {isImageQuestion && (
-  <Image
-    source={plantImages[item.plant?.images[0]]}
-    style={styles.plantImage}
-    resizeMode="cover"
-  />
-)}
+        <Image
+          source={plantImages[item.plant?.images[0]]}
+          style={styles.plantImage}
+          resizeMode="cover"
+        />
+      )}
 
-{isCarouselQuestion && (
-  <ImageCarousel
-    question={item.question}
-    options={item.options}
-    correct={item.correct}
-    onAnswer={(label, correct) => {
-      if (selected) return;
-      setSelected(label);
-      if (correct) setScore(s => s + 1);
-    }}
-  />
-)}
+      {isCarouselQuestion && (
+        <ImageCarousel
+          question={item.question}
+          options={item.options}
+          correct={item.correct}
+          onAnswer={(label, correct) => {
+            if (selected) return;
+            setSelected(label);
+            if (correct) {
+              setScore(s => s + 1);
+            } else {
+              if (item.id && item.question) {
+                setMissedQuestions(prev => {
+                  if (prev.find(q => q.id === item.id)) return prev;
+                  return [...prev, { id: item.id, question: item.question }];
+                });
+              }
+            }
+          }}
+        />
+      )}
 
       {!isCarouselQuestion && (
-  <Text style={styles.question}>{item.question}</Text>
-)}
+        <Text style={styles.question}>{item.question}</Text>
+      )}
 
       {!isCarouselQuestion && item.type === 'multi_select' && (
-  <Text style={styles.questionType}>Select all that apply</Text>
-)}
-{!isCarouselQuestion && item.type !== 'multi_select' &&
+        <Text style={styles.questionType}>Select all that apply</Text>
+      )}
+      {!isCarouselQuestion && item.type !== 'multi_select' &&
         item.type !== 'image_identification' &&
         item.type !== 'plant_narrative' &&
         item.type !== 'bonus_narrative' && (
@@ -272,10 +355,16 @@ if (mode === 'plant') {
         );
       })}
 
-     {!isCarouselQuestion && item.type === 'multi_select' && !submitted && multiSelected.length > 0 && (
+      {!isCarouselQuestion && item.type === 'multi_select' && !submitted && multiSelected.length > 0 && (
         <TouchableOpacity style={styles.next} onPress={handleSubmitMulti}>
           <Text style={styles.nextText}>Submit</Text>
         </TouchableOpacity>
+      )}
+
+      {!isCarouselQuestion && item.type === 'multi_select' && submitted && item.remember && (
+        <View style={styles.rememberBox}>
+          <Text style={styles.rememberText}>💡 {item.remember}</Text>
+        </View>
       )}
 
       {!isCarouselQuestion && item.type === 'multi_select' && submitted && (
@@ -284,6 +373,12 @@ if (mode === 'plant') {
             {current + 1 < ALL_QUESTIONS.length ? 'Next' : 'See Results'}
           </Text>
         </TouchableOpacity>
+      )}
+
+      {!isCarouselQuestion && item.type !== 'multi_select' && selected && item.remember && (
+        <View style={styles.rememberBox}>
+          <Text style={styles.rememberText}>💡 {item.remember}</Text>
+        </View>
       )}
 
       {!isCarouselQuestion && item.type !== 'multi_select' && selected && (
@@ -307,7 +402,7 @@ if (mode === 'plant') {
         onPress={() => router.push({
           pathname: '/screens/foraging',
           params: { view: 'spark' }
-})}
+        })}
       >
         <Text style={styles.exitText}>← Exit</Text>
       </TouchableOpacity>
@@ -322,6 +417,11 @@ const styles = StyleSheet.create({
     padding: 24,
     paddingTop: 60,
   },
+  narrativeContent: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   scene: {
     fontSize: 64,
     textAlign: 'center',
@@ -332,7 +432,7 @@ const styles = StyleSheet.create({
     color: '#c8a96e',
     textAlign: 'center',
     lineHeight: 28,
-    marginBottom: 48,
+    marginBottom: 24,
   },
   progress: {
     fontSize: 14,
@@ -426,5 +526,41 @@ const styles = StyleSheet.create({
   exitText: {
     color: '#8a9a6e',
     fontSize: 16,
+  },
+  rememberBox: {
+    backgroundColor: '#1a2a1a',
+    borderLeftWidth: 3,
+    borderLeftColor: '#c8a96e',
+    padding: 12,
+    borderRadius: 8,
+    marginTop: 8,
+    marginBottom: 4,
+  },
+  rememberText: {
+    color: '#c8a96e',
+    fontSize: 14,
+    fontStyle: 'italic',
+    lineHeight: 20,
+  },
+  lastMissedBox: {
+    backgroundColor: '#2a1a1a',
+    borderRadius: 8,
+    padding: 16,
+    width: '100%',
+    marginBottom: 24,
+    borderLeftWidth: 3,
+    borderLeftColor: '#7c4a4a',
+  },
+  lastMissedTitle: {
+    fontSize: 13,
+    color: '#c87a7a',
+    fontWeight: 'bold',
+    marginBottom: 8,
+  },
+  lastMissedItem: {
+    fontSize: 13,
+    color: '#ffffff',
+    lineHeight: 20,
+    marginBottom: 2,
   },
 });

@@ -16,7 +16,6 @@ if (fs.existsSync(newPlantFile)) {
     const destPath = path.join(plantsDir, fileName);
     fs.writeFileSync(destPath, JSON.stringify(newPlant, null, 2));
     console.log(`✓ Imported new plant: ${fileName}`);
-    // Clear the staging file
     fs.writeFileSync(newPlantFile, '{}');
   }
 }
@@ -39,17 +38,19 @@ allFiles.forEach(file => {
     return;
   }
 
+  const carouselLabel = data.carousel_correct_label || data.common_name;
+
   const carouselOptions = [
-    { label: data.common_name, image: data.images[0] },
+    { label: carouselLabel, image: data.images[0] },
     ...data.carousel_distractors
   ];
 
   data.questions[0] = {
     id: 'q_01',
     type: 'image_carousel',
-    question: `Which of these plants is ${data.common_name}?`,
+    question: `Which of these plants is ${carouselLabel}?`,
     options: carouselOptions,
-    correct: data.common_name,
+    correct: carouselLabel,
     bonus: false
   };
 

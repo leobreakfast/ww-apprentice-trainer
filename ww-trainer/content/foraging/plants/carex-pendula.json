@@ -1,0 +1,295 @@
+{
+  "id": "carex_pendula",
+  "common_name": "Pendulous Sedge",
+  "botanical_name": "Carex pendula",
+  "images": [
+    "carex-pendula_01.jpg"
+  ],
+  "narrative": "You push through the damp undergrowth and notice tall clumps of broad grass-like leaves with long drooping tassels swaying gently in the breeze...",
+  "interesting_fact": "Pendulous Sedge can indicate ancient woodland — its presence alongside other indicator species suggests the site has been continuously wooded since the 17th century.",
+  "carousel_distractors": [
+    {
+      "label": "Common Rush",
+      "image": "juncus-effusus_01.jpg"
+    },
+    {
+      "label": "Reed",
+      "image": "phragmites-australis_01.jpg"
+    },
+    {
+      "label": "Soft Rush",
+      "image": "juncus-inflexus_01.jpg"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_01",
+      "type": "image_carousel",
+      "question": "Which of these plants is Pendulous Sedge?",
+      "options": [
+        {
+          "label": "Pendulous Sedge",
+          "image": "carex-pendula_01.jpg"
+        },
+        {
+          "label": "Common Rush",
+          "image": "juncus-effusus_01.jpg"
+        },
+        {
+          "label": "Reed",
+          "image": "phragmites-australis_01.jpg"
+        },
+        {
+          "label": "Soft Rush",
+          "image": "juncus-inflexus_01.jpg"
+        }
+      ],
+      "correct": "Pendulous Sedge",
+      "bonus": false
+    },
+    {
+      "id": "q_02",
+      "type": "multiple_choice",
+      "question": "Does Pendulous Sedge have any other common names?",
+      "options": [
+        "Hanging Sedge",
+        "Goosegrass",
+        "Winterweed",
+        "Alehoof"
+      ],
+      "correct": "Hanging Sedge",
+      "bonus": false
+    },
+    {
+      "id": "q_03",
+      "type": "multiple_choice",
+      "question": "What is the botanical name of Pendulous Sedge?",
+      "options": [
+        "Carex pendula",
+        "Carex sylvatica",
+        "Juncus effusus",
+        "Phalaris arundinacea"
+      ],
+      "correct": "Carex pendula",
+      "bonus": false
+    },
+    {
+      "id": "q_04",
+      "type": "multiple_choice",
+      "question": "Where is Pendulous Sedge typically found?",
+      "options": [
+        "Damp woodland on heavy clay soil, riverbanks and ditches",
+        "Dry chalk downland and open grassland in full sun",
+        "Rocky coastal cliffs and exposed hillsides",
+        "Open moorland and upland bogs"
+      ],
+      "correct": "Damp woodland on heavy clay soil, riverbanks and ditches",
+      "bonus": false
+    },
+    {
+      "id": "q_05",
+      "type": "multi_select",
+      "question": "Select all key identifying features of Pendulous Sedge",
+      "options": [
+        "Long broad grass-like leaves up to 20mm wide",
+        "Triangular stem in cross section",
+        "Long drooping tassels hanging from tall stems",
+        "Strong minty smell when crushed",
+        "Tiny hooked hairs that cling to clothing"
+      ],
+      "correct": [
+        "Long broad grass-like leaves up to 20mm wide",
+        "Triangular stem in cross section",
+        "Long drooping tassels hanging from tall stems"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_06",
+      "type": "multiple_choice",
+      "question": "How can you tell a sedge from a grass?",
+      "options": [
+        "Sedges have edges — triangular stems with sharp edges. Grasses have round hollow stems",
+        "Sedges always grow near water whereas grasses grow in dry open ground",
+        "Sedges have broader leaves than grasses and a stronger smell when crushed",
+        "Sedges produce berries whereas grasses produce seeds on open spikes"
+      ],
+      "correct": "Sedges have edges — triangular stems with sharp edges. Grasses have round hollow stems",
+      "remember": "Sedges have edges — feel the stem between your fingers and you can tell immediately",
+      "bonus": false
+    },
+    {
+      "id": "q_07",
+      "type": "multi_select",
+      "question": "What is Pendulous Sedge used for? Select all that apply",
+      "options": [
+        "Ripe seeds stripped, winnowed and toasted — added to bread or ground into flour",
+        "Leaves dried and twisted or woven into rope and cordage",
+        "Young leaves eaten raw as a salad green",
+        "Made into a tea or infusion"
+      ],
+      "correct": [
+        "Ripe seeds stripped, winnowed and toasted — added to bread or ground into flour",
+        "Leaves dried and twisted or woven into rope and cordage"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_08",
+      "type": "multiple_choice",
+      "question": "What do the toasted seeds of Pendulous Sedge taste like?",
+      "options": [
+        "Mild and nutty when toasted",
+        "Sharp and lemony with a bitter aftertaste",
+        "Sweet and fruity similar to pineapple",
+        "Earthy and vegetal like cooked spinach"
+      ],
+      "correct": "Mild and nutty when toasted",
+      "bonus": false
+    },
+    {
+      "id": "q_09",
+      "type": "multiple_choice",
+      "question": "What are the cautions with Pendulous Sedge?",
+      "options": [
+        "Contains silica which may irritate the liver if already inflamed — only harvest ripe light brown seeds",
+        "Contains oxalic acid in large quantities which can cause digestive issues",
+        "Avoid during pregnancy as it has historically been used for uterine conditions",
+        "Safe in normal quantities but avoid if you have kidney or liver conditions"
+      ],
+      "correct": "Contains silica which may irritate the liver if already inflamed — only harvest ripe light brown seeds",
+      "bonus": false
+    },
+    {
+      "id": "q_10",
+      "type": "multiple_choice",
+      "question": "Which species could Pendulous Sedge be confused with?",
+      "options": [
+        "Other sedges — but only Pendulous Sedge has the distinctive long drooping flower spikes",
+        "Hemlock (Conium maculatum) — similar tall hollow stems in damp habitats",
+        "Lords and Ladies (Arum maculatum) — similar broad leaves in woodland shade",
+        "Great Willowherb (Epilobium hirsutum) — similar height and damp habitat preference"
+      ],
+      "correct": "Other sedges — but only Pendulous Sedge has the distinctive long drooping flower spikes",
+      "bonus": false
+    },
+    {
+      "id": "q_11",
+      "type": "multiple_choice",
+      "question": "When does Pendulous Sedge flower?",
+      "options": [
+        "May to June",
+        "August to October",
+        "December to February",
+        "March to April"
+      ],
+      "correct": "May to June",
+      "remember": "The drooping catkins are the flower — sedges never have petals",
+      "bonus": false
+    },
+    {
+      "id": "q_12",
+      "type": "multiple_choice",
+      "question": "What time of year is Pendulous Sedge most commonly found?",
+      "options": [
+        "Year round",
+        "March to October only",
+        "May to September only",
+        "April to November only"
+      ],
+      "correct": "Year round",
+      "bonus": false
+    },
+    {
+      "id": "q_13",
+      "type": "multiple_choice",
+      "question": "Is Pendulous Sedge native to the UK?",
+      "options": [
+        "Yes",
+        "No — introduced from Asia in the 18th century as a garden plant",
+        "Only in southern England and Wales",
+        "Introduced by Roman settlers for use as rope material"
+      ],
+      "correct": "Yes",
+      "bonus": false
+    },
+    {
+      "id": "q_14",
+      "type": "multiple_choice",
+      "question": "What does the presence of Pendulous Sedge suggest about a woodland?",
+      "options": [
+        "It can indicate ancient woodland continuously wooded since the 17th century",
+        "It suggests the woodland was planted within the last 50 years",
+        "It indicates the soil is particularly fertile and recently disturbed",
+        "It suggests nearby water sources such as a river or pond"
+      ],
+      "correct": "It can indicate ancient woodland continuously wooded since the 17th century",
+      "bonus": false
+    },
+    {
+      "id": "q_15",
+      "type": "multiple_choice",
+      "question": "What is the life cycle of Pendulous Sedge?",
+      "options": [
+        "Perennial — returns every year",
+        "Annual — completes in one year",
+        "Biennial — takes two years to complete",
+        "Ephemeral — only lasts a few weeks"
+      ],
+      "correct": "Perennial — returns every year",
+      "bonus": false
+    },
+    {
+      "id": "q_16",
+      "type": "multiple_choice",
+      "question": "What plant family does Pendulous Sedge belong to?",
+      "options": [
+        "Cyperaceae — the sedge family",
+        "Poaceae — the grass family",
+        "Juncaceae — the rush family",
+        "Typhaceae — the bulrush family"
+      ],
+      "correct": "Cyperaceae — the sedge family",
+      "bonus": true
+    },
+    {
+      "id": "q_17",
+      "type": "multiple_choice",
+      "question": "What is the origin of the name Carex?",
+      "options": [
+        "From Greek kairo meaning to cut",
+        "From Latin carina meaning keel",
+        "From Greek karpos meaning fruit",
+        "From Latin carere meaning to lack"
+      ],
+      "correct": "From Greek kairo meaning to cut",
+      "bonus": true
+    },
+    {
+      "id": "q_18",
+      "type": "multiple_choice",
+      "question": "What does Pendula mean in the botanical name?",
+      "options": [
+        "Hanging or drooping",
+        "Pointed or sharp",
+        "Tall and upright",
+        "Swaying or flexible"
+      ],
+      "correct": "Hanging or drooping",
+      "bonus": true
+    },
+    {
+      "id": "q_19",
+      "type": "multiple_choice",
+      "question": "What is winnowing and where does the technique come from?",
+      "options": [
+        "Separating seed from husk by tossing in the air so the light husks blow away — used for wheat and barley since ancient times",
+        "Grinding seeds into flour using two flat stones — a technique developed in the Stone Age",
+        "Soaking seeds in water so the husks float to the surface — used in Asian rice cultivation for centuries",
+        "Heating seeds until the husks crack and fall away — developed in medieval European grain processing"
+      ],
+      "correct": "Separating seed from husk by tossing in the air so the light husks blow away — used for wheat and barley since ancient times",
+      "bonus": true
+    }
+  ]
+}

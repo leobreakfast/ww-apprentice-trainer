@@ -7,32 +7,35 @@
   ],
   "narrative": "You spot a flat rosette of broad oval leaves growing at the edge of the woodland path...",
   "interesting_fact": "Native Americans called it White Man's Footprint because it spread wherever European settlers went — following their paths and roadsides across the world.",
+  "carousel_distractors": [
+    {
+      "label": "Dock",
+      "image": "rumex-obtusifolius_01.jpg"
+    },
+    {
+      "label": "Ribwort Plantain",
+      "image": "plantago-lanceolata_01.jpg"
+    },
+    {
+      "label": "Burdock",
+      "image": "arctium-lappa_01.jpg"
+    }
+  ],
   "questions": [
     {
-      "id": "q_01",
-      "type": "image_carousel",
-      "question": "Which of these plants is Broadleaf Plantain?",
-      "options": [
-        {
-          "label": "Broadleaf Plantain",
-          "image": "plantago-major_01.jpg"
-        },
-        {
-          "label": "Dock",
-          "image": "rumex-obtusifolius_01.jpg"
-        },
-        {
-          "label": "Ribwort Plantain",
-          "image": "plantago-lanceolata_01.jpg"
-        },
-        {
-          "label": "Burdock",
-          "image": "arctium-lappa_01.jpg"
-        }
-      ],
-      "correct": "Broadleaf Plantain",
-      "bonus": false
-    },
+  "id": "q_01",
+  "type": "image_carousel",
+  "question": "Which of these plants is Greater Burdock?",
+  "options": [
+    { "label": "Greater Burdock", "image": "arctium-lappa_01.jpg" },
+    { "label": "Foxglove", "image": "digitalis-purpurea_01.jpg" },
+    { "label": "Dock", "image": "rumex-obtusifolius_01.jpg" },
+    { "label": "Broadleaf Plantain", "image": "plantago-major_01.jpg" }
+  ],
+  "correct": "Greater Burdock",
+  "remember": "Greater Burdock has larger flower heads on long spreading stalks and solid leaf stalks. Lesser Burdock is more compact with clustered stalkless flower heads and hollow leaf stalks — cut across the stalk to check",
+  "bonus": false
+},
     {
       "id": "q_02",
       "type": "multiple_choice",
@@ -44,6 +47,7 @@
         "Winterweed"
       ],
       "correct": "White Man's Footprint",
+      "remember": "Native Americans called it White Man's Footprint because it spread wherever European settlers went — following their paths and roadsides across the world",
       "bonus": false
     },
     {
@@ -53,8 +57,8 @@
       "options": [
         "Plantago major",
         "Plantago lanceolata",
-        "Rumex obtusifolius",
-        "Arctium lappa"
+        "Plantago media",
+        "Plantago maritima"
       ],
       "correct": "Plantago major",
       "bonus": false
@@ -64,12 +68,12 @@
       "type": "multiple_choice",
       "question": "Where is Broadleaf Plantain typically found?",
       "options": [
-        "Almost anywhere — paths, lawns, disturbed and compacted ground",
-        "Deep shaded woodland only",
-        "Rocky coastal cliffs",
-        "Boggy wetland margins"
+        "Paths, lawns, disturbed and compacted ground throughout the UK",
+        "Damp woodland edges and hedgerows on heavy clay soil",
+        "Meadows and grassland on well-drained chalky soils",
+        "Field margins and arable land on fertile loamy soil"
       ],
-      "correct": "Almost anywhere — paths, lawns, disturbed and compacted ground",
+      "correct": "Paths, lawns, disturbed and compacted ground throughout the UK",
       "bonus": false
     },
     {
@@ -80,7 +84,7 @@
         "Large oval leaves in a flat rosette with prominent parallel veins",
         "Broken stem reveals string-like fibres similar to celery",
         "Strong minty smell when crushed",
-        "Heart shaped leaves in groups of three",
+        "Finely toothed leaf edges with a slightly wavy margin",
         "Tiny hooked hairs that cling to clothing"
       ],
       "correct": [
@@ -97,7 +101,7 @@
         "Young leaves eaten raw or cooked",
         "Seeds ground into flour",
         "Made into a tea",
-        "Leaves used as a trail nibble — sweet and juicy"
+        "Roots boiled and eaten as a starchy vegetable"
       ],
       "correct": [
         "Young leaves eaten raw or cooked",
@@ -111,12 +115,12 @@
       "type": "multiple_choice",
       "question": "What does Broadleaf Plantain taste like?",
       "options": [
-        "Bitter and slightly vegetal — young leaves are best",
-        "Sweet and mild like peas",
-        "Sharp and lemony",
-        "Peppery and strong"
+        "Bitter and slightly vegetal — young leaves are milder and best eaten in spring",
+        "Mild and sweet with a slightly mucilaginous texture similar to cooked okra",
+        "Sharp and tangy with a lemony finish due to oxalic acid in the leaves",
+        "Earthy and nutty — similar in flavour to cooked spinach or chard"
       ],
-      "correct": "Bitter and slightly vegetal — young leaves are best",
+      "correct": "Bitter and slightly vegetal — young leaves are milder and best eaten in spring",
       "bonus": false
     },
     {
@@ -124,12 +128,12 @@
       "type": "multiple_choice",
       "question": "What are the cautions with Broadleaf Plantain?",
       "options": [
-        "No known adverse reactions — avoid older leaves as they become very fibrous",
-        "Toxic in any quantity",
-        "Avoid during pregnancy",
-        "Can cause severe skin irritation"
+        "No known adverse reactions — avoid older leaves as they become very fibrous and tough",
+        "Contains oxalic acid — avoid in large quantities especially if prone to kidney stones",
+        "Safe in small amounts but may cause digestive upset if eaten in quantity due to tannin content",
+        "Avoid during pregnancy as it has historically been used to stimulate uterine contractions"
       ],
-      "correct": "No known adverse reactions — avoid older leaves as they become very fibrous",
+      "correct": "No known adverse reactions — avoid older leaves as they become very fibrous and tough",
       "bonus": false
     },
     {
@@ -137,12 +141,12 @@
       "type": "multiple_choice",
       "question": "Which species could Broadleaf Plantain be confused with?",
       "options": [
-        "Ribwort Plantain (Plantago lanceolata) — similar but narrow lance-shaped leaves",
-        "Hemlock (Conium maculatum) — deadly toxic",
-        "Lords and Ladies (Arum maculatum) — toxic",
-        "Dogs Mercury (Mercurialis perennis) — poisonous"
+        "Ribwort Plantain (Plantago lanceolata) — similar parallel veins and flower spike but narrow lance-shaped leaves",
+        "Foxglove (Digitalis purpurea) — similar large oval leaves but matte and hairy with no parallel veins",
+        "Greater Burdock (Arctium lappa) — similar broad leaves but much larger with a woolly underside",
+        "Common Sorrel (Rumex acetosa) — similar rosette habit but arrow-shaped leaves with pointed lobes"
       ],
-      "correct": "Ribwort Plantain (Plantago lanceolata) — similar but narrow lance-shaped leaves",
+      "correct": "Ribwort Plantain (Plantago lanceolata) — similar parallel veins and flower spike but narrow lance-shaped leaves",
       "bonus": false
     },
     {
@@ -150,12 +154,12 @@
       "type": "multiple_choice",
       "question": "Is Broadleaf Plantain native to the UK?",
       "options": [
-        "Yes",
-        "No",
-        "Only in southern England",
-        "It was introduced by Roman settlers"
+        "Yes — native throughout Britain and Ireland",
+        "No — introduced from Europe during the Roman period as a medicinal herb",
+        "Yes — but only in England and Wales, rarely found in Scotland",
+        "No — introduced from Asia in the 17th century and now naturalised"
       ],
-      "correct": "Yes",
+      "correct": "Yes — native throughout Britain and Ireland",
       "bonus": false
     },
     {
@@ -196,12 +200,12 @@
       "type": "multiple_choice",
       "question": "What is the life cycle of Broadleaf Plantain?",
       "options": [
-        "Perennial — returns every year",
-        "Annual — completes in one year",
-        "Biennial — takes two years to complete",
-        "Ephemeral — only lasts a few weeks"
+        "Perennial — returns every year from the same rootstock",
+        "Annual — completes its full life cycle within a single growing season",
+        "Biennial — produces a leaf rosette in the first year and flowers in the second",
+        "Ephemeral — appears briefly after rain then dies back completely within weeks"
       ],
-      "correct": "Perennial — returns every year",
+      "correct": "Perennial — returns every year from the same rootstock",
       "bonus": false
     },
     {
@@ -222,12 +226,12 @@
       "type": "multiple_choice",
       "question": "What is the origin of the name Plantago?",
       "options": [
-        "From Latin planta meaning sole of the foot — referring to its flat rosette",
-        "Named after the botanist Pierre Plantago",
-        "From Greek meaning broad leaf",
-        "From Celtic meaning path plant"
+        "Possibly from Latin planta meaning sole of the foot — possibly referring to its flat rosette shape",
+        "Possibly from Latin plantare meaning to plant — possibly referring to its use in early cultivation",
+        "Possibly from Greek platos meaning flat — possibly referring to the broad shape of the leaves",
+        "Possibly from Celtic plann meaning spread — possibly referring to how widely it grows"
       ],
-      "correct": "From Latin planta meaning sole of the foot — referring to its flat rosette",
+      "correct": "Possibly from Latin planta meaning sole of the foot — possibly referring to its flat rosette shape",
       "bonus": true
     },
     {
@@ -235,27 +239,13 @@
       "type": "multiple_choice",
       "question": "What does Major mean in the botanical name Plantago major?",
       "options": [
-        "Greater or larger — distinguishing it from smaller plantain species",
-        "Medicinal — referring to its herbal uses",
-        "Common — referring to how widespread it is",
-        "Ancient — referring to how long it has been used"
+        "Greater or larger in Latin — distinguishing it from smaller plantain species like Plantago media",
+        "Medicinal in Latin — referring to its long history of use as a healing herb",
+        "Common in Latin — referring to how widespread and abundant it is across Europe",
+        "Ancient in Latin — referring to how long it has been used by humans as food and medicine"
       ],
-      "correct": "Greater or larger — distinguishing it from smaller plantain species",
+      "correct": "Greater or larger in Latin — distinguishing it from smaller plantain species like Plantago media",
       "bonus": true
-    }
-  ],
-  "carousel_distractors": [
-    {
-      "label": "Dock",
-      "image": "rumex-obtusifolius_01.jpg"
-    },
-    {
-      "label": "Ribwort Plantain",
-      "image": "plantago-lanceolata_01.jpg"
-    },
-    {
-      "label": "Burdock",
-      "image": "arctium-lappa_01.jpg"
     }
   ]
 }

@@ -1,6 +1,11 @@
+export { default as arctium_lappa_minus } from './arctium-lappa-minus';
+export { default as arum_maculatum } from './arum-maculatum';
+export { default as carex_pendula } from './carex-pendula';
 export { default as galium_aparine } from './galium-aparine';
 export { default as glechoma_hederacea } from './glechoma-hederacea';
+export { default as matricaria_discoidea } from './matricaria-discoidea';
 export { default as oxalis_acetosella } from './oxalis-acetosella';
 export { default as plantago_major } from './plantago-major';
+export { default as rumex_obtusifolius_crispus } from './rumex-obtusifolius-crispus';
 export { default as stellaria_media } from './stellaria-media';
 export { default as urtica_dioica } from './urtica-dioica';

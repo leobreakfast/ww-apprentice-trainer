@@ -1,0 +1,332 @@
+{
+  "id": "rumex_obtusifolius_crispus",
+  "common_name": "Dock — Broad-leaved / Curled",
+  "botanical_name": "Rumex obtusifolius / Rumex crispus",
+  "images": [
+    "rumex-obtusifolius_01.jpg"
+  ],
+  "narrative": "You spot a cluster of large broad leaves growing at the edge of the path. The lower stems have a distinctive reddish tinge...",
+  "interesting_fact": "Broad-leaved Dock can produce around 60,000 seeds per year and they can remain viable in soil for up to 50 years — due to a chemical that inhibits microbial decay.",
+  "carousel_distractors": [
+    {
+      "label": "Foxglove",
+      "image": "digitalis-purpurea_01.jpg"
+    },
+    {
+      "label": "Burdock",
+      "image": "arctium-lappa_01.jpg"
+    },
+    {
+      "label": "Common Sorrel",
+      "image": "rumex-acetosa_01.jpg"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_01",
+      "type": "image_carousel",
+      "question": "Which of these plants is Dock — Broad-leaved / Curled?",
+      "options": [
+        {
+          "label": "Dock — Broad-leaved / Curled",
+          "image": "rumex-obtusifolius_01.jpg"
+        },
+        {
+          "label": "Foxglove",
+          "image": "digitalis-purpurea_01.jpg"
+        },
+        {
+          "label": "Burdock",
+          "image": "arctium-lappa_01.jpg"
+        },
+        {
+          "label": "Common Sorrel",
+          "image": "rumex-acetosa_01.jpg"
+        }
+      ],
+      "correct": "Dock — Broad-leaved / Curled",
+      "bonus": false
+    },
+    {
+      "id": "q_02",
+      "type": "multiple_choice",
+      "question": "Name the other common names for Broad-leaved Dock and Curled Dock",
+      "options": [
+        "Bitter Dock and Yellow Dock",
+        "Goosegrass and Sticky Willy",
+        "Alehoof and Creeping Charlie",
+        "Winterweed and Starwort"
+      ],
+      "correct": "Bitter Dock and Yellow Dock",
+      "remember": "Butter Dock is another name for Broad-leaved Dock — large leaves were traditionally used to wrap butter before waxed paper existed",
+      "bonus": false
+    },
+    {
+      "id": "q_03",
+      "type": "multiple_choice",
+      "question": "What are the botanical names of Broad-leaved and Curled Dock?",
+      "options": [
+        "Rumex obtusifolius and Rumex crispus",
+        "Rumex acetosa and Rumex acetosella",
+        "Rumex alpinus and Rumex sanguineus",
+        "Rumex palustris and Rumex aquaticus"
+      ],
+      "correct": "Rumex obtusifolius and Rumex crispus",
+      "bonus": false
+    },
+    {
+      "id": "q_04",
+      "type": "multiple_choice",
+      "question": "Where is Dock typically found?",
+      "options": [
+        "Field edges, roadsides, waste ground and woodland margins on fertile disturbed soil",
+        "Deep shaded woodland on heavy clay soil",
+        "Upland moorland and exposed hillsides on acidic peat",
+        "Coastal sand dunes and shingle beaches"
+      ],
+      "correct": "Field edges, roadsides, waste ground and woodland margins on fertile disturbed soil",
+      "bonus": false
+    },
+    {
+      "id": "q_05",
+      "type": "multi_select",
+      "question": "Select all key identifying features of Dock",
+      "options": [
+        "Very large oval leaves with rounded tips",
+        "Lower leaves often have reddish stems",
+        "Tall reddish-brown seed heads visible well into winter",
+        "Strong minty smell when crushed",
+        "Tiny hooked hairs that cling to clothing"
+      ],
+      "correct": [
+        "Very large oval leaves with rounded tips",
+        "Lower leaves often have reddish stems",
+        "Tall reddish-brown seed heads visible well into winter"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_06",
+      "type": "multiple_choice",
+      "question": "How can you tell Broad-leaved Dock from Curled Dock?",
+      "options": [
+        "Broad-leaved Dock has flat or slightly wavy leaf edges — Curled Dock has distinctly wavy and curled edges",
+        "Broad-leaved Dock has reddish stems — Curled Dock has entirely green stems",
+        "Broad-leaved Dock grows in woodland — Curled Dock only grows in open fields",
+        "Broad-leaved Dock flowers in spring — Curled Dock flowers in autumn"
+      ],
+      "correct": "Broad-leaved Dock has flat or slightly wavy leaf edges — Curled Dock has distinctly wavy and curled edges",
+      "remember": "From a foraging perspective they are interchangeable — same uses, same taste, same risks",
+      "bonus": false
+    },
+    {
+      "id": "q_07",
+      "type": "multi_select",
+      "question": "What is Dock used for? Select all that apply",
+      "options": [
+        "Young leaves cooked like spinach",
+        "Seeds ground into flour",
+        "Leaves used to wrap food parcels for cooking in embers",
+        "Root eaten as a vegetable"
+      ],
+      "correct": [
+        "Young leaves cooked like spinach",
+        "Seeds ground into flour",
+        "Leaves used to wrap food parcels for cooking in embers"
+      ],
+      "remember": "The dock leaf on nettle sting is largely folklore — a BMJ study found lettuce was just as effective. The cooling effect of any moist leaf provides some relief but there is no specific chemical in dock that treats nettle stings. Crushed nettles themselves are actually a better remedy",
+      "bonus": false
+    },
+    {
+      "id": "q_08",
+      "type": "multiple_choice",
+      "question": "What do Dock leaves taste like?",
+      "options": [
+        "Bitter and slightly lemony — young spring leaves are milder",
+        "Sweet and fruity like pineapple",
+        "Sharp and strongly acidic like vinegar",
+        "Mild and vegetal like cooked spinach with no bitterness"
+      ],
+      "correct": "Bitter and slightly lemony — young spring leaves are milder",
+      "bonus": false
+    },
+    {
+      "id": "q_09",
+      "type": "multiple_choice",
+      "question": "What are the cautions with Dock?",
+      "options": [
+        "Contains oxalic acid — avoid in large quantities especially if prone to kidney stones",
+        "Contains calcium oxalate crystals causing immediate burning in the mouth",
+        "Avoid entirely during pregnancy as it stimulates uterine contractions",
+        "Safe in any quantity with no known cautions"
+      ],
+      "correct": "Contains oxalic acid — avoid in large quantities especially if prone to kidney stones",
+      "bonus": false
+    },
+    {
+      "id": "q_10",
+      "type": "multiple_choice",
+      "question": "Which toxic plant could Dock be confused with?",
+      "options": [
+        "Foxglove (Digitalis purpurea) — similar large leaves but matte and hairy with no rounded lobes at the base",
+        "Hemlock (Conium maculatum) — similar tall stems found in disturbed ground",
+        "Lords and Ladies (Arum maculatum) — similar large leaves in shaded habitats",
+        "Ragwort (Senecio jacobaea) — similar height and disturbed ground preference"
+      ],
+      "correct": "Foxglove (Digitalis purpurea) — similar large leaves but matte and hairy with no rounded lobes at the base",
+      "bonus": false
+    },
+    {
+      "id": "q_11",
+      "type": "multiple_choice",
+      "question": "When does Dock flower?",
+      "options": [
+        "Summer",
+        "Early spring",
+        "Late autumn",
+        "Midwinter"
+      ],
+      "correct": "Summer",
+      "bonus": false
+    },
+    {
+      "id": "q_12",
+      "type": "multiple_choice",
+      "question": "What time of year is Dock most commonly found?",
+      "options": [
+        "Year round — leaves best harvested in spring",
+        "Spring and summer only",
+        "Autumn and winter only",
+        "Summer only when fully grown"
+      ],
+      "correct": "Year round — leaves best harvested in spring",
+      "bonus": false
+    },
+    {
+      "id": "q_13",
+      "type": "multiple_choice",
+      "question": "Is Dock native to the UK?",
+      "options": [
+        "Yes — native throughout Britain and Ireland",
+        "No — introduced from Europe in the 17th century as a crop plant",
+        "Yes — but only in England and Wales, rare north of the border",
+        "Introduced by Roman settlers who used it as a medicinal herb"
+      ],
+      "correct": "Yes — native throughout Britain and Ireland",
+      "bonus": false
+    },
+    {
+      "id": "q_14",
+      "type": "multi_select",
+      "question": "What was Dock historically used to treat? Select all that apply",
+      "options": [
+        "Liver complaints and jaundice",
+        "Skin conditions and boils",
+        "Rheumatism and joint pain",
+        "Broken bones"
+      ],
+      "correct": [
+        "Liver complaints and jaundice",
+        "Skin conditions and boils",
+        "Rheumatism and joint pain"
+      ],
+      "remember": "Jaundice is the yellowing of the skin and whites of the eyes — caused by a build-up of bilirubin when the liver cannot process it properly. Usually a sign of liver problems",
+      "bonus": false
+    },
+    {
+      "id": "q_15",
+      "type": "multi_select",
+      "question": "How was Dock applied medicinally? Select all that apply",
+      "options": [
+        "Fresh leaves crushed and applied as a poultice",
+        "Root made into a tea or tincture",
+        "Burned and inhaled as smoke",
+        "Ground into a powder and swallowed dry"
+      ],
+      "correct": [
+        "Fresh leaves crushed and applied as a poultice",
+        "Root made into a tea or tincture"
+      ],
+      "remember": "Crushing leaves releases natural juices, tannins and in some cases anti-inflammatory compounds — the cooling effect of evaporating sap is also genuinely soothing. This is why crushed leaf poultices have been used across many cultures for thousands of years",
+      "bonus": false
+    },
+    {
+      "id": "q_16",
+      "type": "multiple_choice",
+      "question": "What is the life cycle of Dock?",
+      "options": [
+        "Perennial — returns every year from a deep taproot",
+        "Annual — completes its full life cycle within a single growing season",
+        "Biennial — produces leaves in the first year and flowers in the second",
+        "Ephemeral — appears briefly in spring then dies back completely"
+      ],
+      "correct": "Perennial — returns every year from a deep taproot",
+      "bonus": false
+    },
+    {
+      "id": "q_17",
+      "type": "multiple_choice",
+      "question": "What plant family does Dock belong to?",
+      "options": [
+        "Polygonaceae — the dock and sorrel family",
+        "Rosaceae — the rose family",
+        "Asteraceae — the daisy family",
+        "Lamiaceae — the mint family"
+      ],
+      "correct": "Polygonaceae — the dock and sorrel family",
+      "bonus": true
+    },
+    {
+      "id": "q_18",
+      "type": "multiple_choice",
+      "question": "What is the origin of the name Rumex?",
+      "options": [
+        "From Latin rumo meaning to suck — Romans sucked sorrel leaves to quench thirst",
+        "From Latin rumex meaning sharp point — referring to the pointed seed heads",
+        "From Greek rhuma meaning flow — referring to its preference for wet habitats",
+        "From Latin ruber meaning red — referring to the reddish stems and seed heads"
+      ],
+      "correct": "From Latin rumo meaning to suck — Romans sucked sorrel leaves to quench thirst",
+      "bonus": true
+    },
+    {
+      "id": "q_19",
+      "type": "multiple_choice",
+      "question": "What does Obtusifolius mean in the botanical name?",
+      "options": [
+        "Blunt-leaved in Latin — referring to the rounded leaf tips",
+        "Broad-leaved in Latin — referring to the large size of the leaves",
+        "Bitter-leaved in Latin — referring to the bitter taste of the leaves",
+        "Oval-leaved in Latin — referring to the oval shape of the leaves"
+      ],
+      "correct": "Blunt-leaved in Latin — referring to the rounded leaf tips",
+      "bonus": true
+    },
+    {
+      "id": "q_20",
+      "type": "multiple_choice",
+      "question": "Dock is listed under the UK Weeds Act 1959 — what does this mean?",
+      "options": [
+        "It must be controlled on agricultural land to prevent it spreading to crops — it is not illegal to have it in a garden",
+        "It is illegal to grow, possess or forage it anywhere in the UK",
+        "It must be reported to the local council if found on private land",
+        "It can only be removed by licensed contractors using approved herbicides"
+      ],
+      "correct": "It must be controlled on agricultural land to prevent it spreading to crops — it is not illegal to have it in a garden",
+      "bonus": true
+    },
+    {
+      "id": "q_21",
+      "type": "multiple_choice",
+      "question": "How long can Dock seeds remain viable in soil?",
+      "options": [
+        "Up to 50 years",
+        "Up to 5 years",
+        "Up to 15 years",
+        "Up to 2 years"
+      ],
+      "correct": "Up to 50 years",
+      "bonus": true
+    }
+  ]
+}

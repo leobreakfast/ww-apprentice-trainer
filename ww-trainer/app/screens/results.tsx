@@ -1,17 +1,23 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 
 export default function ResultsScreen() {
   const router = useRouter();
-  const { score, bonusScore, total, totalBonus, mode, plantId } = useLocalSearchParams();
+  const { score, bonusScore, total, totalBonus, mode, plantId, missedQuestions } = useLocalSearchParams();
 
   const scoreNum = Number(score);
   const totalNum = Number(total);
   const passed = scoreNum === totalNum;
   const isPlantMode = mode === 'plant';
 
+  const missed: { id: string; question: string }[] = missedQuestions
+    ? JSON.parse(missedQuestions as string)
+    : [];
+
+  const modeLabel = isPlantMode ? 'Plant Practice' : 'Full Customer Forage';
+
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.emoji}>{passed ? '🔥' : '🌱'}</Text>
       <Text style={styles.title}>{passed ? 'Perfect!' : 'Keep Practising'}</Text>
 
@@ -26,16 +32,23 @@ export default function ResultsScreen() {
         <Text style={styles.bonusScore}>{bonusScore} / {totalBonus}</Text>
       </View>
 
-      <Text style={styles.subtitle}>
-        {isPlantMode ? 'Plant Practice' : 'Full Customer Forage'} — Spark
-      </Text>
+      <Text style={styles.subtitle}>{modeLabel} — Spark</Text>
+
+      {missed.length > 0 && (
+        <View style={styles.missedBox}>
+          <Text style={styles.missedTitle}>⚠️ Review these questions</Text>
+          {missed.map((q, i) => (
+            <Text key={i} style={styles.missedItem}>· {q.question}</Text>
+          ))}
+        </View>
+      )}
 
       <TouchableOpacity
         style={styles.button}
         onPress={() => router.push({
-  pathname: '/screens/foraging',
-  params: { view: 'spark' }
-})}
+          pathname: '/screens/foraging',
+          params: { view: 'spark' }
+        })}
       >
         <Text style={styles.buttonText}>
           {isPlantMode ? 'Back to Plants' : 'Back to Foraging'}
@@ -53,13 +66,13 @@ export default function ResultsScreen() {
           <Text style={styles.buttonSecondaryText}>Try Again</Text>
         </TouchableOpacity>
       )}
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     backgroundColor: '#1a1a0e',
     padding: 32,
     alignItems: 'center',
@@ -124,7 +137,28 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 14,
     color: '#8a9a6e',
-    marginBottom: 32,
+    marginBottom: 24,
+  },
+  missedBox: {
+    backgroundColor: '#2a1a1a',
+    borderRadius: 12,
+    padding: 20,
+    width: '100%',
+    marginBottom: 24,
+    borderLeftWidth: 4,
+    borderLeftColor: '#7c4a4a',
+  },
+  missedTitle: {
+    fontSize: 14,
+    color: '#c87a7a',
+    fontWeight: 'bold',
+    marginBottom: 12,
+  },
+  missedItem: {
+    fontSize: 14,
+    color: '#ffffff',
+    lineHeight: 22,
+    marginBottom: 4,
   },
   button: {
     backgroundColor: '#4a7c59',

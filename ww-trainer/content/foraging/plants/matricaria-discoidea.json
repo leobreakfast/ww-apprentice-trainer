@@ -1,0 +1,289 @@
+{
+  "id": "matricaria_discoidea",
+  "common_name": "Pineapple Weed",
+  "botanical_name": "Matricaria discoidea",
+  "images": [
+    "matricaria-discoidea_01.jpg"
+  ],
+  "narrative": "You notice a low growing plant with feathery leaves pushing up through the gravel at the edge of the path. You crush a flower head between your fingers...",
+  "interesting_fact": "Pineapple Weed can flower just 37 days after germination — one of the fastest flowering plants in Britain. It became one of the most rapidly spreading plants of the 20th century after escaping from Kew Gardens.",
+  "carousel_distractors": [
+    {
+      "label": "Chamomile",
+      "image": "chamomile_01.jpg"
+    },
+    {
+      "label": "Yarrow",
+      "image": "yarrow_01.jpg"
+    },
+    {
+      "label": "Mayweed",
+      "image": "mayweed_01.jpg"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_01",
+      "type": "image_carousel",
+      "question": "Which of these plants is Pineapple Weed?",
+      "options": [
+        {
+          "label": "Pineapple Weed",
+          "image": "matricaria-discoidea_01.jpg"
+        },
+        {
+          "label": "Chamomile",
+          "image": "chamomile_01.jpg"
+        },
+        {
+          "label": "Yarrow",
+          "image": "yarrow_01.jpg"
+        },
+        {
+          "label": "Mayweed",
+          "image": "mayweed_01.jpg"
+        }
+      ],
+      "correct": "Pineapple Weed",
+      "bonus": false
+    },
+    {
+      "id": "q_02",
+      "type": "multiple_choice",
+      "question": "Does Pineapple Weed have any other common names?",
+      "options": [
+        "Wild Chamomile",
+        "Goosegrass",
+        "Winterweed",
+        "Alehoof"
+      ],
+      "correct": "Wild Chamomile",
+      "bonus": false
+    },
+    {
+      "id": "q_03",
+      "type": "multiple_choice",
+      "question": "What is the botanical name of Pineapple Weed?",
+      "options": [
+        "Matricaria discoidea",
+        "Matricaria chamomilla",
+        "Anthemis cotula",
+        "Tanacetum vulgare"
+      ],
+      "correct": "Matricaria discoidea",
+      "bonus": false
+    },
+    {
+      "id": "q_04",
+      "type": "multiple_choice",
+      "question": "Where is Pineapple Weed typically found?",
+      "options": [
+        "Paths, gateways, compacted and disturbed ground",
+        "Deep shaded woodland floors near tree roots",
+        "Boggy wetland margins and riverbanks",
+        "Rocky coastal cliffs and exposed hillsides"
+      ],
+      "correct": "Paths, gateways, compacted and disturbed ground",
+      "bonus": false
+    },
+    {
+      "id": "q_05",
+      "type": "multi_select",
+      "question": "Select all key identifying features of Pineapple Weed",
+      "options": [
+        "Finely divided feathery leaves",
+        "Strong pineapple scent when crushed",
+        "Small dome shaped yellow-green flower heads with no petals",
+        "Cone shaped green buds before flowering",
+        "Tiny hooked hairs that cling to clothing",
+        "Heart shaped leaves in groups of three"
+      ],
+      "correct": [
+        "Finely divided feathery leaves",
+        "Strong pineapple scent when crushed",
+        "Small dome shaped yellow-green flower heads with no petals",
+        "Cone shaped green buds before flowering"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_06",
+      "type": "multi_select",
+      "question": "What is Pineapple Weed used for? Select all that apply",
+      "options": [
+        "Flower heads eaten raw as a trail nibble",
+        "Made into a tea or syrup",
+        "Used as an insect repellent",
+        "Stir fried like tenderstem broccoli",
+        "Seeds dried as a coffee substitute"
+      ],
+      "correct": [
+        "Flower heads eaten raw as a trail nibble",
+        "Made into a tea or syrup",
+        "Used as an insect repellent"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_07",
+      "type": "multiple_choice",
+      "question": "What does Pineapple Weed taste like?",
+      "options": [
+        "Sweet and fruity — like pineapple crossed with chamomile",
+        "Bitter and earthy with a slightly medicinal aftertaste",
+        "Sharp and lemony due to oxalic acid",
+        "Mild and vegetal — fresh and green with a slight bitterness"
+      ],
+      "correct": "Sweet and fruity — like pineapple crossed with chamomile",
+      "bonus": false
+    },
+    {
+      "id": "q_08",
+      "type": "multiple_choice",
+      "question": "What are the cautions with Pineapple Weed?",
+      "options": [
+        "Some people are allergic — try a small amount first. Avoid during pregnancy as it has historically been used for uterine conditions",
+        "Safe in small quantities but avoid entirely if you have liver or kidney conditions",
+        "Avoid in large quantities as it contains oxalic acid which can cause digestive issues",
+        "Generally safe but avoid if pregnant as it contains compounds similar to mint"
+      ],
+      "correct": "Some people are allergic — try a small amount first. Avoid during pregnancy as it has historically been used for uterine conditions",
+      "bonus": false
+    },
+    {
+      "id": "q_09",
+      "type": "multiple_choice",
+      "question": "Which species could Pineapple Weed be confused with?",
+      "options": [
+        "Mayweed Chamomile (Anthemis cotula) — similar but no pineapple smell and grows taller",
+        "Hemlock (Conium maculatum) — similar feathery leaves but grows much taller and is deadly",
+        "Yarrow (Achillea millefolium) — similar feathery leaves but has white flowers in flat clusters",
+        "Wild Chamomile (Matricaria chamomilla) — similar flowers but has white ray petals"
+      ],
+      "correct": "Mayweed Chamomile (Anthemis cotula) — similar but no pineapple smell and grows taller",
+      "bonus": false
+    },
+    {
+      "id": "q_10",
+      "type": "multiple_choice",
+      "question": "When does Pineapple Weed flower?",
+      "options": [
+        "May to November",
+        "December to February",
+        "July to August only",
+        "March to April only"
+      ],
+      "correct": "May to November",
+      "bonus": false
+    },
+    {
+      "id": "q_11",
+      "type": "multiple_choice",
+      "question": "What time of year is Pineapple Weed most commonly found?",
+      "options": [
+        "Late spring to autumn",
+        "Winter only when other plants have died back",
+        "Midsummer only during the warmest months",
+        "Year round including through winter"
+      ],
+      "correct": "Late spring to autumn",
+      "bonus": false
+    },
+    {
+      "id": "q_12",
+      "type": "multiple_choice",
+      "question": "Is Pineapple Weed native to the UK?",
+      "options": [
+        "No — introduced from Asia, believed to have escaped from Kew Gardens in the 18th century",
+        "Yes — it is fully native and has grown wild in Britain since before Roman times"
+      ],
+      "correct": "No — introduced from Asia, believed to have escaped from Kew Gardens in the 18th century",
+      "bonus": false
+    },
+    {
+      "id": "q_13",
+      "type": "multi_select",
+      "question": "What was Pineapple Weed historically used to treat? Select all that apply",
+      "options": [
+        "Digestive complaints",
+        "Fevers",
+        "Menstrual pain",
+        "Broken bones"
+      ],
+      "correct": [
+        "Digestive complaints",
+        "Fevers",
+        "Menstrual pain"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_14",
+      "type": "multi_select",
+      "question": "How was Pineapple Weed applied medicinally? Select all that apply",
+      "options": [
+        "As a tea or infusion",
+        "Rubbed on skin as an insect repellent",
+        "Burned and inhaled as smoke",
+        "Ground into a powder and swallowed dry"
+      ],
+      "correct": [
+        "As a tea or infusion",
+        "Rubbed on skin as an insect repellent"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_15",
+      "type": "multiple_choice",
+      "question": "What is the life cycle of Pineapple Weed?",
+      "options": [
+        "Annual — completes in one year",
+        "Perennial — returns every year from the same root",
+        "Biennial — takes two years to flower and set seed",
+        "Ephemeral — only lasts a few weeks before dying back"
+      ],
+      "correct": "Annual — completes in one year",
+      "bonus": false
+    },
+    {
+      "id": "q_16",
+      "type": "multiple_choice",
+      "question": "What plant family does Pineapple Weed belong to?",
+      "options": [
+        "Asteraceae — the daisy family",
+        "Lamiaceae — the mint family",
+        "Rosaceae — the rose family",
+        "Plantaginaceae — the plantain family"
+      ],
+      "correct": "Asteraceae — the daisy family",
+      "bonus": true
+    },
+    {
+      "id": "q_17",
+      "type": "multiple_choice",
+      "question": "What is the origin of the name Matricaria?",
+      "options": [
+        "From Latin matrix meaning womb — due to its association with uterine treatments",
+        "Named after the botanist Maria Matricara who first classified it",
+        "From Greek meaning small flower — referring to its tiny flower heads",
+        "From Celtic meaning path plant — due to where it grows"
+      ],
+      "correct": "From Latin matrix meaning womb — due to its association with uterine treatments",
+      "bonus": true
+    },
+    {
+      "id": "q_18",
+      "type": "multiple_choice",
+      "question": "What does Discoidea mean in the botanical name?",
+      "options": [
+        "Without rays — referring to its lack of petals",
+        "Disc shaped — referring to the flat rosette of leaves",
+        "Small disc — referring to the miniature size of the plant",
+        "Double flower — referring to the two types of florets it produces"
+      ],
+      "correct": "Without rays — referring to its lack of petals",
+      "bonus": true
+    }
+  ]
+}

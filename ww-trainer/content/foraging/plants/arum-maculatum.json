@@ -1,0 +1,296 @@
+{
+  "id": "arum_maculatum",
+  "common_name": "Lords and Ladies",
+  "botanical_name": "Arum maculatum",
+  "images": [
+    "arum-maculatum-leaf_01.jpg",
+    "arum-maculatum-spathe_01.jpg",
+    "arum-maculatum-berries_01.jpg"
+  ],
+  "narrative": "You spot a cluster of glossy arrow shaped leaves emerging from the base of a hedgerow. Some have dark purple blotches...",
+  "interesting_fact": "Lords and Ladies is one of the most common reasons for plant-based poisoning hospital admissions in the UK. The burning sensation hits almost immediately — most people spit it out before consuming a dangerous amount.",
+  "carousel_distractors": [
+    {
+      "label": "Wild Garlic",
+      "image": "allium-ursinum_01.jpg"
+    },
+    {
+      "label": "Common Sorrel",
+      "image": "rumex-acetosa_01.jpg"
+    },
+    {
+      "label": "Lesser Celandine",
+      "image": "ficaria-verna_01.jpg"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_01",
+      "type": "image_carousel",
+      "question": "Which of these plants is Lords and Ladies?",
+      "options": [
+        {
+          "label": "Lords and Ladies",
+          "image": "arum-maculatum-leaf_01.jpg"
+        },
+        {
+          "label": "Wild Garlic",
+          "image": "allium-ursinum_01.jpg"
+        },
+        {
+          "label": "Common Sorrel",
+          "image": "rumex-acetosa_01.jpg"
+        },
+        {
+          "label": "Lesser Celandine",
+          "image": "ficaria-verna_01.jpg"
+        }
+      ],
+      "correct": "Lords and Ladies",
+      "bonus": false
+    },
+    {
+      "id": "q_02",
+      "type": "multiple_choice",
+      "question": "Does Lords and Ladies have any other common names?",
+      "options": [
+        "Cuckoo Pint",
+        "Goosegrass",
+        "Alehoof",
+        "Winterweed"
+      ],
+      "correct": "Cuckoo Pint",
+      "remember": "Cuckoo Pint — pint is a shortening of pintle meaning penis, referring to the shape of the spadix. Cuckoo because it appears when the cuckoo arrives in spring. Lords and Ladies refers to the spadix and spathe resembling male and female genitalia.",
+      "bonus": false
+    },
+    {
+      "id": "q_03",
+      "type": "multiple_choice",
+      "question": "What is the botanical name of Lords and Ladies?",
+      "options": [
+        "Arum maculatum",
+        "Arum italicum",
+        "Arisarum vulgare",
+        "Dracunculus vulgaris"
+      ],
+      "correct": "Arum maculatum",
+      "bonus": false
+    },
+    {
+      "id": "q_04",
+      "type": "multiple_choice",
+      "question": "Where is Lords and Ladies typically found?",
+      "options": [
+        "Woodland and hedgerows on fertile moist soils",
+        "Disturbed ground and roadsides on poor compacted soil",
+        "Upland moorland and bog on acidic peaty soil",
+        "Coastal grassland and cliff tops on thin chalky soil"
+      ],
+      "correct": "Woodland and hedgerows on fertile moist soils",
+      "bonus": false
+    },
+    {
+      "id": "q_05",
+      "type": "multi_select",
+      "question": "Select all key identifying features of Lords and Ladies",
+      "options": [
+        "Arrow shaped glossy dark green leaves sometimes with dark purple blotches",
+        "Pale green spathe surrounding a purple spadix in spring",
+        "Bright orange-red berries on a bare stalk in autumn",
+        "Strong pineapple scent when crushed",
+        "Tiny hooked hairs that cling to clothing"
+      ],
+      "correct": [
+        "Arrow shaped glossy dark green leaves sometimes with dark purple blotches",
+        "Pale green spathe surrounding a purple spadix in spring",
+        "Bright orange-red berries on a bare stalk in autumn"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_06",
+      "type": "multiple_choice",
+      "question": "Is Lords and Ladies edible?",
+      "options": [
+        "No — all parts are toxic and should never be eaten",
+        "Yes — the young leaves can be eaten raw in spring",
+        "Only the berries are safe to eat when fully ripe",
+        "Yes — but only after thorough boiling with multiple water changes"
+      ],
+      "correct": "No — all parts are toxic and should never be eaten",
+      "bonus": false
+    },
+    {
+      "id": "q_07",
+      "type": "multiple_choice",
+      "question": "What makes Lords and Ladies toxic?",
+      "options": [
+        "Calcium oxalate crystals causing immediate burning and swelling of the mouth and throat",
+        "High levels of oxalic acid similar to Wood Sorrel but in far greater concentrations",
+        "Alkaloids similar to those found in Hemlock causing progressive paralysis",
+        "Saponins similar to those in Chickweed but present in dangerous concentrations"
+      ],
+      "correct": "Calcium oxalate crystals causing immediate burning and swelling of the mouth and throat",
+      "remember": "Calcium oxalate crystals are microscopic needle-shaped shards — when they contact soft tissue in the mouth and throat they physically pierce the cells like tiny glass splinters, causing immediate burning and inflammation. There is no known antidote.",
+      "bonus": false
+    },
+    {
+      "id": "q_08",
+      "type": "multiple_choice",
+      "question": "What are the dangers of Lords and Ladies?",
+      "options": [
+        "Can cause swelling of the throat leading to asphyxiation — there is no known antidote",
+        "Causes digestive upset if eaten in large quantities but rarely serious",
+        "Primarily a skin irritant — dangerous only on prolonged contact with eyes",
+        "Toxic to animals but not to humans in small quantities"
+      ],
+      "correct": "Can cause swelling of the throat leading to asphyxiation — there is no known antidote",
+      "bonus": false
+    },
+    {
+      "id": "q_09",
+      "type": "multiple_choice",
+      "question": "What happens if Lords and Ladies touches your mouth?",
+      "options": [
+        "Immediate burning sensation — the calcium oxalate crystals pierce soft tissue like glass",
+        "Delayed burning sensation developing over several hours after contact",
+        "Initial numbness followed by a burning sensation after around 30 minutes",
+        "Mild tingling that fades quickly — similar to eating a strong mint"
+      ],
+      "correct": "Immediate burning sensation — the calcium oxalate crystals pierce soft tissue like glass",
+      "bonus": false
+    },
+    {
+      "id": "q_10",
+      "type": "multiple_choice",
+      "question": "Which edible plant could Lords and Ladies be confused with?",
+      "options": [
+        "Wild Garlic (Allium ursinum) — young leaves look similar but Wild Garlic smells strongly of garlic when crushed",
+        "Stinging Nettle (Urtica dioica) — similar height and damp woodland habitat preference",
+        "Cleavers (Galium aparine) — similar broad leaves scrambling through hedgerow habitat",
+        "Broadleaf Plantain (Plantago major) — similar oval leaves found on disturbed ground"
+      ],
+      "correct": "Wild Garlic (Allium ursinum) — young leaves look similar but Wild Garlic smells strongly of garlic when crushed",
+      "bonus": false
+    },
+    {
+      "id": "q_11",
+      "type": "multiple_choice",
+      "question": "Which plant could Lords and Ladies leaves be confused with?",
+      "options": [
+        "Common Sorrel (Rumex acetosa) — both have arrow shaped leaves but the lobes differ",
+        "Hedge Garlic (Alliaria petiolata) — similar glossy leaves in hedgerow and woodland edge",
+        "Navelwort (Umbilicus rupestris) — similar rounded glossy leaves in shaded spots",
+        "Lesser Celandine (Ficaria verna) — similar dark glossy leaves appearing early in spring"
+      ],
+      "correct": "Common Sorrel (Rumex acetosa) — both have arrow shaped leaves but the lobes differ",
+      "bonus": false
+    },
+    {
+      "id": "q_12",
+      "type": "multiple_choice",
+      "question": "How can you tell Lords and Ladies from Wild Garlic?",
+      "options": [
+        "Crush a leaf — Wild Garlic smells strongly of garlic, Lords and Ladies has no garlic smell",
+        "Wild Garlic has spotted leaves whereas Lords and Ladies leaves are plain green",
+        "Lords and Ladies grows in full sun whereas Wild Garlic prefers deep shade",
+        "Wild Garlic has purple flowers whereas Lords and Ladies has white flowers"
+      ],
+      "correct": "Crush a leaf — Wild Garlic smells strongly of garlic, Lords and Ladies has no garlic smell",
+      "remember": "Always crush and smell a leaf if you are unsure — this is the single most reliable way to distinguish Lords and Ladies from Wild Garlic in the field",
+      "bonus": false
+    },
+    {
+      "id": "q_13",
+      "type": "multiple_choice",
+      "question": "When does Lords and Ladies flower?",
+      "options": [
+        "April to May",
+        "July to August",
+        "December to February",
+        "September to October"
+      ],
+      "correct": "April to May",
+      "remember": "The spathe and spadix appear in spring — the bright red berries follow in autumn on a bare stalk after the leaves have died back",
+      "bonus": false
+    },
+    {
+      "id": "q_14",
+      "type": "multiple_choice",
+      "question": "What time of year are the leaves of Lords and Ladies most visible?",
+      "options": [
+        "Late winter to early summer — leaves appear from February and die back by midsummer",
+        "Late summer to autumn — leaves appear after flowering has finished",
+        "Midsummer to early autumn — appearing once the ground has warmed through",
+        "Spring and autumn — dying back in both summer and winter"
+      ],
+      "correct": "Late winter to early summer — leaves appear from February and die back by midsummer",
+      "bonus": false
+    },
+    {
+      "id": "q_15",
+      "type": "multiple_choice",
+      "question": "Is Lords and Ladies native to the UK?",
+      "options": [
+        "Yes — native throughout England, Wales and parts of Ireland",
+        "No — introduced from southern Europe during the 17th century",
+        "Only in southern England — not found north of the Midlands",
+        "Introduced by monks for use in church laundry starch production"
+      ],
+      "correct": "Yes — native throughout England, Wales and parts of Ireland",
+      "bonus": false
+    },
+    {
+      "id": "q_16",
+      "type": "multiple_choice",
+      "question": "What is the life cycle of Lords and Ladies?",
+      "options": [
+        "Perennial — returns every year from an underground tuber",
+        "Annual — completes its full life cycle within a single growing season",
+        "Biennial — produces leaves in the first year and flowers in the second",
+        "Ephemeral — appears briefly in spring then dies back completely within weeks"
+      ],
+      "correct": "Perennial — returns every year from an underground tuber",
+      "bonus": false
+    },
+    {
+      "id": "q_17",
+      "type": "multiple_choice",
+      "question": "What plant family does Lords and Ladies belong to?",
+      "options": [
+        "Araceae — the arum family",
+        "Liliaceae — the lily family",
+        "Ranunculaceae — the buttercup family",
+        "Solanaceae — the nightshade family"
+      ],
+      "correct": "Araceae — the arum family",
+      "bonus": true
+    },
+    {
+      "id": "q_18",
+      "type": "multiple_choice",
+      "question": "What is the possible origin of the name Arum?",
+      "options": [
+        "Possibly from Arabic ar meaning fire — possibly referring to the burning sensation it causes",
+        "Possibly from Greek aros meaning arrow — possibly referring to the arrow shaped leaves",
+        "Possibly from Latin arare meaning to plough — possibly referring to its preference for disturbed ground",
+        "Possibly from Celtic ara meaning red — possibly referring to the bright red berries"
+      ],
+      "correct": "Possibly from Arabic ar meaning fire — possibly referring to the burning sensation it causes",
+      "bonus": true
+    },
+    {
+      "id": "q_19",
+      "type": "multiple_choice",
+      "question": "What does Maculatum mean in the botanical name?",
+      "options": [
+        "Spotted or speckled in Latin — referring to the dark blotches sometimes found on the leaves",
+        "Dangerous or toxic in Latin — referring to its highly poisonous properties",
+        "Hooded or covered in Latin — referring to the spathe that encloses the spadix",
+        "Hidden or concealed in Greek — referring to how the flowers are enclosed within the spathe"
+      ],
+      "correct": "Spotted or speckled in Latin — referring to the dark blotches sometimes found on the leaves",
+      "bonus": true
+    }
+  ]
+}

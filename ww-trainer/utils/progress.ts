@@ -1,8 +1,16 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+export interface QuestionMiss {
+  questionId: string;
+  question: string;
+  missedCount: number;
+  lastMissed: boolean;
+}
+
 export interface PlantProgress {
   perfectCompletions: number;
   currentStreak: number;
+  missedQuestions: QuestionMiss[];
 }
 
 export interface ModuleProgress {
@@ -17,11 +25,12 @@ export interface ModuleProgress {
 const DEFAULT_PLANT: PlantProgress = {
   perfectCompletions: 0,
   currentStreak: 0,
+  missedQuestions: [],
 };
 
 const DEFAULT_PROGRESS: ModuleProgress = {
   plants: {},
-  forage: { perfectCompletions: 0, currentStreak: 0 },
+  forage: { perfectCompletions: 0, currentStreak: 0, missedQuestions: [] },
   sparkUnlocked: true,
   emberUnlocked: false,
   flameUnlocked: false,
@@ -61,8 +70,6 @@ export async function savePlantResult(
 
     progress.plants[plantId] = plant;
 
-    // check if ember should unlock
-    // all plants must have 2+ perfect completions
     const allPlantIds = ['oxalis_acetosella', 'galium_aparine', 'glechoma_hederacea', 'stellaria_media', 'urtica_dioica'];
     const allPerfect = allPlantIds.every(id =>
       (progress.plants[id]?.perfectCompletions ?? 0) >= 2
@@ -140,5 +147,43 @@ export async function clearSessionProgress(moduleId: string): Promise<void> {
     await AsyncStorage.removeItem(`session_${moduleId}`);
   } catch (error) {
     console.error('Error clearing session:', error);
+  }
+}
+
+export async function saveMissedQuestions(
+  moduleId: string,
+  plantId: string,
+  missed: { id: string; question: string }[]
+): Promise<void> {
+  try {
+    const progress = await getModuleProgress(moduleId);
+    const plant = progress.plants[plantId] || { ...DEFAULT_PLANT };
+
+    // Reset lastMissed on all existing questions
+    plant.missedQuestions = (plant.missedQuestions || []).map(q => ({
+      ...q,
+      lastMissed: false
+    }));
+
+    // Update or add missed questions
+    missed.forEach(({ id, question }) => {
+      const existing = plant.missedQuestions.find(q => q.questionId === id);
+      if (existing) {
+        existing.missedCount += 1;
+        existing.lastMissed = true;
+      } else {
+        plant.missedQuestions.push({
+          questionId: id,
+          question,
+          missedCount: 1,
+          lastMissed: true
+        });
+      }
+    });
+
+    progress.plants[plantId] = plant;
+    await AsyncStorage.setItem(`progress_${moduleId}`, JSON.stringify(progress));
+  } catch (error) {
+    console.error('Error saving missed questions:', error);
   }
 }
