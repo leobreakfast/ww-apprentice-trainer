@@ -1,0 +1,206 @@
+{
+  "id": "rubus_fruticosus",
+  "common_name": "Bramble",
+  "botanical_name": "Rubus fruticosus",
+  "images": [
+    "rubus-fruticosus_01.jpg"
+  ],
+  "narrative": "A thorny tangle spills out from the hedge, arching across the edge of the path...",
+  "interesting_fact": "Dense bramble patches provide food and shelter for a wide range of wildlife.",
+  "carousel_distractors": [
+    {
+      "label": "Raspberry",
+      "image": "rubus-idaeus_01.jpg"
+    },
+    {
+      "label": "Dog Rose",
+      "image": "rosa-canina_01.jpg"
+    },
+    {
+      "label": "Blackthorn",
+      "image": "prunus-spinosa_01.jpg"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_01",
+      "type": "image_carousel",
+      "question": "Which of these plants is Bramble?",
+      "options": [
+        {
+          "label": "Bramble",
+          "image": "rubus-fruticosus_01.jpg"
+        },
+        {
+          "label": "Raspberry",
+          "image": "rubus-idaeus_01.jpg"
+        },
+        {
+          "label": "Dog Rose",
+          "image": "rosa-canina_01.jpg"
+        },
+        {
+          "label": "Blackthorn",
+          "image": "prunus-spinosa_01.jpg"
+        }
+      ],
+      "correct": "Bramble",
+      "bonus": false
+    },
+    {
+      "id": "q_02",
+      "type": "multiple_choice",
+      "question": "Does Bramble have any other common names?",
+      "options": [
+        "Blackberry",
+        "Goosegrass",
+        "Cleavers",
+        "Hedge Mustard"
+      ],
+      "correct": "Blackberry",
+      "bonus": false
+    },
+    {
+      "id": "q_03",
+      "type": "multiple_choice",
+      "question": "What is the botanical name of Bramble?",
+      "options": [
+        "Rubus fruticosus",
+        "Rubus idaeus",
+        "Prunus spinosa",
+        "Rosa canina"
+      ],
+      "correct": "Rubus fruticosus",
+      "bonus": false
+    },
+    {
+      "id": "q_04",
+      "type": "multiple_choice",
+      "question": "Where is Bramble typically found?",
+      "options": [
+        "Hedgerows, woodland edges, scrub and disturbed ground",
+        "Only in deep shade in ancient woodland",
+        "Mostly in marshes and wet reedbeds",
+        "Mainly on exposed sea cliffs"
+      ],
+      "correct": "Hedgerows, woodland edges, scrub and disturbed ground",
+      "bonus": false
+    },
+    {
+      "id": "q_05",
+      "type": "multi_select",
+      "question": "Select all key identifying features of Bramble",
+      "options": [
+        "Arching thorny canes",
+        "Leaves usually made up of three or five toothed leaflets",
+        "White or pale pink five-petalled flowers",
+        "Hollow jointed stems",
+        "Umbel-shaped flower heads"
+      ],
+      "correct": [
+        "Arching thorny canes",
+        "Leaves usually made up of three or five toothed leaflets",
+        "White or pale pink five-petalled flowers"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_06",
+      "type": "multi_select",
+      "question": "What is Bramble used for? Select all that apply",
+      "options": [
+        "Ripe fruit eaten raw or cooked",
+        "Leaves made into tea",
+        "Flexible stems used for cordage or simple bindings",
+        "Crushed berries used as a stain or dye",
+        "Roots commonly boiled as a staple vegetable"
+      ],
+      "correct": [
+        "Ripe fruit eaten raw or cooked",
+        "Leaves made into tea",
+        "Flexible stems used for cordage or simple bindings",
+        "Crushed berries used as a stain or dye"
+      ],
+      "remember": "Young shoots can also be eaten when very young and tender. The leaves have a long history of use in tea, and because they are astringent they have also been used traditionally when people needed something binding for the gut",
+      "bonus": false
+    },
+    {
+      "id": "q_08",
+      "type": "multiple_choice",
+      "question": "What are the cautions with Bramble?",
+      "options": [
+        "Watch out for thorns and avoid picking from polluted or contaminated places",
+        "All ripe fruits must be cooked before eating",
+        "The leaves are poisonous raw",
+        "The fruit is unsafe unless frost has passed"
+      ],
+      "correct": "Watch out for thorns and avoid picking from polluted or contaminated places",
+      "bonus": false
+    },
+    {
+      "id": "q_10",
+      "type": "multiple_choice",
+      "question": "Is Bramble native to the UK?",
+      "options": [
+        "Yes — native and widespread throughout Britain and Ireland",
+        "No — introduced from North America",
+        "No — introduced by the Romans",
+        "Yes — but only native in southern England"
+      ],
+      "correct": "Yes — native and widespread throughout Britain and Ireland",
+      "bonus": false
+    },
+    {
+      "id": "q_13",
+      "type": "multiple_choice",
+      "question": "What is the life cycle of Bramble?",
+      "options": [
+        "Perennial rootstock with biennial canes — first-year canes grow, second-year canes flower and fruit",
+        "Annual — completes its life cycle in one year",
+        "Biennial — the whole plant dies after fruiting in year two",
+        "Ephemeral — appears briefly after rain then disappears"
+      ],
+      "correct": "Perennial rootstock with biennial canes — first-year canes grow, second-year canes flower and fruit",
+      "bonus": false
+    },
+    {
+      "id": "q_14",
+      "type": "multiple_choice",
+      "question": "What plant family does Bramble belong to?",
+      "options": [
+        "Rosaceae — the rose family",
+        "Plantaginaceae — the plantain family",
+        "Apiaceae — the carrot family",
+        "Lamiaceae — the mint family"
+      ],
+      "correct": "Rosaceae — the rose family",
+      "bonus": true
+    },
+    {
+      "id": "q_15",
+      "type": "multiple_choice",
+      "question": "What is the origin of the name Rubus?",
+      "options": [
+        "From Latin for bramble or blackberry",
+        "From Greek for red berry",
+        "From Old English for thorn hedge",
+        "From Celtic for hooked stem"
+      ],
+      "correct": "From Latin for bramble or blackberry",
+      "bonus": true
+    },
+    {
+      "id": "q_16",
+      "type": "multiple_choice",
+      "question": "What does fruticosus mean in the botanical name Rubus fruticosus?",
+      "options": [
+        "Shrubby or bushy",
+        "Sweet-fruited",
+        "Thorn-bearing",
+        "Woodland-dwelling"
+      ],
+      "correct": "Shrubby or bushy",
+      "bonus": true
+    }
+  ]
+}

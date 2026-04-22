@@ -23,19 +23,30 @@
   ],
   "questions": [
     {
-  "id": "q_01",
-  "type": "image_carousel",
-  "question": "Which of these plants is Greater Burdock?",
-  "options": [
-    { "label": "Greater Burdock", "image": "arctium-lappa_01.jpg" },
-    { "label": "Foxglove", "image": "digitalis-purpurea_01.jpg" },
-    { "label": "Dock", "image": "rumex-obtusifolius_01.jpg" },
-    { "label": "Broadleaf Plantain", "image": "plantago-major_01.jpg" }
-  ],
-  "correct": "Greater Burdock",
-  "remember": "Greater Burdock has larger flower heads on long spreading stalks and solid leaf stalks. Lesser Burdock is more compact with clustered stalkless flower heads and hollow leaf stalks — cut across the stalk to check",
-  "bonus": false
-},
+      "id": "q_01",
+      "type": "image_carousel",
+      "question": "Which of these plants is Broadleaf Plantain?",
+      "options": [
+        {
+          "label": "Broadleaf Plantain",
+          "image": "plantago-major_01.jpg"
+        },
+        {
+          "label": "Dock",
+          "image": "rumex-obtusifolius_01.jpg"
+        },
+        {
+          "label": "Ribwort Plantain",
+          "image": "plantago-lanceolata_01.jpg"
+        },
+        {
+          "label": "Burdock",
+          "image": "arctium-lappa_01.jpg"
+        }
+      ],
+      "correct": "Broadleaf Plantain",
+      "bonus": false
+    },
     {
       "id": "q_02",
       "type": "multiple_choice",

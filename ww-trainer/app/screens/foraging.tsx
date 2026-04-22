@@ -6,12 +6,14 @@ import { getModuleProgress, ModuleProgress, clearSessionProgress, getSessionProg
 const INTRO = { id: 'foraging_intro', name: 'Foraging Law & Intro', botanical: '' };
 
 const PLANTS = [
+  { id: 'rubus_fruticosus', name: 'Bramble', botanical: 'Rubus fruticosus' },
   { id: 'plantago_major', name: 'Broadleaf Plantain', botanical: 'Plantago major' },
   { id: 'arctium_lappa_minus', name: 'Burdock — Greater / Lesser', botanical: 'Arctium lappa / Arctium minus' },
   { id: 'stellaria_media', name: 'Chickweed', botanical: 'Stellaria media' },
   { id: 'galium_aparine', name: 'Cleavers', botanical: 'Galium aparine' },
   { id: 'rumex_obtusifolius_crispus', name: 'Dock — Broad-leaved / Curled', botanical: 'Rumex obtusifolius / Rumex crispus' },
   { id: 'glechoma_hederacea', name: 'Ground Ivy', botanical: 'Glechoma hederacea' },
+  { id: 'geranium_robertianum', name: 'Herb Robert', botanical: 'Geranium robertianum' },
   { id: 'arum_maculatum', name: 'Lords and Ladies', botanical: 'Arum maculatum' },
   { id: 'carex_pendula', name: 'Pendulous Sedge', botanical: 'Carex pendula' },
   { id: 'matricaria_discoidea', name: 'Pineapple Weed', botanical: 'Matricaria discoidea' },

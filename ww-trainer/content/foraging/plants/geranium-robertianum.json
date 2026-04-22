@@ -1,0 +1,197 @@
+{
+  "id": "geranium_robertianum",
+  "common_name": "Herb Robert",
+  "botanical_name": "Geranium robertianum",
+  "images": [
+    "geranium-robertianum_01.jpg"
+  ],
+  "narrative": "A small loose plant grows from the shaded bank, with reddish stems and little pink flowers held above divided leaves...",
+  "interesting_fact": "When crushed, Herb Robert has a very strong smell, which is why one of its old common names is Stinking Bob.",
+  "carousel_distractors": [
+    {
+      "label": "Ground Ivy",
+      "image": "glechoma-hederacea_01.jpg"
+    },
+    {
+      "label": "Herb Bennet",
+      "image": "geum-urbanum_01.jpg"
+    },
+    {
+      "label": "Red Campion",
+      "image": "silene-dioica_01.jpg"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_01",
+      "type": "image_carousel",
+      "question": "Which of these plants is Herb Robert?",
+      "options": [
+        {
+          "label": "Herb Robert",
+          "image": "geranium-robertianum_01.jpg"
+        },
+        {
+          "label": "Ground Ivy",
+          "image": "glechoma-hederacea_01.jpg"
+        },
+        {
+          "label": "Herb Bennet",
+          "image": "geum-urbanum_01.jpg"
+        },
+        {
+          "label": "Red Campion",
+          "image": "silene-dioica_01.jpg"
+        }
+      ],
+      "correct": "Herb Robert",
+      "bonus": false
+    },
+    {
+      "id": "q_02",
+      "type": "multiple_choice",
+      "question": "Does Herb Robert have any other common names?",
+      "options": [
+        "Stinking Bob",
+        "Sweet Cicely",
+        "Hedge Woundwort",
+        "Lady's Smock"
+      ],
+      "correct": "Stinking Bob",
+      "remember": "It gets this name from its strong smell when the leaves are crushed",
+      "bonus": false
+    },
+    {
+      "id": "q_03",
+      "type": "multiple_choice",
+      "question": "What is the botanical name of Herb Robert?",
+      "options": [
+        "Geranium robertianum",
+        "Geranium molle",
+        "Erodium cicutarium",
+        "Lamium purpureum"
+      ],
+      "correct": "Geranium robertianum",
+      "bonus": false
+    },
+    {
+      "id": "q_04",
+      "type": "multiple_choice",
+      "question": "Where is Herb Robert typically found?",
+      "options": [
+        "Woodland edges, shady banks, walls and other darker spots",
+        "Only in open marsh and reedbed",
+        "Mainly on exposed coastal dunes",
+        "Only in intensively managed arable fields"
+      ],
+      "correct": "Woodland edges, shady banks, walls and other darker spots",
+      "bonus": false
+    },
+    {
+      "id": "q_05",
+      "type": "multi_select",
+      "question": "Select all key identifying features of Herb Robert",
+      "options": [
+        "Reddish stems",
+        "Deeply divided leaves",
+        "Bright pink flowers with five petals",
+        "Strong smell when crushed",
+        "Hollow ridged stems with umbrella flower heads"
+      ],
+      "correct": [
+        "Reddish stems",
+        "Deeply divided leaves",
+        "Bright pink flowers with five petals",
+        "Strong smell when crushed"
+      ],
+      "bonus": false
+    },
+    {
+      "id": "q_06",
+      "type": "multi_select",
+      "question": "What is Herb Robert used for? Select all that apply",
+      "options": [
+        "Leaves used to make tea",
+        "Traditionally used as an antiseptic",
+        "Traditionally used for loose bowels and digestive upset",
+        "Crushed and rubbed on skin as an insect repellent",
+        "Roots boiled as a staple food"
+      ],
+      "correct": [
+        "Leaves used to make tea",
+        "Traditionally used as an antiseptic",
+        "Traditionally used for loose bowels and digestive upset",
+        "Crushed and rubbed on skin as an insect repellent"
+      ],
+      "remember": "The leaves have been used to make tea. Traditionally, infusions were also used for loose bowels and digestive upset, similar to bramble leaf",
+      "bonus": false
+    },
+    {
+      "id": "q_07",
+      "type": "multiple_choice",
+      "question": "What are the cautions with Herb Robert?",
+      "options": [
+        "No known adverse effects — but always advise caution to customers when trying any wild plant for the first time",
+        "The flowers are poisonous unless cooked",
+        "The leaves must only be eaten after frost",
+        "Contact with the plant causes severe blistering in sunlight"
+      ],
+      "correct": "No known adverse effects — but always advise caution to customers when trying any wild plant for the first time",
+      "remember": "Always advise caution to customers when consuming any wild plant, especially for the first time",
+      "bonus": false
+    },
+    {
+      "id": "q_08",
+      "type": "multiple_choice",
+      "question": "Is Herb Robert native to the UK?",
+      "options": [
+        "Yes — native and widespread throughout Britain and Ireland",
+        "No — introduced from North America",
+        "No — introduced by medieval monks",
+        "Yes — but only native in Scotland"
+      ],
+      "correct": "Yes — native and widespread throughout Britain and Ireland",
+      "bonus": false
+    },
+    {
+      "id": "q_09",
+      "type": "multiple_choice",
+      "question": "What is the life cycle of Herb Robert?",
+      "options": [
+        "Biennial",
+        "Annual",
+        "Perennial",
+        "Evergreen shrub"
+      ],
+      "correct": "Biennial",
+      "remember": "Biennial means it usually completes its life cycle over two years — typically leafy growth in the first year, then flowering and seed in the second",
+      "bonus": false
+    },
+    {
+      "id": "q_10",
+      "type": "multiple_choice",
+      "question": "What plant family does Herb Robert belong to?",
+      "options": [
+        "Geraniaceae — the geranium family",
+        "Rosaceae — the rose family",
+        "Lamiaceae — the mint family",
+        "Apiaceae — the carrot family"
+      ],
+      "correct": "Geraniaceae — the geranium family",
+      "bonus": true
+    },
+    {
+      "id": "q_11",
+      "type": "multiple_choice",
+      "question": "What does the name Robertianum refer to?",
+      "options": [
+        "It is thought to refer to Robert, possibly an old personal or saint's name associated with the plant",
+        "It means red-stemmed in Latin",
+        "It means woodland-growing in Latin",
+        "It means foul-smelling in Greek"
+      ],
+      "correct": "It is thought to refer to Robert, possibly an old personal or saint's name associated with the plant",
+      "bonus": true
+    }
+  ]
+}
