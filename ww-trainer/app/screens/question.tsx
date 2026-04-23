@@ -38,6 +38,28 @@ function buildPlantQuestions(plant: any) {
   ];
 }
 
+const BONUS_TEXT = 'The customers are full of questions today. One of them turns to you and asks something unexpected...';
+
+function useTypewriter(text: string, speed: number = 8, charsPerTick: number = 2) {
+  const [displayed, setDisplayed] = useState('');
+
+  useEffect(() => {
+    setDisplayed('');
+    let i = 0;
+    const interval = setInterval(() => {
+      if (i < text.length) {
+        i = Math.min(i + charsPerTick, text.length);
+        setDisplayed(text.slice(0, i));
+      } else {
+        clearInterval(interval);
+      }
+    }, speed);
+    return () => clearInterval(interval);
+  }, [text]);
+
+  return displayed;
+}
+
 export default function QuestionScreen() {
   const router = useRouter();
 
@@ -92,6 +114,16 @@ export default function QuestionScreen() {
   const [missedQuestions, setMissedQuestions] = useState<{ id: string; question: string }[]>([]);
   const [lastMissed, setLastMissed] = useState<string[]>([]);
 
+  const item = ALL_QUESTIONS[current];
+
+  const narrativeText = useTypewriter(
+  item?.type === 'plant_narrative' ? item.plant.narrative :
+  item?.type === 'bonus_narrative' ? BONUS_TEXT :
+  '',
+  8,  // ms between ticks
+  1   // characters per tick
+);
+
   useFocusEffect(
     useCallback(() => {
       const subscription = BackHandler.addEventListener('hardwareBackPress', () => true);
@@ -114,8 +146,6 @@ export default function QuestionScreen() {
       });
     }
   }, [current]);
-
-  const item = ALL_QUESTIONS[current];
 
   function handleAnswer(option: string) {
     if (item.type === 'multi_select') {
@@ -217,7 +247,7 @@ export default function QuestionScreen() {
       <View style={styles.container}>
         <View style={styles.narrativeContent}>
           <Text style={styles.scene}>🌿</Text>
-          <Text style={styles.narrative}>{item.plant.narrative}</Text>
+          <Text style={styles.narrative}>{narrativeText}</Text>
 
           {lastMissed.length > 0 && (
             <View style={styles.lastMissedBox}>
@@ -250,9 +280,7 @@ export default function QuestionScreen() {
       <View style={styles.container}>
         <View style={styles.narrativeContent}>
           <Text style={styles.scene}>⭐</Text>
-          <Text style={styles.narrative}>
-            The customers are full of questions today. One of them turns to you and asks something unexpected...
-          </Text>
+          <Text style={styles.narrative}>{narrativeText}</Text>
           <TouchableOpacity style={styles.next} onPress={handleNext}>
             <Text style={styles.nextText}>Bonus Round</Text>
           </TouchableOpacity>
