@@ -1,0 +1,343 @@
+{
+  "id": "wood_pigeon_prep",
+  "common_name": "Wood Pigeon — Preparation",
+  "botanical_name": "Columba palumbus",
+  "images": [],
+  "narrative": "The session is moving into its next phase. The food is being taken care of. Now it's time to get the prep area ready before the group arrives.",
+  "interesting_fact": "Wood Pigeons are one of the most common birds in the UK with around 5 million breeding pairs — yet many people have never looked at one closely.",
+  "questions": [
+    {
+      "id": "q_01",
+      "type": "multi_select",
+      "question": "Before leading customers to the prep area, what must you do?",
+      "options": [
+        "Hand cooking instructions to the other instructor",
+        "Do a headcount",
+        "Check customers have headtorches if required",
+        "Brief customers on knife safety",
+        "Check the fire is at cooking temperature"
+      ],
+      "correct": [
+        "Hand cooking instructions to the other instructor",
+        "Do a headcount",
+        "Check customers have headtorches if required"
+      ],
+      "bonus": false,
+      "section": "prep"
+    },
+    {
+      "id": "q_02",
+      "type": "multi_select",
+      "question": "What should be present and ready at the prep area before customers arrive?",
+      "options": [
+        "Pigeon box with pigeon in good condition",
+        "Red waste box",
+        "Washing up bowl with water and soap",
+        "Clean and presentable prep area",
+        "Spare clothing in case of spillage",
+        "Camera for documentation"
+      ],
+      "correct": [
+        "Pigeon box with pigeon in good condition",
+        "Red waste box",
+        "Washing up bowl with water and soap",
+        "Clean and presentable prep area"
+      ],
+      "bonus": false,
+      "section": "prep"
+    },
+    {
+      "id": "q_03",
+      "type": "multi_select",
+      "question": "Once the group has gathered at the prep area, what must you cover before beginning?",
+      "options": [
+        "No smoking in the prep area — wait until after",
+        "Preparation is carried out away from the main camp",
+        "If possible remove rings, watches and bracelets — if not, disinfect properly after handling",
+        "Customers must wear gloves at all times",
+        "Photography is not permitted during preparation"
+      ],
+      "correct": [
+        "No smoking in the prep area — wait until after",
+        "Preparation is carried out away from the main camp",
+        "If possible remove rings, watches and bracelets — if not, disinfect properly after handling"
+      ],
+      "bonus": false,
+      "section": "prep"
+    },
+    {
+      "id": "q_04",
+      "type": "multiple_choice",
+      "question": "Why is preparation carried out away from the main camp?",
+      "options": [
+        "For hygiene reasons and to avoid attracting animals",
+        "To give customers more space to move around",
+        "To reduce noise disturbance for other groups nearby",
+        "So the smell does not put customers off their food"
+      ],
+      "correct": "For hygiene reasons and to avoid attracting animals",
+      "bonus": false,
+      "section": "prep"
+    },
+    {
+      "id": "q_05",
+      "type": "multiple_choice",
+      "question": "What is the expectation around customer involvement in the preparation?",
+      "options": [
+        "Customers are encouraged but not expected to get involved if they do not wish to",
+        "All customers must participate — it is a core part of the session",
+        "Customers should be discouraged from handling the bird for hygiene reasons",
+        "Only customers who confirmed involvement in advance may participate"
+      ],
+      "correct": "Customers are encouraged but not expected to get involved if they do not wish to",
+      "bonus": false,
+      "section": "prep"
+    },
+    {
+      "id": "q_06",
+      "type": "multiple_choice",
+      "question": "What two things should you tell the group when introducing the bird?",
+      "options": [
+        "That it has been lawfully sourced and that despite being dead it should be treated respectfully",
+        "That it was caught this morning and that customers should not touch it without gloves",
+        "That it was shot on site and that it has been checked for disease",
+        "That it is a captive bred bird and that it should be handled with care"
+      ],
+      "correct": "That it has been lawfully sourced and that despite being dead it should be treated respectfully",
+      "bonus": false,
+      "section": "intro_bird"
+    },
+    {
+      "id": "q_07",
+      "type": "multi_select",
+      "question": "Select all key identifying features of the Wood Pigeon",
+      "options": [
+        "White spots on the collar",
+        "White lines down the edge of the wing feathers",
+        "Black bar on the end of the tail feather",
+        "White creamy breast",
+        "Bright orange beak with a yellow tip",
+        "Iridescent blue and green patch on the back"
+      ],
+      "correct": [
+        "White spots on the collar",
+        "White lines down the edge of the wing feathers",
+        "Black bar on the end of the tail feather",
+        "White creamy breast"
+      ],
+      "bonus": false,
+      "section": "intro_bird"
+    },
+    {
+      "id": "q_08",
+      "type": "multiple_choice",
+      "question": "What is the Latin name for Wood Pigeon?",
+      "options": [
+        "Columba palumbus",
+        "Columba livia domestica",
+        "Columba oenas",
+        "Columba livia"
+      ],
+      "correct": "Columba palumbus",
+      "bonus": false,
+      "section": "intro_bird"
+    },
+    {
+      "id": "q_09",
+      "type": "multiple_choice",
+      "question": "Where are Wood Pigeons typically found?",
+      "options": [
+        "Farmland, woodland edges, parks and hedgerows",
+        "Dense ancient woodland and forest interiors",
+        "Coastal cliffs and open moorland",
+        "Wetlands and river margins"
+      ],
+      "correct": "Farmland, woodland edges, parks and hedgerows",
+      "bonus": false,
+      "section": "natural_history"
+    },
+    {
+      "id": "q_10",
+      "type": "multiple_choice",
+      "question": "What are Wood Pigeon nests like and how many eggs do they typically lay?",
+      "options": [
+        "Untidy nests made of twigs — usually 2 eggs hatching after around 18 days",
+        "Neat woven nests — usually 4 eggs hatching after around 28 days",
+        "Ground nests lined with feathers — usually 3 eggs hatching after around 14 days",
+        "Tree hollows lined with moss — usually 1 egg hatching after around 21 days"
+      ],
+      "correct": "Untidy nests made of twigs — usually 2 eggs hatching after around 18 days",
+      "bonus": false,
+      "section": "natural_history"
+    },
+    {
+      "id": "q_11",
+      "type": "multiple_choice",
+      "question": "What is the typical lifespan of a Wood Pigeon?",
+      "options": [
+        "Many die around 3 years, though they can live several years if lucky",
+        "Most live between 8 and 12 years in the wild",
+        "Average lifespan is around 6 years with some reaching 15",
+        "Most die within their first year — few survive long enough to breed"
+      ],
+      "correct": "Many die around 3 years, though they can live several years if lucky",
+      "bonus": false,
+      "section": "natural_history"
+    },
+    {
+      "id": "q_12",
+      "type": "multiple_choice",
+      "question": "Approximately how many breeding pairs of Wood Pigeon are there in the UK today?",
+      "options": [
+        "Around 5 million",
+        "Around 500,000",
+        "Around 10 million",
+        "Around 1 million"
+      ],
+      "correct": "Around 5 million",
+      "bonus": false,
+      "section": "natural_history"
+    },
+    {
+      "id": "q_13",
+      "type": "multiple_choice",
+      "question": "What does UK law say about killing or trapping wild birds?",
+      "options": [
+        "It is illegal to intentionally kill, injure or trap any wild bird",
+        "It is illegal to kill wild birds but trapping with permission is freely allowed",
+        "Wild birds may be killed at any time on private land with the landowner's consent",
+        "Wild birds may only be killed during designated open seasons"
+      ],
+      "correct": "It is illegal to intentionally kill, injure or trap any wild bird",
+      "bonus": false,
+      "section": "law"
+    },
+    {
+      "id": "q_14",
+      "type": "multiple_choice",
+      "question": "What piece of legislation protects wild birds in the UK?",
+      "options": [
+        "The Wildlife and Countryside Act 1981",
+        "The Wildlife and Countryside Act 1984",
+        "The Animal Welfare and Conservation Act 1981",
+        "The Nature Protection and Wildlife Act 1981"
+      ],
+      "correct": "The Wildlife and Countryside Act 1981",
+      "bonus": false,
+      "section": "law"
+    },
+    {
+      "id": "q_15",
+      "type": "multi_select",
+      "question": "Under UK general licences, for what reasons can Wood Pigeons legally be killed?",
+      "options": [
+        "To prevent serious damage to crops",
+        "To protect public health and safety",
+        "To preserve air safety",
+        "To reduce noise disturbance in urban areas",
+        "To protect endangered plant species on private land"
+      ],
+      "correct": [
+        "To prevent serious damage to crops",
+        "To protect public health and safety",
+        "To preserve air safety"
+      ],
+      "bonus": false,
+      "section": "law"
+    },
+    {
+      "id": "q_16",
+      "type": "multi_select",
+      "question": "What methods are legal to cull Wood Pigeons under UK general licences?",
+      "options": [
+        "Shooting",
+        "Approved cage traps",
+        "Poisoning with licensed compounds",
+        "Netting at roost sites overnight",
+        "Carbon monoxide gassing"
+      ],
+      "correct": [
+        "Shooting",
+        "Approved cage traps"
+      ],
+      "remember": "Traps must be specific approved designs — any trap not meeting the approved specification is illegal regardless of purpose. There is no close season for Wood Pigeons — they can be shot year round under general licence",
+      "bonus": false,
+      "section": "law"
+    },
+    {
+      "id": "q_17",
+      "type": "multi_select",
+      "question": "If you had a bird caught in a trap, what are accepted humane methods of dispatch?",
+      "options": [
+        "Two fingers around the neck, spin the arm to twist and break the neck",
+        "Two fingers round the neck, hold firmly with the other hand and twist in opposite directions",
+        "A sharp blow to the head",
+        "Submerging the bird in water",
+        "Compression of the chest cavity"
+      ],
+      "correct": [
+        "Two fingers around the neck, spin the arm to twist and break the neck",
+        "Two fingers round the neck, hold firmly with the other hand and twist in opposite directions",
+        "A sharp blow to the head"
+      ],
+      "bonus": false,
+      "section": "dispatch"
+    },
+    {
+      "id": "q_18",
+      "type": "multiple_choice",
+      "question": "What species are street pigeons?",
+      "options": [
+        "Feral rock doves — Columba livia domestica",
+        "Wood Pigeons that have adapted to urban environments over centuries",
+        "A separate urban species that diverged from Wood Pigeons around 200 years ago",
+        "Domesticated Wood Pigeons released into cities during the industrial revolution"
+      ],
+      "correct": "Feral rock doves — Columba livia domestica",
+      "bonus": true,
+      "section": "good_to_know"
+    },
+    {
+      "id": "q_19",
+      "type": "multiple_choice",
+      "question": "Wood Pigeon numbers have risen strongly since the 1960s. What is the suspected reason?",
+      "options": [
+        "Modern agriculture and winter crops providing year round food",
+        "A reduction in natural predators such as sparrowhawks and peregrines",
+        "Milder winters due to climate change reducing winter mortality",
+        "Legal protection introduced in the 1970s preventing culling"
+      ],
+      "correct": "Modern agriculture and winter crops providing year round food",
+      "bonus": true,
+      "section": "good_to_know"
+    },
+    {
+      "id": "q_20",
+      "type": "multiple_choice",
+      "question": "Why did humans first domesticate rock doves?",
+      "options": [
+        "They were easy to capture and train",
+        "They were the most abundant bird in Europe at the time",
+        "They were the only bird capable of navigating home over long distances",
+        "They provided more meat than any other wild bird of similar size"
+      ],
+      "correct": "They were easy to capture and train",
+      "bonus": true,
+      "section": "good_to_know"
+    },
+    {
+      "id": "q_21",
+      "type": "multiple_choice",
+      "question": "In what order were rock doves officially named?",
+      "options": [
+        "Columba domestica (early 1700s) → Columba livia (late 1700s) → Columba livia domestica when found to be the same species",
+        "Columba livia (early 1700s) → Columba domestica (late 1700s) → Columba livia domestica",
+        "Columba palumbus (early 1700s) → Columba livia (late 1700s) → Columba livia domestica",
+        "Columba livia domestica (early 1700s) → split into Columba livia and Columba domestica → later reunified"
+      ],
+      "correct": "Columba domestica (early 1700s) → Columba livia (late 1700s) → Columba livia domestica when found to be the same species",
+      "bonus": true,
+      "section": "good_to_know"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Modal } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Modal, ImageBackground } from 'react-native';
 import { useRouter, useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useState, useCallback } from 'react';
 import { getModuleProgress, ModuleProgress, clearSessionProgress, getSessionProgress, SessionProgress } from '../../utils/progress';
@@ -46,7 +46,13 @@ export default function ForagingScreen() {
 
 if (view === 'levels') {
   return (
-    <View style={styles.container}>
+    <ImageBackground
+    source={require('../../assets/images/backgrounds/background-field_01.jpg')}
+    style={styles.container}
+    resizeMode="cover"
+  >
+    
+      
       <ScrollView contentContainerStyle={styles.content}>
         <TouchableOpacity onPress={() => router.push('/screens/modules')}>
           <Text style={styles.backText}>← Back</Text>
@@ -73,7 +79,7 @@ if (view === 'levels') {
           <Text style={styles.cardDesc}>🔒 Complete Ember to unlock</Text>
         </TouchableOpacity>
       </ScrollView>
-    </View>
+    </ImageBackground>
   );
 }
 
@@ -250,13 +256,14 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 28,
-    fontWeight: 'bold',
-    color: '#c8a96e',
+    fontFamily: 'PressStart2P_400Regular',
+    color: '#000000',
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 14,
-    color: '#8a9a6e',
+    fontFamily: 'PressStart2P_400Regular',
+    color: '#8f3700',
     marginBottom: 32,
   },
   sectionHeader: {
@@ -293,18 +300,20 @@ const styles = StyleSheet.create({
   },
   cardTitle: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontFamily: 'PressStart2P_400Regular',
     color: '#ffffff',
     marginBottom: 4,
   },
   cardBotanical: {
     fontSize: 13,
     color: '#8a9a6e',
-    fontStyle: 'italic',
+    fontFamily: 'PressStart2P_400Regular',
   },
   cardDesc: {
-    fontSize: 14,
+    fontFamily: 'PressStart2P_400Regular',
+    fontSize: 10,
     color: '#8a9a6e',
+    marginTop:10,
   },
   cardStats: {
     alignItems: 'flex-end',
@@ -344,12 +353,13 @@ const styles = StyleSheet.create({
   },
   modalTitle: {
     fontSize: 22,
-    fontWeight: 'bold',
+    fontFamily: 'PressStart2P_400Regular',
     color: '#c8a96e',
     marginBottom: 8,
   },
   modalText: {
     fontSize: 16,
+    fontFamily: 'PressStart2P_400Regular',
     color: '#8a9a6e',
     marginBottom: 24,
     textAlign: 'center',
@@ -366,7 +376,7 @@ const styles = StyleSheet.create({
   modalButtonText: {
     color: '#ffffff',
     fontSize: 16,
-    fontWeight: 'bold',
+    fontFamily: 'PressStart2P_400Regular',
   },
   modalButtonSecondary: {
     backgroundColor: '#2a3a2a',
@@ -392,8 +402,12 @@ const styles = StyleSheet.create({
   },
   
 backText: {
-  color: '#8a9a6e',
+  color: '#1e3000',
   fontSize: 16,
+  fontFamily: 'PressStart2P_400Regular',
+  textAlign: 'right',
+  marginBottom: 10,
+
 },
   
 });

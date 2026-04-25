@@ -1,19 +1,34 @@
 import { DarkTheme, ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import { useFonts, PressStart2P_400Regular } from '@expo-google-fonts/press-start-2p';
+import * as SplashScreen from 'expo-splash-screen';
+import { useEffect } from 'react';
 
-const theme = {
-  ...DarkTheme,
-  colors: {
-    ...DarkTheme.colors,
-    background: '#1a1a0e',
-  },
-};
+SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+  const [loaded] = useFonts({
+    PressStart2P_400Regular,
+  });
+
+  useEffect(() => {
+    if (loaded) SplashScreen.hideAsync();
+  }, [loaded]);
+
+  if (!loaded) return null;
+
+  const theme = {
+    ...DarkTheme,
+    colors: {
+      ...DarkTheme.colors,
+      background: '#1a1a0e',
+    },
+  };
+
   return (
     <ThemeProvider value={theme}>
-      <Stack screenOptions={{ 
+      <Stack screenOptions={{
         headerShown: false,
         contentStyle: { backgroundColor: '#1a1a0e' },
         animation: 'none',

@@ -55,13 +55,14 @@ const styles = StyleSheet.create({
     fontSize: 64,
     marginBottom: 32,
   },
-  narrative: {
-    fontSize: 18,
-    color: '#c8a96e',
-    textAlign: 'center',
-    lineHeight: 28,
-    marginBottom: 48,
-  },
+narrative: {
+  fontSize: 10,
+  color: '#000000',
+  textAlign: 'center',
+  lineHeight: 20,
+  marginBottom: 24,
+  fontFamily: 'PressStart2P_400Regular',
+},
   button: {
     backgroundColor: '#4a7c59',
     paddingVertical: 14,

@@ -1,11 +1,15 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ImageBackground } from 'react-native';
 import { useRouter } from 'expo-router';
 
 export default function ModulesScreen() {
   const router = useRouter();
 
   return (
-    <View style={styles.container}>
+    <ImageBackground
+  source={require('../../assets/images/backgrounds/background-field_01.jpg')}
+  style={styles.container}
+  resizeMode="cover">
+
       <Text style={styles.title}>Choose a Module</Text>
 
       <TouchableOpacity 
@@ -25,7 +29,7 @@ export default function ModulesScreen() {
         <Text style={styles.moduleName}>Knife and Saw Skills</Text>
         <Text style={styles.moduleStatus}>🔒 Coming soon</Text>
       </TouchableOpacity>
-    </View>
+    </ImageBackground>
   );
 }
 
@@ -37,9 +41,10 @@ const styles = StyleSheet.create({
     paddingTop: 60,
   },
   title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: '#c8a96e',
+    fontFamily: `PressStart2P_400Regular`,
+    fontSize: 20,
+    textAlign: 'center',
+    color: '#000000',
     marginBottom: 32,
   },
   module: {
@@ -54,10 +59,10 @@ const styles = StyleSheet.create({
     opacity: 0.4,
   },
   moduleName: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    fontSize: 18,
     color: '#ffffff',
-    marginBottom: 4,
+    marginBottom: 0,
+    fontFamily: `PressStart2P_400Regular`,
   },
   moduleStatus: {
     fontSize: 14,

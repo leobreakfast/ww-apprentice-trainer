@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import { BackHandler } from 'react-native';
 import { useRouter, useLocalSearchParams, useFocusEffect } from 'expo-router';
 import { useState, useMemo, useCallback, useEffect } from 'react';
@@ -7,6 +7,7 @@ import plantImages from '../../content/plantImages';
 import introData from '../../content/foraging/intro.json';
 import * as PlantFiles from '../../content/foraging/plants/index';
 import ImageCarousel from '../../components/ImageCarousel';
+
 
 
 function shuffleArray(array: string[]) {
@@ -244,7 +245,11 @@ export default function QuestionScreen() {
 
   if (item.type === 'plant_narrative') {
     return (
-      <View style={styles.container}>
+      <ImageBackground
+        source={require('../../assets/images/backgrounds/background-field_01.jpg')}
+        style={styles.container}
+        resizeMode="cover"
+      >
         <View style={styles.narrativeContent}>
           <Text style={styles.scene}>🌿</Text>
           <Text style={styles.narrative}>{narrativeText}</Text>
@@ -271,7 +276,7 @@ export default function QuestionScreen() {
         >
           <Text style={styles.exitText}>← Exit</Text>
         </TouchableOpacity>
-      </View>
+      </ImageBackground>
     );
   }
 
@@ -456,12 +461,13 @@ const styles = StyleSheet.create({
     marginBottom: 32,
   },
   narrative: {
-    fontSize: 18,
-    color: '#c8a96e',
-    textAlign: 'center',
-    lineHeight: 28,
-    marginBottom: 24,
-  },
+  fontSize: 18,
+  color: '#000000',
+  textAlign: 'center',
+  lineHeight: 20,
+  marginBottom: 24,
+  fontFamily: 'PressStart2P_400Regular',
+},
   progress: {
     fontSize: 14,
     color: '#8a9a6e',

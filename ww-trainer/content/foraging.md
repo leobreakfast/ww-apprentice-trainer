@@ -80,10 +80,10 @@ Where it's typically found, what it grows near
 - Galium aparine (Cleavers / Goosegrass) ✓
 - Glechoma hederacea (Ground Ivy) ✓
 - Urtica dioica (Stinging Nettle) ✓
-- Plantago major (Broadleaf Plantain) -
-- Matricaria discoidea (Pineapple Weed) -
-- Carex pendula (Pendulous Sedge) -
-- Rumex obtusifolius (Broad-leaved Dock) -
+- Plantago major (Broadleaf Plantain) ✓
+- Matricaria discoidea (Pineapple Weed) ✓
+- Carex pendula (Pendulous Sedge) ✓
+- Rumex obtusifolius/crispus (Broad-leaved Dock/curled dock) -
 - Arctium lappa (Greater Burdock) - 
 - Arctium minus (Lesser Burdock) -
 - Impatiens glandulifera (Himalayan Balsam) - 
@@ -93,7 +93,7 @@ Where it's typically found, what it grows near
 - Anemone nemorosa (Wood Anemone) - 
 - Geranium robertianum (Herb Robert) - 
 - Artemisia vulgaris (Mugwort) - 
-- Arum Maculatum (Lords and Ladies) - 
+- Arum Maculatum (Lords and Ladies) ✓ 
 - Nasturtium officinale (Watercress) 
 - 
 
